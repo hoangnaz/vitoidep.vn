@@ -1,3 +1,6 @@
+<?php
+  error_reporting(0);
+?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -23,5 +26,5 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="body"  oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" >
+<body id="body"   >
 <!-- Start Top Header Bar -->

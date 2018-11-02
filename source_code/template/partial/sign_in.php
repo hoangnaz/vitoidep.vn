@@ -14,7 +14,7 @@
 											
 											
 											<div class="col-md-12 signin-page">
-													
+												
 											<div class="col-sm-6 col-md-6  text-center">
 													GOOGLE +
 												</div>
@@ -24,17 +24,23 @@
 												</div>
 												<div class="block text-center">	
 													<h2 class="text-center">Chào bạn trở lại với vì tôi đẹp</h2>
-													  <form class="text-left clearfix" action="index.php" >
+													 
 														<div class="form-group">
-														  <input type="email" class="form-control"  placeholder="Email">
+														  <input type="email" class="form-control" id="email"  placeholder="Email">
 														</div>
 														<div class="form-group">
-														  <input type="password" class="form-control" placeholder="Password">
+														  <input type="password" class="form-control" placeholder="Password" id="password" >
 														</div>
+														
+														<div class="col-xs-12 col-md-12">
+																<p  id="messageLogin" class="text-warning"></p>
+														</div>
+														
 														<div class="text-center">
-														  <button type="submit" class="btn btn-main text-center" >Login</button>
+														  <button  onclick="login()" class="btn btn-main text-center" >Login</button>
 														</div>
-													  </form>
+													 
+													 
 													  <p class="mt-20">Bạn quên mật khẩu của mình ?<a   data-toggle="modal" data-target="#get_password" > Click để lấy lại mật khẩu</a></p>
 												</div>
 											</div>

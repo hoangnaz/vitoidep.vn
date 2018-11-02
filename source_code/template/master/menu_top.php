@@ -95,23 +95,43 @@
 			  <!-- / Search -->
 
 	          <!-- User Info -->
-	          <li class="commonSelect">
-	          	 <div class="dropdown">
-				    <a class="dropdown-toggle" data-toggle="dropdown">
-				    	<i class="fa fa-user-o" aria-hidden="true"></i> Hoangnaz <span class="caret"></span>
-				    </a>
-				    <ul class="dropdown-menu">
-				      <li class="dropdown-header">Tài khoản</li>
-				       <li>
-				       <a href="#"  data-toggle="modal" data-target="#sign_in">Thông tin cá nhân</a>
-				       </li>
-				      <li><a href="general_info.php" >Lịch sử mua hàng</a></li>
-				      <li><a href="#" >Đăng xuất</a></li>
-				    </ul>
-			  	</div>
-			  </li>
+				<li class="commonSelect">
+					<div class="dropdown">
 
-			  <!-- / User Info -->
+				<?php
+						if($_SESSION['customer']){
+							?>
+							
+									<a class="dropdown-toggle" data-toggle="dropdown">
+										<i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $_SESSION['customer']->fullname;?> <span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+									<li class="dropdown-header">Tài khoản</li>
+									<li>
+									<a href="#"  data-toggle="modal" data-target="#sign_in">Thông tin cá nhân</a>
+									</li>
+									<li><a href="general_info.php" >Lịch sử mua hàng</a></li>
+									<li><a href="function/logout.php" >Đăng xuất</a></li>
+									</ul>
+								
+							<!-- / User Info -->
+							
+						<?php
+							}
+							else{
+						?>		
+							<a href=""  data-toggle="modal" data-target="#sign_in">Đăng nhập</a>
+				<?php
+						}
+
+				?>
+
+					</div>
+				</li>
+
+
+
+			 
 	        </ul>
 			</div>
 		</div>

@@ -17,5 +17,15 @@
             $this->socialAccount=$socialAccount;
         }
 
+        public function __construct($id, $fullname,$account,$password,  $email, $phoneNumber, $sex,$DOB,$address,$point,$socialAccount){
+            parent::__construct($id, $fullname,$account,$password,  $email, $phoneNumber, $sex,$DOB,$address);
+            $this->point=$point;
+            $this->socialAccount=$socialAccount;
+        }
+
+        public function customer(){
+            
+        }
+
     }
 ?>

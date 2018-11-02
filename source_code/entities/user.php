@@ -10,6 +10,20 @@
         protected $DOB;
         protected $address;
 
+        public function __construct( $id, $fullname,$account,$password,  $email, $phoneNumber, $sex,$DOB,$address){
+            $this->id=$id;
+            $this->fullname=$fullname;
+            $this->account=$account;
+            $this->password=$password;
+            $this->email=$email;
+            $this->phoneNumber=$phoneNumber;
+            $this->sex=$sex;
+            $this->DOB=$DOB;
+            $this->address=$address;
+        }
+
+        
+
         public function getId(){
             return $this->id;
         }
@@ -44,7 +58,7 @@
             return $this->phoneNumber;
         }
         public function setPhonenumber($phonenumber){
-            $this->phoneNumber=$phoneNumber;
+            $this->phoneNumber=$phonenumber;
         }
         public function getSex(){
             return $this->sex;

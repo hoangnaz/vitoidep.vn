@@ -20,33 +20,38 @@
 												ĐĂNG KÝ TÀI KHOẢN
 											</div>
 											
-													<div class="block text-center">
-													
-													
-														<form class="text-left clearfix" action="index.php">
-															<div class="form-group">
-																<input type="email" class="form-control" placeholder="Email">
-															</div>
-															<div class="form-group">
-																<input type="email" class="form-control" placeholder="Email">
-															</div>
-															<div class="form-group">
-																<input type="email" class="form-control" placeholder="Email">
-															</div>
-															<div class="form-group">
-																<input type="email" class="form-control" placeholder="Email">
-															</div>
-													
-															<div class="form-group">
-																<input type="password" class="form-control" placeholder="Password">
-															</div>
-															<div class="text-center">
-																<button type="submit" class="btn btn-main text-center">Login</button>
-															</div>
-														</form>
-														<p class="mt-20">New in this site ?<a data-toggle="modal" data-target="#sign_up"> Create New Account</a></p>
+											<div class="block text-center">
+													<div class="form-group">
+														<input type="email"  class="form-control" id="rg_full_name" placeholder="Vui lòng nhập tên của bạn">
+													</div>	
+													<span  id="message-error-fullname"></span>
+													<div class="form-group">
+														<input type="email"  class="form-control" id="rg_account"  placeholder="Vui lòng nhập tài khoản đăng nhập">
 													</div>
+													<span  id="message-error-account"></span>
+													<div class="form-group">
+														<input type="email"  class="form-control" id="rg_email"  placeholder="Vui lòng nhập email">
 													</div>
+													<span  id="message-error-email"></span>
+													<div class="form-group">
+														<input type="email" class="form-control"  id="rg_email_again"   placeholder="Vui lòng nhập xác nhận email">
+													</div>
+													<span  id="message-error-re-email"></span>
+													<div class="form-group">
+														<input type="password" class="form-control"  id="rg_pass"   placeholder="Vui lòng nhập mật khẩu">
+													</div>
+													<span  id="message-error-pass"></span>
+													<div class="form-group">
+														<input type="password" class="form-control"  id="rg_pass_again"   placeholder="Xác thực mật khẩu">
+													</div>
+													<span  id="message-error-re-pass"></span>
+													<span  id="message-sign-up"></span>
+													<div class="text-center">
+														<button  onclick="signUp()" class="btn btn-main text-center" >Đăng ký</button>
+													</div>
+													
+													</div>
+												</div>
 										</div>
 										
 									</div>
