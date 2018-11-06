@@ -42,11 +42,11 @@
 													</div>
 													<span  id="message-error-pass"></span>
 													<div class="form-group">
-														<input type="password" class="form-control"  id="rg_pass_again"   placeholder="Xác thực mật khẩu">
+														<input type="password" class="form-control"   id="rg_pass_again"   placeholder="Xác thực mật khẩu">
 													</div>
 													<span  id="message-error-re-pass"></span>
-													<span  id="message-sign-up"></span>
-													<div class="text-center">
+													<span  id="message-sign-up" ></span>
+													<div class="text-center" id="button-signup">
 														<button  onclick="signUp()" class="btn btn-main text-center" >Đăng ký</button>
 													</div>
 													

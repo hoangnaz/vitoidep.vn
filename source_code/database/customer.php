@@ -1,7 +1,6 @@
 <?php
 	require 'connect_database.php';
 	require '../library/common.php';
-	require '../library/const.php';
 	require '../entities/customer.php';
 
     class customerDB extends databaseConnect
@@ -29,11 +28,22 @@
         public function insertCustomer($customer)
 		{
 			$pdo=parent::connectDatabase();
-			$value = check_unique_accout($pdo,"customer",'account',$customer->getAccount());
-			$value = check_unique_accout($pdo,"customer",'email',$customer->getEmail());	
-			if($value == true)
+			$chkIdCustomer = true;	
+			while($chkIdCustomer){
+				$idCustomer="CUS".rand(1000000,9999999);
+				$chkIdCustomer = checkUniqueAccount($pdo,"customer","id_customer",$idCustomer);
+			}
+			
+			$customer->setId($idCustomer);
+			$chkEmail = checkUniqueAccount($pdo,"customer",'email',$customer->getEmail());	
+			if($chkEmail == true)
 			{
-				return ERROR_UNIUQE;
+				return 400;
+			}
+			$chkAccount = checkUniqueAccount($pdo,"customer",'account',$customer->getAccount());
+			if($chkAccount == true)
+			{
+				return 400;
 			}
 			
 			$query="INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -138,6 +148,14 @@
 
 	}
 
+
+// 	$custome= new customer('', 'nguyen anh hoang','bongd3as','123', '31233@gmail.com',
+// 	'0933333333', 'Nam','1994-02-07','qiamg',30,2222);
+// //    //	print_r($_REQUEST);
+// // 	$custome=new customer();
+//  	$user=new customerDB();
+//  	echo $user->insertCustomer($custome);
+// 	echo 123;
 	
 // if (!isset($_SERVER['PHP_AUTH_USER'])) {
 //    header('WWW-Authenticate: Basic realm="Vui lòng nhập thông tin username và password"');

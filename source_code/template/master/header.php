@@ -1,5 +1,7 @@
 <?php
+  session_start();
   error_reporting(0);
+ 
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -18,6 +20,8 @@
   <link rel="stylesheet" href="css/facebook_messenger.css">
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="css/custome.css">
   <!-- add_fontawawe -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 	<!-- slide_main -->

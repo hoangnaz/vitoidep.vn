@@ -23,9 +23,6 @@
             $this->socialAccount=$socialAccount;
         }
 
-        public function customer(){
-            
-        }
 
     }
 ?>

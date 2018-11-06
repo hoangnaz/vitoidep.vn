@@ -1,12 +1,12 @@
 <?php
-        
+        require '../library/const.php';
 
         function getCurrentTime(){
             return date('Y-m-d H:i:s');
         }
 
 
-        function check_unique_accout($pdo,$table,$atribute,$value){
+        function checkUniqueAccount($pdo,$table,$atribute,$value){
             $sqlQuery= "SELECT * FROM $table WHERE $atribute LIKE '$value' ";
             $PDO=$pdo->prepare($sqlQuery);
 			$PDO->execute();
@@ -16,6 +16,34 @@
             }
             return false;
         }
+
+        /**
+         * Function use when get all record in datatable
+         * @param pdo
+         * @param tableName
+         */
+        function getAllRecord($pdo,$tableName){
+            $sqlQuery= "SELECT * FROM $tableName";
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
+
+         /**
+         * Function use when get all record in datatable follow a condition
+         * @param pdo
+         * @param tableName
+         *  @param conditionName
+         * @param value
+         */
+        function getRecordFollowCondition($pdo,$tableName,$conditionName,$value){
+            $sqlQuery= "SELECT * FROM $tableName WHERE $conditionName = $value";
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
+
+
 
 
         /** 
@@ -69,7 +97,14 @@
        
         function insertUpadeRecord($pdo,$paramQuery,$sqlQuery){
             $PDO=$pdo->prepare($sqlQuery);
-			return $PDO->execute($paramQuery);
+            try {
+                $PDO->execute($paramQuery);
+                return SUCCESS;
+            }
+            catch(PDOException $e){
+               return FAIL_PROCESS;
+            }
+           
         }
 
      

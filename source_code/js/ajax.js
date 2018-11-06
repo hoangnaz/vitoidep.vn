@@ -52,6 +52,7 @@ function signUp(){
         var rgEmailConfirm=$("input#rg_email_again").val();
         var rgPass=$("input#rg_pass").val();
         var rgPassConfirm=$("input#rg_pass_again").val();
+        $('#message-sign-up').html("")
         $('#message-error-fullname').html("")
         $('#message-error-account').html("")
         $('#message-error-email').html("")
@@ -59,16 +60,31 @@ function signUp(){
         $('#message-error-pass').html("")
         $('#message-error-re-pass').html("")
 
+        if(rgFullName.length > 50){
+            $('#message-error-fullname').html("Họ tên có độ dài tối đa là 50 ký tự");
+            $("input#rg_full_name").focus();  
+            return false;  
+        }
         if(rgFullName=="")
         {
             $('#message-error-fullname').html("Vui lòng nhập họ tên");
             $("input#rg_full_name").focus();  
             return false;  
         }
+        if(rgAccoutn.length > 50){
+            $('#message-error-account').html("Tài khoản tối đa là 50 ký tự");
+            $("input#rg_account").focus();  
+            return false;  
+        }
         if(rgAccoutn=="")
         {
             $('#message-error-account').html("Vui lòng nhập account");
             $("input#rg_account").focus();  
+            return false;  
+        }
+        if(rgAccoutn.length > 100){
+            $('#message-error-email').html("Email tối đa là 100 ký tự");
+            $("input#rg_email").focus();  
             return false;  
         }
         if(rgEmail=="" || !isEmail(rgEmail))
@@ -87,6 +103,11 @@ function signUp(){
         {
             $('#message-error-re-email').html("Email chưa  trùng khớp");
             $("input#rg_email_again").focus();  
+            return false;  
+        }
+        if(rgPass.length > 50){
+            $('#message-error-pass').html("Mật khẩu có độ dài tối đa là 50 ký tự");
+            $("input#rg_pass").focus();  
             return false;  
         }
         if(rgPass=="")
@@ -113,24 +134,27 @@ function signUp(){
             dataType:'html',
             data:{
                 txtFullName : $("input#rg_full_name").val(),
-                txtAccoutn : $("input#rg_account").val(),
+                txtAccount : $("input#rg_account").val(),
                 txtEmail : $("input#rg_email").val(),
                 txtPass : $("input#rg_pass").val()
             }
         }).done(function(ketqua) {
-            if(ketqua==2){
-               
-                
-                message="Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp. Hãy đăng nhập ngay nhé.";
-                $('#message-sign-up').html(message);
-                 setTimeout(function(){
-                    $("#sign_up").tabIndex = -1;
-                 }, 5000);
-                
-                
+            if(ketqua==200){
+                $("#button-signup").hide();
+                message='Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp.'; 
+                message+='<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';               
+                $('#message-sign-up').html(message); 
+
+            }
+            else if(ketqua==400){
+                message='Tài khoảng hoặc email đã tồn tại.'; 
+                message+='<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';               
+                $('#message-sign-up').html(message);   
             }
             else{
-                window.location.href='index.php';
+                message='Quá trình đăng ký xảy ra lỗi vui lòng thử lại'; 
+                message+='<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';               
+                $('#message-sign-up').html(message);   
             }
         });
 

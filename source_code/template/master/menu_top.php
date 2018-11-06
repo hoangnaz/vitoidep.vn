@@ -108,7 +108,7 @@
 									<ul class="dropdown-menu">
 									<li class="dropdown-header">Tài khoản</li>
 									<li>
-									<a href="#"  data-toggle="modal" data-target="#sign_in">Thông tin cá nhân</a>
+									<a href="user_info.php" >Thông tin cá nhân</a>
 									</li>
 									<li><a href="general_info.php" >Lịch sử mua hàng</a></li>
 									<li><a href="function/logout.php" >Đăng xuất</a></li>

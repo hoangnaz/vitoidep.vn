@@ -2608,9 +2608,9 @@ width: 640px;
     display: inline-block;
 }
 .dashboard-menu .active {
-    background: #000;
+    background:#f5f5f5;
     color: #fff;
-    border: 1px solid #000;
+    
 }
 .banner_img{
       width: 100%;
