@@ -1,3 +1,67 @@
+
+
+function updateInfo(id_customer)
+{
+    var rgPhone=$("input#rg_phone_number").val();
+    var rgSex=$("input[name='rg_sex']:checked").val();
+    var rgDate=$("input#rg_date").val();
+    var rgAddress=$.trim($("#rg_address").val());
+    var rgSocialAccount=$("input#rg_social_account").val();
+    $('#message-update').html("")
+    $('#message-error-phone').html("")
+    $('#message-error-social').html("")
+    $('#message-error-date').html("")
+    $('#message-error-address').html("")
+    
+    
+    if(rgPhone.length == ""){
+        $('#message-error-phone').html("Vui lòng bổ sung ít nhất số điện thoại");
+        $("input#rg_phone_number").focus();  
+        return false;  
+    }
+
+    if(rgPhone.length > 10){
+        $('#message-error-phone').html("Số điện thoại có độ dài tối đa là 10 ký tự");
+        $("input#rg_phone_number").focus();  
+        return false;  
+    }
+
+    if(rgAddress.length > 500){
+        $('#message-error-address').html("Địa chỉ tối đa là 500 ký tự");
+        $("input#rg_address").focus();  
+        return false;  
+    }
+    $.ajax({
+        url:'function/update_info.php',
+        type:'POST',
+        dataType:'html',
+        data:{
+            id_customer:id_customer,
+            txtPhone : rgPhone,
+            txtAdress : rgAddress,
+            txtSex : rgSex,
+            txtSocialAccount : rgSocialAccount,
+            txtDOB: rgDate
+        }
+    }).done(function(ketqua) {
+        
+        if(ketqua==200){
+            $("#button-update").hide();
+            message='Bạn đã cập nhật thành công thông tin';            
+            $('#message-update').html(message); 
+            
+            setTimeout(function(){
+                window.location.href='user_info.php';
+            },3000);
+        }
+        else {
+            message='Quá trình cập nhật thông tin thất bại. Vui lòng thử lại';            
+            $('#message-update').html(message);  
+        }
+       
+    });
+}
+
 function login()
 {
         var user = $("input#email").val();  
@@ -139,6 +203,7 @@ function signUp(){
                 txtPass : $("input#rg_pass").val()
             }
         }).done(function(ketqua) {
+            alert(ketqua)
             if(ketqua==200){
                 $("#button-signup").hide();
                 message='Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp.'; 

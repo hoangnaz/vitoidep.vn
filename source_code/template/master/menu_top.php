@@ -1,3 +1,4 @@
+
 <div class="container-fluid delivery_ads">
       <marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962678192</p></marquee>
 </div>  
@@ -99,7 +100,9 @@
 					<div class="dropdown">
 
 				<?php
+				
 						if($_SESSION['customer']){
+						
 							?>
 							
 									<a class="dropdown-toggle" data-toggle="dropdown">

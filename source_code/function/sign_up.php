@@ -1,7 +1,7 @@
 <?php
     require_once "../database/customer.php";
     require_once "../entities/customer.php";
-    $customer= new customer("","","","","","","","","","","","");
+    $customer= new customer("","","","","","","","","","","","","");
     $customer->setFullname($_REQUEST['txtFullName']);
     $customer->setAccount($_REQUEST['txtAccount']);
     $customer->setEmail($_REQUEST['txtEmail']);

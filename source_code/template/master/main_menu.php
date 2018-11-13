@@ -1,4 +1,9 @@
-
+<?php
+	 require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/catalog_product.php';  
+	 $blCatalog= new catalogProduct();
+	 print_r($blCatalog->lstSubProduct());
+		// list product from line 43to 58
+?>
 <!-- Main Menu Section -->
 <section class="menu">
 	<nav class="navbar navigation">
@@ -33,41 +38,24 @@
 	            <div class="dropdown-menu">
 	              	<div class="row">
 
-		                <!-- Introduction -->
-		                <div class="col-sm-3 col-xs-12">
-		                	<ul>
-								<li class="dropdown-header">Sản phẩm son</li>
-								<li role="separator" class="divider"></li>
-								<li><a href="list_product_new.php">Son gấc</a></li>
-								<li><a href="list_product_new.php">Son dưỡng</a></li>
-								<li><a href="list_product_new.php">Son tím</a></li>
-								<li><a href="list_product_new.php">Son vàng</a></li>
-								<li><a href="list_product_new.php">Son đỏ</a></li>
-		                	</ul>
-		                </div>
-
-		                <!-- Contact -->
-		                <div class="col-sm-3 col-xs-12">
-		                	<ul>
-										<li class="dropdown-header">Ngũ cốc</li>
-										<li role="separator" class="divider"></li>
-										<li><a href="list_product_new.php">Bột cám gạo</a></li>
-										<li><a href="list_product_new.php">Chè xanh</a></li>
-										<li><a href="list_product_new.php">Bột đậu xanh</a></li>
-										<li><a href="list_product_new.php">Bột gạo</a></li>
-		                	</ul>
-		                </div>
-
-		                <!-- Utility -->
-		                <div class="col-sm-3 col-xs-12">
-		                	<ul>
-								<li class="dropdown-header">Chăm sóc da</li>
-								<li role="separator" class="divider"></li>
-								<li><a href="list_product_new.php">Chăm sóc tóc</a></li>
-								<li><a href="slist_product_new.php">Chăm sóc da mặt</a></li>
-								<li><a href="list_product_new.php">Trị mun</a></li>
-		                	</ul>
-		                </div>
+										<?php
+											foreach ($blCatalog->lstSubProduct() as $keyCatalog => $valueCatalog) {
+													?>
+														 <div class="col-sm-3 col-xs-12">
+		                						<ul>
+																<li class="dropdown-header"><?php echo  $keyCatalog;?></li>
+															<?php
+																foreach ($valueCatalog as $key => $value) {
+															?>
+																	<li><a href="danh_sach_san_pham.php?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
+															<?php	
+																}
+															?>
+														</ul>
+													</div>
+													<?php
+												}
+									  	?>		              
 		                <!-- Mega Menu -->
 		                <div class="col-sm-3 col-xs-12">
 		                	<a href="shop.php">

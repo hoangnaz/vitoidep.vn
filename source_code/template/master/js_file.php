@@ -11,6 +11,7 @@
 	
 		<!-- Main Js File -->
 		<script src="js/script.js"></script>
+		<script src="js/upload_file.js"></script>
 		<script src="js/block_f12.js"></script>
 		<script src="js/ajax.js"></script>
 		<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>

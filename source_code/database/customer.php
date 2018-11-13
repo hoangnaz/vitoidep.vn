@@ -17,8 +17,8 @@
 			
 		}
 
-		public function getInfoCustomer(){
-			 $idCustomer = $_REQUEST["id_customer"];
+		public function getInfoCustomer( $idCustomer){
+			
 			$pdo=parent::connectDatabase();
 			$query="SELECT * FROM `customer` WHERE id_customer= ?";
 			$paramQuery=array($idCustomer);
@@ -46,7 +46,7 @@
 				return 400;
 			}
 			
-			$query="INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			$query="INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			$paramQuery = array(
 				$customer->getId(),
 				$customer->getFullname(),
@@ -59,6 +59,7 @@
 				$customer->getAddress(),
 				$customer->getPoint(),
 				$customer->getSocialAccount(),
+				$customer->getAvatar(),
 				getCurrentTime(),
 				getCurrentTime()
 			);
@@ -67,6 +68,7 @@
 		
 		function updateInfoCustomer($customer){
 			$pdo=parent::connectDatabase();
+			$infoCustomer=  new customer('', '','','', '',	'', '','','','','','');
 			$query="UPDATE `customer` SET 
 									`fullname`=?,
 									`email`=?,
@@ -79,37 +81,39 @@
 									`update_date`=?
 									 WHERE `id_customer`=?"; 
 			$infoCustomer=$this->getInfoCustomer($customer->getId());
-			
-			if(empty($customer->fullname))
+			if($infoCustomer == 101){
+				return 400;
+			}
+			if(empty($customer->getFullname()))
 			{	
 				$customer->setFullname($infoCustomer->fullname);
 			}
-			if(empty($customer->email))
+			if(empty($customer->getEmail()))
 			{
 				$customer->setEmail($infoCustomer->email);
 			}
-			if(empty($customer->phoneNumber))
+			if(empty($customer->getPhonenumber()))
 			{
 				$customer->setPhonenumber($infoCustomer->phone_number);
 			}
 			
-			if(empty($customer->DOB))
+			if(empty($customer->getDOB()))
 			{
 				$customer->setDOB($infoCustomer->DOB);
 			}
-			if(empty($customer->sex))
+			if(empty($customer->getSex()))
 			{
 				$customer->setSex($infoCustomer->sex);
 			}
-			if(empty($customer->address))
+			if(empty($customer->getAddress()))
 			{
 				$customer->setAddress($infoCustomer->address);
 			}
-			if(!empty($customer->point))
+			if(empty($customer->getPoint()))
 			{
 				$customer->setPoint($infoCustomer->social_account);
 			}
-			if(!empty($customer->socialAccount))
+			if(empty($customer->getSocialAccount()))
 			{
 				$customer->setSocialAccount($infoCustomer->social_account);
 			}
@@ -117,8 +121,8 @@
 				$customer->getFullname(),
 				$customer->getEmail(),
 				$customer->getPhonenumber(),
-				$customer->getSex(),
 				$customer->getDOB(),
+				$customer->getSex(),
 				$customer->getAddress(),
 				$customer->getPoint(),
 				$customer->getSocialAccount(),
@@ -141,6 +145,20 @@
 				$customer->getPoint(),
 				getCurrentTime(),
 				$customer->getId()
+			);
+			return insertUpadeRecord($pdo,$paramQuery,$query);	
+			
+		}
+		function updateAvatar($file,$idCustomer){
+			$pdo=parent::connectDatabase();
+			$query="UPDATE `customer` SET 
+									`avatar`=?,
+									`update_date`=?
+									WHERE `id_customer`=?"; 
+			$paramQuery=array(
+				$file,
+				getCurrentTime(),
+				$idCustomer
 			);
 			return insertUpadeRecord($pdo,$paramQuery,$query);	
 			
