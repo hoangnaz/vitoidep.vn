@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="title text-center">
-				<h2>Related Products</h2>
+				<h2>CÁC SẢN PHẨM CÓ THỂ BẠN QUAN TÂM</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -19,12 +19,7 @@
 										<i class="tf-ion-ios-search"></i>
 									</span>
 								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
+								
 							</ul>
                       	</div>
 					</div>
@@ -45,12 +40,7 @@
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
 								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
+								
 							</ul>
                       	</div>
 					</div>
@@ -71,13 +61,7 @@
 										<i class="tf-ion-ios-search"></i>
 									</span>
 								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
+							
                       	</div>
 					</div>
 					<div class="product-content">
@@ -97,12 +81,7 @@
 										<i class="tf-ion-ios-search"></i>
 									</span>
 								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
+								
 							</ul>
                       	</div>
 					</div>

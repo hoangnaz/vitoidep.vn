@@ -7,225 +7,60 @@
 		</div>
 		<div class="row">
 			
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/product/bot_cam_gao.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong "></i>
-									</span>
-								</li>
+		<?php
+			foreach ($lstNewProduct as $key => $value) {
+				?>
+					<div class="col-md-4">
+						<div class="product-item">
+							<div class="product-thumb">
+							<?php
+									if($value->point_promotion > 0){
+										?>
+										<span class="bage"><i class="fa fa-bolt text-danger" aria-hidden="true"></i> - <?php echo $value->point_promotion;?>% </span>
+										<?php
+									}
+								?>
+								<img class="img-responsive" src="images/product/bot_cam_gao.jpg" alt="product-img" />
+								<div class="preview-meta">
+									<ul>
+										<li>
+											<span  data-toggle="modal" data-target="#product-modal">
+												<i class="tf-ion-ios-search-strong "></i>
+											</span>
+										</li>
+									
+									</ul>
+								</div>
+							</div>
+							<div class="product-content">
+							<h4><a href="product-single.php"><?php echo $value->name_product;?></a></h4>
+							<?php
+								if($value->point_promotion > 0){
+									?>
+								<p class="price text-warning">Giá: <?php echo number_format((1-$value->point_promotion/100)*$value->price_product);?> VNĐ  <sub color="black"><strike><?php echo number_format($value->price_product);?> VNĐ</strike></sub></p>
 								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Cao bí đỏ</a></h4>
-						<p class="price text-danger">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/bot_cu_den.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
+								<?php
+								}else{
+									?>
+									<p>Giá: <?php echo number_format($value->price_product);?> VNĐ</p>
+									<?php
+								}
+							?>	
+							
 								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
+								<div style="margin:auto;">
+									<button type="button" class=" btn-shopping " onclick="shopping_cart(<?php echo $value->id_product;?>)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
+									<button type="button" class=" btn-buynow "><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Cao bí đỏ</a></h4>
-						<p class="price text-danger">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/cao_bi_do.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Cao bí đỏ</a></h4>
-						<p class="price text-danger">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/mat_na_tinh_ngje.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Bradley Mid</a></h4>
-						<p class="price">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/mat_na_tinh_ngje.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Bradley Mid</a></h4>
-						<p class="price">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/nghe_den_mat_ong.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Rainbow Shoes</a></h4>
-						<p class="price">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/product/thao_duoc_tri_mun.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Rainbow Shoes</a></h4>
-						<p class="price">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/tinh_dau_buoi.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Rainbow Shoes</a></h4>
-						<p class="price">Giá: 200.000 VNĐ</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/product/xit_khoang_thao_moc.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal_a">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.php">Rainbow Shoes</a></h4>
-						<p class="price"><span>Giá: 200.00220 VNĐ</span><span class="promotion_price">150.000 VNĐ</span></p>
-					</div>
-				</div>
-			</div>
+				<?php
+			}
+		?>
+			
 			<div class="col-md-12 see_more">
-				<a href="blog-single.php" class="btn btn-main">Xem thêm các sản phẩm</a>
+				<a href="danh_sach_san_pham.php?sanpham=moi" class="btn btn-main">Xem thêm các sản phẩm</a>
 			</div>
 		</div>
 	</div>

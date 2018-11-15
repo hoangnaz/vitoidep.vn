@@ -1,7 +1,7 @@
 <?php
 	 require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/catalog_product.php';  
 	 $blCatalog= new catalogProduct();
-	 print_r($blCatalog->lstSubProduct());
+		error_reporting(1);
 		// list product from line 43to 58
 ?>
 <!-- Main Menu Section -->

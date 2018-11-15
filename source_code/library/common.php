@@ -31,6 +31,22 @@
             return $PDO->fetchAll(PDO::FETCH_OBJ);
         }
 
+        
+         /**
+         * Get one record follow option codintion
+         * @param pdo
+         * @param tableName
+         *  @param conditionName
+         * @param value
+         */
+        function getOneRecordFollowCondition($pdo,$tableName,$conditionName,$value)
+        {
+            $sqlQuery= "SELECT * FROM $tableName WHERE $conditionName LIKE '".$value."'";
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetch(PDO::FETCH_OBJ);
+        }
+
          /**
          * Function use when get all record in datatable follow a condition
          * @param pdo
@@ -47,25 +63,106 @@
         }
 
 
+         /**
+         * Function use when get all record in datatable follow a condition
+         * support search
+         * @param pdo
+         * @param tableName
+         *  @param conditionName
+         * @param value
+         */
+        function getRecordConditionEqual($pdo,$tableName,$conditionName,$value)
+        {
+            $sqlQuery= "SELECT * FROM $tableName WHERE $conditionName = '".$value."'";
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
+
+
+        
+        /**
+         * Function use when get all record in datatable follow a condition
+         * support search
+         * @param pdo
+         * @param tableName
+         *  @param conditionName
+         * @param value
+         */
+        function getRecordFollowConditionLike($pdo,$tableName,$conditionSearch)
+        {
+            $value=$conditionSearch["value"];
+            $sqlQuery= "SELECT * FROM $tableName WHERE ".$conditionSearch['conditon']." LIKE '%".$value."%'";
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
+
+
         /**
          * @start start
          * @numberRecord numberRecord
          * 
          */
 
-         function getPagnationRecord($pdo,$start,$numberRecord,$catalogId)
+         function getPagnationRecord($pdo,$start,$numberRecord,$valueSearch)
          {
-                $query="SELECT * FROM `product_info` WHERE `sub_catalog` LIKE '".$catalogId."' ";
+                $lstOrder=array("DESC","ASC");
+                $order=$valueSearch['order'];
+                if($valueSearch['order']=="HightToLow"){
+                    $valueSearch['order']="DESC";
+                }
+                elseif($valueSearch['order']=="LowToHight"){
+                    $valueSearch['order']="ASC";
+                }
+                $query="SELECT * FROM `product_info` WHERE `sub_catalog` LIKE '".$valueSearch['value']."' ";
+                if(in_array($order,$lstOrder)){
+                    $query.=" ORDER BY `name_product` ".$valueSearch['order'] ;
+                }else{
+                    $query.=" ORDER BY `price_product` ".$valueSearch['order'] ;
+                }
                 $query.="  LIMIT ".$start.",".$numberRecord;
               
                 $PDO=$pdo->prepare($query);
-    ;
                 $PDO->execute();
                 if($PDO->rowCount()>=1){
                     return $PDO->fetchAll(PDO::FETCH_OBJ);
                 }
                 return FAIL_PROCESS;
          }
+
+
+          /**
+         * @start start
+         * @numberRecord numberRecord
+         * 
+         */
+
+        function getPagnationHightLightAndStatus($pdo,$start,$numberRecord,$conditionSearch)
+        {
+                $lstOrder=array("DESC","ASC");
+                $order=$conditionSearch['order'];
+                if($conditionSearch['order']=="HightToLow"){
+                    $conditionSearch['order']="DESC";
+                }
+                elseif($conditionSearch['order']=="LowToHight"){
+                    $conditionSearch['order']="ASC";
+                }
+               $query="SELECT * FROM `product_info` WHERE ".$conditionSearch['conditon']." LIKE '".$conditionSearch['value']."' ";
+               if(in_array($order,$lstOrder)){
+                $query.=" ORDER BY `name_product` ".$conditionSearch['order'] ;
+                }else{
+                    $query.=" ORDER BY `price_product` ".$conditionSearch['order'] ;
+                }
+               $query.="  LIMIT ".$start.",".$numberRecord;
+             
+               $PDO=$pdo->prepare($query);
+               $PDO->execute();
+               if($PDO->rowCount()>=1){
+                   return $PDO->fetchAll(PDO::FETCH_OBJ);
+               }
+               return FAIL_PROCESS;
+        }
 
         /** 
         * Function is used when get one record in datatable
@@ -167,7 +264,7 @@
             if(!in_array($extension,$arrayCheckExtension)){
                 Return FAIL_EXTENSION_FILE;
             }
-            elseif($file['size'] > 100000){
+            elseif($file['size'] > 20971520){
                 Return FAIL_MAX_FILE;
             }
             else{
