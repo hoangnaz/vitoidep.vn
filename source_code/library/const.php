@@ -4,5 +4,7 @@
     Const SUCCESS = 200;
     Const FAIL_MAX_FILE = 300;
     Const FAIL_EXTENSION_FILE = 300;
+    Const MORE_MAX_PRODUCT = 1000;
+    Const FULL_PRODUCT = 1001;
 
 ?>

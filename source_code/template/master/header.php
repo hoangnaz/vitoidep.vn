@@ -12,6 +12,8 @@
   <!-- Mobile Specific Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Favicon -->
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="css/custome.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="plugins/themefisher-font/style.css">
@@ -19,8 +21,7 @@
   <link rel="stylesheet" href="css/facebook_messenger.css">
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="css/custome.css">
+ 
 
     <link rel="stylesheet" href="css/pagnigation.css">
   <!-- add_fontawawe -->
@@ -30,6 +31,11 @@
   <link rel="stylesheet" type="text/css" href="plugins/slick-carousel/slick/slick-theme.css"/>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+ 
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="js/ajax.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body id="body"   >
 <!-- Start Top Header Bar -->

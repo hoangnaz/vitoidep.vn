@@ -9,7 +9,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="category-box">
-					<a href="">
+					<a href="danh_sach_san_pham.php?sanpham=MEKENHANOI">
 						<img src="images/catalog/son.jpg" alt="" />
 						<div class="content">
 							<h2>Dòng sản phẩm Mẹ Kem</h2>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="col-md-6">
 			<div class="category-box">
-					<a href="">
+					<a href="danh_sach_san_pham.php?sanpham=10XBEAUTY">
 						<img src="images/catalog/ngu_coc.jpg" alt="" />
 						<div class="content">
 							<h2>10X beauty</h2>

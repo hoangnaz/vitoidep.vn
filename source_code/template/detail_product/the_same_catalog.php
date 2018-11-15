@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="title text-center">
-				<h2>Related Products</h2>
+				<h2>CÁC SẢN PHẨM CÓ THỂ BẠN QUAN TÂM</h2>
 			</div>
 		</div>
 		<div class="row">

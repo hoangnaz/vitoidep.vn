@@ -1,7 +1,21 @@
 
-<div class="container-fluid delivery_ads">
-      <marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962678192</p></marquee>
-</div>  
+ <script>
+	search();
+  </script>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 header_top">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 message_deliver">
+		<div class="container-fluid delivery_ads">
+			<marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962678192</p></marquee>
+		</div>  
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 search_form_fast">
+		<form class="search_product" method="GET"  action="result_search.php">
+		<input type="text" id="skill_input" class="form-control" placeholder="Tìm kiếm sản phẩm của Vì tôi đẹp ">
+		<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>
 <section class="top-header">
 	<div class="container">
 		<div class="row">
@@ -38,62 +52,79 @@
 			<!-- Header Cart -->
 			<ul class="top-menu text-right list-inline">
 	          <li class="dropdown cart-nav dropdown-slide">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
-	            <div class="dropdown-menu cart-dropdown">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Giỏ hàng
+					<?php
+					if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0){
+						?>
+						<i class="tf-ion-android-cart text-success"></i>
+						<span class="text-success">(
+						<?php
+						echo count($_SESSION["product_cart"]);
+						echo ")</span>";
+					}
+					else{
+					?>
+					
+						<i class="tf-ion-android-cart "></i>
+					<?php
+						}
 
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-                            <h5><strong>$1200</strong></h5>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
+					?>
+				</a>
+	            <div class="dropdown-menu cart-dropdown">
+					<div id="shopping_cart"> 
+					<!-- Show shopping cart -->
+					<?php
+						if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0 ){
+							$totalMoney=0;
+							foreach ($_SESSION["product_cart"] as $key => $value) {
+								?>
+								<!-- Cart Item -->
+								<div class="media">
+									<a class="pull-left" href="#">
+										<img  class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
+									</a>
+									<div class="media-body">
+										<h4 class="media-heading"><a href=""><?php echo $value["info"]->product_name;?></a></h4>
+										<div class="cart-price">
+										<span>Số lượng:<?php echo $value["number"];?></span>
+										<span>Giá:<?php echo number_format($value["info"]->price_product) ;?>VNĐ</span>
+										</div>
+										<h5><strong> Tổng : <?php  echo number_format($value["number"]*$value["info"]->price_product) ;?>VNĐ</strong></h5>
+									</div>
+									<a  class="remove" onclick="delete_product_cart(<?php echo $key;?>)"><i class="tf-ion-close"></i></a>
+								</div>
+								
+								<?php
+								$totalMoney+=($value["number"]*$value["info"]->price_product);
+							}
+							?>
+									<!-- / Cart Item -->
+									<div class="cart-summary">
+									<span>Tổng tiền:</span>
+									<span class="total-price"><?php echo number_format($totalMoney);?>VNĐ</span>
+								</div>
+								<ul class="text-center cart-buttons">
+									<li><a href="" class="btn btn-small">Giỏ hàng</a></li>
+									<li><a href="" class="btn btn-small btn-solid-border">Thanh toán</a></li>
+								</ul>
+
+							<?php
+						}
+						else{
+							?>
+							<p>Bạn chưa có sản phẩm trong giỏ</p>
+						<?php
+						}
+					?>
+
 					</div>
 					
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart/cart-2.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-                            <h5><strong>$1200</strong></h5>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-					</div>
-
-					<!-- / Cart Item -->
-	            	<div class="cart-summary">
-                        <span>Total</span>
-                        <span class="total-price">$1799.00</span>
-                    </div>
-                    <ul class="text-center cart-buttons">
-                    	<li><a href="" class="btn btn-small">Giỏ hàng</a></li>
-                    	<li><a href="" class="btn btn-small btn-solid-border">Thanh toán</a></li>
-                    </ul>
                 </div>
 
 	          </li><!-- / Cart -->
 
-	          <!-- Search -->
-	          <li class="dropdown search dropdown-slide">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-ios-search-strong"></i> Tìm kiếm</a>
-	            <ul class="dropdown-menu search-dropdown">
-	              <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li>
-	            </ul>
-			  </li>
-			  <!-- / Search -->
+	          
 
 	          <!-- User Info -->
 				<li class="commonSelect">
@@ -132,12 +163,18 @@
 					</div>
 				</li>
 
-
+				
+			  <!-- / Search -->
 
 			 
-	        </ul>
+			</ul>
+			
 			</div>
+			
 		</div>
+		
 	</div>
+	
 </section>
+
 <!-- End Top Header Bar -->

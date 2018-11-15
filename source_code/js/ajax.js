@@ -1,5 +1,86 @@
+function topFunction() {
+    $('html, body').animate({
+        scrollTop: $("#body").offset().top
+    }, 1000);
+}
+
+ function search(){
+    $(function() {
+        $("#skill_input").autocomplete({
+            source: "search.php",
+            select: function (event, ui) {
+            $(this).val(ui.item.value);
+            $('.search_product').submit();
+                }
+        });
+    });
+ }
+ 
+// JavaScript Document
+function delete_product_cart(id_pro)
+{
+	
+	var kq=confirm("Bạn thực sự muốn xóa sản phẩm này?");
+	if(kq==true)
+	{
+			$.ajax({
+			url : "function/delete_product_in_cart.php",
+			type : "get",
+			dataType:"text",
+			data : {
+			
+				 id : id_pro
+			},
+			success : function (result){
+				
+				
+				window.location=result;
+			}
+		});
+	
+	}
+}
 
 
+
+ function shopping_cart(id_product)
+{   
+          alert(id_product)
+			$.ajax({
+			url : "function/cart_store.php",
+			type : "get",
+			dataType:"text",
+			data : {
+			
+				 id_product : id_product, number: 1
+			},
+			success : function (result){
+				
+                topFunction();
+                setTimeout(function(){
+                    window.location.reload(1);
+                 }, 1200);
+			}
+		});
+		
+        
+	}
+
+function getresult(url,catalog,numberRecord,order) {
+
+	$.ajax({
+		url: url,
+		type: "GET",
+		data:  {rowcount:$("#rowcount").val(),kubun:catalog,order:order,numberRecord:numberRecord},
+		beforeSend: function(){$("#overlay").show();},
+		success: function(data){
+		$("#pagination-result").html(data);
+		setInterval(function() {$("#overlay").hide(); },500);
+		},
+		error: function() 
+		{} 	        
+   });
+}
 function updateInfo(id_customer)
 {
     var rgPhone=$("input#rg_phone_number").val();

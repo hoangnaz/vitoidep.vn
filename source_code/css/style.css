@@ -436,7 +436,9 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
-
+.search-dropdown{
+  width: 350px;
+}
 .dropdown-slide .dropdown-menu {
   border-radius: 0;
   opacity: 1;
@@ -975,6 +977,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 .product-item .product-content {
   text-align: center;
+ 
 }
 
 .product-item .product-content h4 {
@@ -982,6 +985,9 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   font-weight: 400;
   margin-top: 15px;
   margin-bottom: 6px;
+  height: 40px;
+  white-space: normal;
+  overflow: hidden;
 }
 
 .product-item .product-content h4 a {
@@ -2080,6 +2086,17 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 /*/////////////////////*/
+.header_top{
+  height: 90px;
+
+  margin-bottom: 30px;
+}
+.message_deliver{
+  
+}
+.search_form_fast{
+  padding-top:20px;
+}
 
 .delivery_ads {
     margin-left: auto;
@@ -2584,8 +2601,31 @@ width: 640px;
     padding: 14px 35px;
     text-transform: uppercase;
     font-weight: 200;
-    border-radius: 0;
+    border: 0;
     margin-bottom: 30px;
+}
+
+.btn-shopping{
+  background:rgb(166, 179, 236);
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 14px 35px;
+  text-transform: uppercase;
+  font-weight: 200;
+  border: 0;
+  margin-bottom: 30px;
+}
+.btn-buynow{
+  background:rgb(232, 235, 216);
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 14px 35px;
+  text-transform: uppercase;
+  font-weight: 200;
+  border: 0;
+  margin-bottom: 30px;
 }
 
 /*trang login*/
