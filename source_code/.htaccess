@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine on
+ErrorDocument 404 /404_page.php

@@ -1,22 +1,19 @@
 <!-- Main Menu Section -->
-
-<section class="single-product">
+<section class="page-header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Shop</a></li>
-					<li class="active">Single Product</li>
-				</ol>
-			</div>
-			<div class="col-md-6">
-				<ol class="product-pagination text-right">
-					<li><a href="#"><i class="tf-ion-ios-arrow-left"></i> Next </a></li>
-					<li><a href="#">Preview <i class="tf-ion-ios-arrow-right"></i></a></li>
-				</ol>
+			<div class="col-md-12">
+				<div class="content">
+					<h1 class="page-name">Thông tin sản phẩm </h1>
+					
+				</div>
 			</div>
 		</div>
+	</div>
+</section>
+<section class="single-product">
+	<div class="container">
+	
 		<div class="row mt-20">
 			<div class="col-md-5">
 				<div class="single-product-slider">
@@ -25,9 +22,9 @@
 							<!-- me art lab slider -->
 							<div class='carousel-inner '>
 								<div class='item active'>
-									<img src='images/shop/single-products/product-1.jpg' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
+									<img src='images/product/<?php echo $infoProduct->image_product;?>' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
 								</div>
-								<div class='item'>
+								<!-- <div class='item'>
 									<img src='images/shop/single-products/product-2.jpg' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
 								</div>
 								
@@ -42,21 +39,21 @@
 								</div>
 								<div class='item'>
 									<img src='images/shop/single-products/product-6.jpg' alt='' data-zoom-image="images/shop/single-products/product-6.jpg" />
-								</div>
+								</div> -->
 								
 							</div>
 							
 							<!-- sag sol -->
-							<a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
+							<!-- <a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
 								<i class="tf-ion-ios-arrow-left"></i>
 							</a>
 							<a class='right carousel-control' href='#carousel-custom' data-slide='next'>
 								<i class="tf-ion-ios-arrow-right"></i>
-							</a>
+							</a> -->
 						</div>
 						
 						<!-- thumb -->
-						<ol class='carousel-indicators mCustomScrollbar meartlab'>
+						<!-- <ol class='carousel-indicators mCustomScrollbar meartlab'>
 							<li data-target='#carousel-custom' data-slide-to='0' class='active'>
 								<img src='images/shop/single-products/product-1.jpg' alt='' />
 							</li>
@@ -78,56 +75,47 @@
 							<li data-target='#carousel-custom' data-slide-to='6'>
 								<img src='images/shop/single-products/product-7.jpg' alt='' />
 							</li>
-						</ol>
+						</ol> -->
 					</div>
 				</div>
 			</div>
 			<div class="col-md-7">
 				<div class="single-product-details">
-					<h2>Eclipse Crossbody</h2>
-					<p class="product-price">$300</p>
+					<h2><?php echo $infoProduct->name_product;?></h2>
 					
-					<p class="product-description mt-20">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
-					<div class="color-swatches">
-						<span>color:</span>
-						<ul>
-							<li>
-								<a href="" class="swatch-violet"></a>
-							</li>
-							<li>
-								<a href="" class="swatch-black"></a>
-							</li>
-							<li>
-								<a href="" class="swatch-cream"></a>
-							</li>
-						</ul>
+				</div>	
+					
+				
+					<div >
+						<p class="product-description mt-20">
+						<?php echo $infoProduct->describle_product;?>
+						</p>
+						<p class="product-price"><b>Giá: </b><?php echo number_format((1-($infoProduct->point_promotion/100))*$infoProduct->price_product);?> VNĐ / <?php echo $infoProduct->unit;?></p>
+					
+					
+						<span><b>Số lượng còn lại:</b> <?php echo $infoProduct->quantity_inventory; ?> sản phẩm</span>
+						
 					</div>
-					<div class="product-size">
-						<span>Size:</span>
-						<select class="form-control">
-							<option>S</option>
-							<option>M</option>
-							<option>L</option>
-							<option>XL</option>
-						</select>
-					</div>
-					<div class="product-quantity">
-						<span>Quantity:</span>
-						<div class="product-quantity-slider">
-							<input id="product-quantity" type="text" value="0" name="product-quantity">
+						<div class="product-quantity">
+							<span><b>Số lượng mua:</b></span>
+							<div class="quantity product-quantity-slider">
+								<input id="product-quantity" type="number" min="1" max="100" step="1" value="1" name="product-quantity">
+							</div>
 						</div>
+					<div>
+					
+						<a  class="btn btn-main mt-20" onclick="shopping_cart(<?php echo $infoProduct->id_product;?>,0,document.getElementById('product-quantity').value)">Thêm vào giỏ hàng</a>
 					</div>
 					<div class="product-category">
-						<span>Categories:</span>
-						<ul>
-							<li><a href="#">Products</a></li>
-							<li><a href="#">Soap</a></li>
-						</ul>
+							<div class="widget widget-tag">
+								<h4 class="widget-title">Danh mục</h4>
+								<ul class="widget-tag-list">
+							        <li><a href="#">Animals</a>
+							        </li>
+							       
+							    </ul>
 					</div>
-					<a href="cart.html" class="btn btn-main mt-20">Add To Cart</a>
 				</div>
+				
 			</div>
 		</div>

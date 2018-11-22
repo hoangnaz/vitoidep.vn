@@ -4,7 +4,7 @@
 				<div class="col-md-6">
 					<ul class="social-media">
 						<li>
-							<a href="">
+							<a href=" https://www.facebook.com/vitoidep.myphamthiennhien">
 								<i class="tf-ion-social-facebook"></i>
 							</a>
 						</li>
@@ -26,7 +26,7 @@
 					</ul>
 					<ul class="footer-menu">
 						<li>
-							<a href="">LIÊN HỆ</a>
+							<a href="contact.php">LIÊN HỆ</a>
 						</li>
 						<li>
 							<a href="">SHIPPING</a>
@@ -46,18 +46,19 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="col-md-12">
-						<div class="col-sm-6 col-md-6  chanel_online">
-							<img src="images/link/lazada.png" class="img-responsive" width="60px" alt="Image">
+					<div class="row">
+				
+						<div class="col-xs-3 col-sm-3 col-md-5  col-md-offset-1  col-lg-5 col-lg-offset-1  chanel_online">
+							<a href=" https://www.lazada.vn/shop/vi-toi-dep"><img src="images/link/lazada.png" class="img-responsive" width="60px" alt="Image"></a>
 						</div>
-						<div class="col-sm-6 col-md-6  chanel_online">
-							<img src="images/link/face.png" class="img-responsive" width="60px" alt="Image">
+						<div class="col-xs-3 col-sm-3 col-md-5    col-lg-5   chanel_online">
+							<a href=" https://www.facebook.com/vitoidep.myphamthiennhien/"><img src="images/link/face.png" class="img-responsive" width="60px" alt="Image"></a>
 						</div>
-						<div class="col-sm-6 col-md-6  chanel_online">
-							<img src="images/link/zalo.jpg" class="img-responsive" width="60px" alt="Image">
+						<div class="col-xs-3 col-sm-3 col-md-5  col-md-offset-1  col-lg-5  chanel_online">
+							<a href=" https://goo.gl/fV5iv5"><img src="images/link/zalo.jpg" class="img-responsive" width="60px" alt="Image"></a>
 						</div>
-						<div class="col-sm-6 col-md-6  chanel_online">
-							<img src="images/link/shoppe.jpg" class="img-responsive"  width="60px" alt="Image">
+						<div class="col-xs-3 col-sm-3 col-md-5   col-lg-5   chanel_online">
+							<a href="  https://goo.gl/ZwjA6w"><img src="images/link/shoppe.jpg" class="img-responsive"  width="60px" alt="Image"></a>
 						</div>
 					</div>
 				</div>

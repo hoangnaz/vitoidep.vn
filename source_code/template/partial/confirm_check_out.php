@@ -3,68 +3,84 @@
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-body">
-               <form>
+               
 					<div class="product-checkout-details">
 							<div class="block">
-							   <h4 class="widget-title">Đơn hàng của bạn</h4>
+							   <h4 class="widget-title text-uppercase text-center">Thông tin đơn hàng của bạn</h4>
 							   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								  
-								  
-										  
-									<h4 class="media-heading"><a href="product-single.php"> Họ tên: Nguyễn Anh Hoàng</a></h4>
-									<h4 class="media-heading"><a href="product-single.php"> SDT: 0988338333</a></h4>
-									<h4 class="media-heading"><a href="product-single.php"> Địa chỉ: 244 Mạn Thiện, Tăng Nhơn Phú A, Quận 9, HCM</a></h4>
-								 
-					</div>
-							   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								  
-								  
-										  
-												  <h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-												  <p class="price"><span>Số lượng mua:</span> 3</p>
-												  <span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-											   
-								  </div>
-								  
-								 
-								  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-										  <h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-										  <p class="price"><span>Số lượng mua:</span> 3</p>
-										  <span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-								  </div>
-								  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-										  <h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-										  <p class="price"><span>Số lượng mua:</span> 3</p>
-										  <span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-								  </div>
-		  
+									<h5 class="media-heading">Họ tên: <span id="popup_order_name"></span></h5>
+									<h5 class="media-heading">Số điện thoại: <span  id="popup_order_phone"></span></h5>
+									<h5 class="media-heading">Email: <span  id="popup_order_email"></span></h5>
+									<h5 class="media-heading"> Địa chỉ: <span  id="popup_order_address"></span></h5>
+									<h5 class="media-heading"> Hình thức thanh toán : <span  id="popup_order_delivery"></span></h5>
+					 			</div>
+								 <div class="table-responsive"> 
+										<table class="table table-hover">
+											<thead>
+												<tr>
+													<th>STT</th>
+													<th>Tên sản phẩm</th>
+													<th>Số lượng</th>
+													<th>Đơn giá</th>
+													<th>Thành tiền</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+												<?php
+														$order=0;
+														foreach ($_SESSION["product_cart"] as $key => $value) {
+															$order++;
+													?>
+													<td>
+														<?php echo $order;?>
+													</td>
+													<td>
+														<?php echo $value['info']->name_product;?>
+													</td>
+													<td>
+														<?php echo $value['number'];?>
+													</td>
+													<td>
+														<?php 
+															$price = (1-($value['info']->point_promotion/100))* $value['info']->price_product;
+															echo number_format( $price);
+														?>
+													</td>
+													<td>
+														<?php 
+															$totalMoney= $price*$value['number'];
+															echo number_format( $totalMoney).'VNĐ';
+														?>
+													</td>
+												
+												</tr>
+												<?php
+
+														}
+												?>	 
+											</tbody>
+										</table>
+									</div>						
 							   </div>
 							   <div class="discount-code">
-								  <p>Bạn đã sử dụng mã giảm giá<a data-toggle="modal" data-target="#coupon-modal" href="">DCDD122</a></p>
+								  <p>Mã giảm giá: <span>Không sử dụng</span></p>
 							   </div>
 							   <ul class="summary-prices">
 								  <li>
 									 <span>Số tiền phải trả:</span>
-									 <span class="price">190.000</span>
+									 <span class="price"><?php echo number_format($_SESSION['total_price']);?>VNĐ</span>
 								  </li>
-								  <li>
-									 <span>Số tiền vận chuyển:</span>
-									 <span>Miễn phí</span>
-								  </li>
-								    <li>
-										<span>Số tiền vận chuyển:</span>
-										<span>Miễn phí</span>
-									</li>
-									
+					
 								  <li class="text-center">
-										<button type="submit" class="btn btn-main">Hoàn tất</button>
+										<button  class="btn btn-main" id="confirm_complete_order">Hoàn tất</button>
 								  </li>
 							   </ul>
 							  
 							</div>
 							
                  
-               </form>
+               
             </div>
          </div>
       </div>

@@ -1,6 +1,5 @@
 <?php
     session_start();
-    error_reporting(1);
      require_once "../database/customer.php";
      require_once "../entities/customer.php";
      $customer= new customer("","","","","","","","","","","","");

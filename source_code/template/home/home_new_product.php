@@ -13,6 +13,7 @@
 					<div class="col-md-4">
 						<div class="product-item">
 							<div class="product-thumb">
+
 							<?php
 									if($value->point_promotion > 0){
 										?>
@@ -20,20 +21,21 @@
 										<?php
 									}
 								?>
-								<img class="img-responsive" src="images/product/bot_cam_gao.jpg" alt="product-img" />
+
+								<img class="img-responsive" src="images/product/<?php  echo $value->image_product;?>" alt="product-img" />
 								<div class="preview-meta">
 									<ul>
 										<li>
-											<span  data-toggle="modal" data-target="#product-modal">
-												<i class="tf-ion-ios-search-strong "></i>
+											<span  data-toggle="modal" data-target="#product-modal"  onclick="show_detail(<?php echo $value->id_product;?>)">
+												<i class="tf-ion-ios-search-strong"></i>
 											</span>
 										</li>
-									
 									</ul>
 								</div>
 							</div>
 							<div class="product-content">
 							<h4><a href="product-single.php"><?php echo $value->name_product;?></a></h4>
+
 							<?php
 								if($value->point_promotion > 0){
 									?>
@@ -47,10 +49,11 @@
 								}
 							?>	
 							
+
 								
 								<div style="margin:auto;">
-									<button type="button" class=" btn-shopping " onclick="shopping_cart(<?php echo $value->id_product;?>)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
-									<button type="button" class=" btn-buynow "><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
+									<button type="button" class=" btn-shopping " onclick="shopping_cart(<?php echo $value->id_product;?>,0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
+									<button type="button" class=" btn-buynow " onclick="buy_now(<?php echo $value->id_product;?>)" ><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
 								</div>
 							</div>
 						</div>

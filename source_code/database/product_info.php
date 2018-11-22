@@ -9,6 +9,7 @@
         public const TABLE_NAME = 'product_info';
         public const CONDITION = 'sub_catalog';
         public const CONDITION_FAST_SEARCH = 'name_product';
+        public const CONDITION_NAME_VN = 'name_product_no_vietnamse';
         public const CONDITION_GET_ONE_PRODUCT = 'id_product';
         
       
@@ -20,6 +21,12 @@
             $pdo=parent::connectDatabase();
 			return getAllRecord($pdo,self::TABLE_NAME);
 			
+        }
+
+            // Get information one product
+        public function getInfoProductBaseNameVietNam($value){
+            $pdo=parent::connectDatabase();
+			return getOneRecordFollowCondition($pdo,self::TABLE_NAME,self::CONDITION_NAME_VN,$value);
         }
 
         // Get information one product
@@ -45,9 +52,16 @@
             $conditionSearch['value']=$value;
 			return getRecordFollowConditionLike($pdo,self::TABLE_NAME,$conditionSearch);
         }
-
+         public function getFiveTopProduct(){
+             $pdo=parent::connectDatabase();
+             $sqlQuery="SELECT COUNT(`product`) AS `top5`,`product` FROM `detail_info_order` GROUP BY product ORDER BY `top5` DESC LIMIT 0,5";
+             $PDO=$pdo->prepare($sqlQuery);
+             $PDO->execute();
+             return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
         
 
+       
 
         //Get product follow condition with atrribute.
 
@@ -78,14 +92,10 @@
 			return getRecordFollowConditionLike($pdo,self::TABLE_NAME,$conditionSearch);
         }
 
-      
-
-		
 
 	}
 
-    //$pro=new productDB();
-    //print_r($pro->getProductFollowOption('son_gac'));
+   
     //print_r($pro->getProductPagnition(0,10,'son_gac'));
     // count($pro->getAllProduct());
     // print_r($pro->getProductFollowOption('status_product',2));

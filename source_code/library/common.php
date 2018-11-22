@@ -63,6 +63,24 @@
         }
 
 
+        /**
+         * Function use when get all record in datatable follow a condition
+         * @param pdo
+         * @param tableName
+         *  @param conditionName
+         * @param value
+         */
+        function getRecordFollowConditionOrderBy($pdo,$tableName,$conditionName,$value,$orderBy,$valueOrder)
+        {
+            $sqlQuery= "SELECT * FROM $tableName WHERE $conditionName LIKE '".$value."'";
+            $sqlQuery.= " ORDER BY ".$orderBy." ".$valueOrder;
+            $PDO=$pdo->prepare($sqlQuery);
+            $PDO->execute();
+            return $PDO->fetchAll(PDO::FETCH_OBJ);
+        }
+
+
+
          /**
          * Function use when get all record in datatable follow a condition
          * support search

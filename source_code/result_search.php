@@ -1,6 +1,6 @@
 
 <?php
-    error_reporting(1);
+    error_reporting(0);
    
     include 'template/master/header.php';
     require_once $_SERVER['DOCUMENT_ROOT'].'/function/search.php';

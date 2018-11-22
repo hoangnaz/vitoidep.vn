@@ -1,5 +1,17 @@
 <?php
-	include 'template/master/header.php';
+	error_reporting(0);
+	require_once $_SERVER['DOCUMENT_ROOT'].'/function/history_buy.php';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/detail_order.php';
+	$historyBuy= new orderHistory();
+	$lstOrder=$historyBuy->lstOrderOfUser();
+	$detailOrder= new detailOrderBL();
+	
+	// getLstProductOrder
+
+	// list san pham noi bat
+
+	
+	include_once 'template/master/header.php';
 	include_once 'template/master/menu_top.php';
 	include_once 'template/master/main_menu.php';
 	include_once 'template/general_info/general_content.php';

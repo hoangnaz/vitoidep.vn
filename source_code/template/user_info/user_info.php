@@ -15,9 +15,9 @@
     <div class="row">
       <div class="col-md-12">
         <ul class="list-inline dashboard-menu text-center">
-            <li ><a href="general_info.php">Thông tin cá nhân</a></li>
-						<li class="active"><a href="general_info.php">Lịch sử mua hàng</a></li>
-						<li><a  href="user_info.php"> <i class="fa fa-bell" aria-hidden="true"></i> Thông báo của bạn</a></li>
+            <li class="active"><a href="user_info.php">Thông tin cá nhân</a></li>
+						<li class="margin_top_10"><a href="general_info.php">Lịch sử mua hàng</a></li>
+						<li  class="message"><a  href="user_message.php"> <i class="fa fa-bell" aria-hidden="true"></i> Thông báo của bạn</a></li>
         
         </ul>
         <div class="dashboard-wrapper dashboard-user-profile">

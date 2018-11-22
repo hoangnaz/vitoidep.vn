@@ -1,7 +1,7 @@
 <?php
 	 require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/catalog_product.php';  
 	 $blCatalog= new catalogProduct();
-		error_reporting(1);
+		error_reporting(0);
 		// list product from line 43to 58
 ?>
 <!-- Main Menu Section -->
@@ -43,7 +43,7 @@
 													?>
 														 <div class="col-sm-3 col-xs-12">
 		                						<ul>
-																<li class="dropdown-header"><?php echo  $keyCatalog;?></li>
+																<li class="dropdown-header"><h5><?php echo  $keyCatalog;?></h5></li>
 															<?php
 																foreach ($valueCatalog as $key => $value) {
 															?>
@@ -67,7 +67,7 @@
 			  </li><!-- / Pages -->
 			  
 	          <!-- Blog -->
-	          <li class="dropdown dropdown-slide">
+	          <!-- <li class="dropdown dropdown-slide">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="tf-ion-ios-arrow-down"></span></a>
 	            <ul class="dropdown-menu">
 	            	<div class="container-fluid">
@@ -100,7 +100,8 @@
 	            		</div>
 	            	</div>
 	            </ul>
-	          </li><!-- / Blog -->
+	          </li> -->
+						<!-- / Blog -->
 
 			<!-- Branch -->
 	          <li class="dropdown dropdown-slide">
@@ -108,25 +109,26 @@
 	            <ul class="dropdown-menu">
 	            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="intro.php">
+	            				<a href="recruiment_branch.php">
 		            				<h6>Tuyển dụng đại lý</h6>
 	            				</a>
 	            			</li>
 	            	</div>
 	            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="intro.php">
-		            				<h6>Chinh sách bán lẻ</h6>
+	            				<a href="list_branch.php">
+		            				<h6>Danh sách đại lý bán hàng</h6>
 	            				</a>
 	            			</li>
 	            	</div>
-	            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="intro.php">
-		            				<h6>Khen thưởng đại lý</h6>
+	            				<a href="policy.php">
+		            				<h6>Chính sách bán hàng</h6>
 	            				</a>
-	            			</li>	
+	            			</li>
 	            	</div>
+	            	
 	            			
 	            </ul>
 	          </li><!-- / Branch -->

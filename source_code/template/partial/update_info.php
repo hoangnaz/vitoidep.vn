@@ -1,9 +1,10 @@
 <!-- Modal -->
 <div class="modal product-modal fade" id="updateInfo" tabindex="-1">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="tf-ion-close"></i>
-				</button>
+				
 					<div class="modal-dialog " role="document">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							Đóng
+						</button>
 					<div class="modal-content">
 							<div class="modal-body">
 							<div class="row">

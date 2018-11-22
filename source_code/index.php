@@ -1,9 +1,7 @@
 <?php
-	error_reporting(1);
 	require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/product_info.php';
 	$productBL= new product();
 	// list san pham noi bat
-
 	$lstHighLightProduct= array_slice($productBL->getHightLightProduct(1),-9);
 	$lstNewProduct= array_slice($productBL->getNewProduct(3),-6);
 	include_once 'template/master/header.php';

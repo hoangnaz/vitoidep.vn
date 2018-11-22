@@ -1,52 +1,65 @@
-<div class="col-md-4">
-               <div class="product-checkout-details">
-                  <div class="block">
-                     <h4 class="widget-title">Đơn hàng của bạn</h4>
-					 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						
-						
-								
-										<h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-										<p class="price"><span>Số lượng mua:</span> 3</p>
-										<span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-									 
+   <?php
+      if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0 ){
+   ?>
+      <div class="col-md-4" style="margin-bottom:20px;">
+         <div class="product-checkout-details">
+            <div class="block">
+               <h4 class="widget-title text-center">Đơn hàng của bạn</h4>
+               
+               <!-- process show list product in shopping cart -->
+               <!-- PHP process PHP show list shopping cart -->
+               <?php
+                  $_SESSION['total_price']=0;
+                  foreach ($_SESSION["product_cart"] as $key => $value) {
+               ?>
+               <!-- PHP End process -->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<p class="media-heading"><a href="product-single.php"><?php echo $value['info']->name_product;?></a></p>
+										<p class="price"><span>Số lượng mua:</span><?php echo $value['number'];?></p>
+										<span class="remove" ><span>Thành tiền: 
+                                 <?php 
+                                    $price = (1-($value['info']->point_promotion/100))* $value['info']->price_product;
+                                    $totalMoney= $price*$value['number'];
+                                    echo number_format( $totalMoney);
+                                 ?>
+                              VNĐ</span>
+                              </span>		 
 						</div>
-						
-                       
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-								<p class="price"><span>Số lượng mua:</span> 3</p>
-								<span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-						</div>
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<h4 class="media-heading"><a href="product-single.php">Ambassador Heritage 1921</a></h4>
-								<p class="price"><span>Số lượng mua:</span> 3</p>
-								<span class="remove" ><span>Thành tiền: 300.000 VNĐ</span></span>
-						</div>
+              
+               <?php
+                  $_SESSION['total_price']+=$totalMoney;
+                  }
+               ?>
+                  <div class="discount-code">
+                     <p>Bạn đã sử dụng mã giảm giá : <span class="text-center text-success">Không sử dụng</span></p>
 
-                     </div>
-                     <div class="discount-code">
-                        <p>Bạn đã sử dụng mã giảm giá<a data-toggle="modal" data-target="#coupon-modal" href="">DCDD122</a></p>
-                     </div>
-                     <ul class="summary-prices">
-                        <li>
-                           <span>Số tiền phải trả:</span>
-                           <span class="price">190.000</span>
-                        </li>
-                        <li>
-                           <span>Số tiền vận chuyển:</span>
-                           <span>Miễn phí</span>
-						</li>
-						<li class="text-center">
-								<a href="index.php"  data-toggle="modal" data-target="#btn_confirm_all" class="btn btn-main pull-left btn_confirm_all"><i class="fa fa-arrow-left" aria-hidden="true"></i>Hoàn tất mua hàng</a>
-						</li>
-                     </ul>
-					
                   </div>
+                  <ul class="summary-prices">
+                     <li>
+                        <span>Số tiền phải trả:</span>
+                        <span class="price text-warning"><?php echo number_format( $_SESSION['total_price']);?>VNĐ</span>
+                     </li>
+                     <li>
+                        <span>Số tiền vận chuyển:</span>
+                        <span>Miễn phí</span>
+                     </li>
+                     <li class="text-center">   
+                           <a onclick="return confirm_info_order()" class="btn btn-main pull-left btn_confirm_all complete_order"><i class="fa fa-check-circle-o" aria-hidden="true"></i>Hoàn tất mua hàng</a>
+                     </li>
+                  </ul>
                </div>
             </div>
          </div>
       </div>
+   <?php
+      }
+      else{
+   ?>
+         <p class="text-center">Bạn chưa có sản phẩm nào trong giỏ để thực hiện thanh toán</p>
+   <?php 
+      }
+   ?> 
    </div>
+</div>
 
  

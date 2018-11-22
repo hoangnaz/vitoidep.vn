@@ -1,7 +1,8 @@
 <?php
-	require 'connect_database.php';
-	require '../library/common.php';
-	require '../entities/customer.php';
+		require_once $_SERVER['DOCUMENT_ROOT'].'/database/connect_database.php';
+		require_once $_SERVER['DOCUMENT_ROOT'].'/library/common.php';
+		require_once $_SERVER['DOCUMENT_ROOT'].'/library/const.php';
+		require_once $_SERVER['DOCUMENT_ROOT'].'/entities/customer.php';
 
     class customerDB extends databaseConnect
     {
@@ -149,6 +150,24 @@
 			return insertUpadeRecord($pdo,$paramQuery,$query);	
 			
 		}
+
+		function updateAddressCustomer($customer){
+			$pdo=parent::connectDatabase();
+			$query="UPDATE `customer` SET 
+									`address`=?,
+									`update_date`=?
+									WHERE `id_customer`=?"; 
+			$infoCustomer=$this->getInfoCustomer($customer->getId());
+		
+			$paramQuery=array(
+				$customer->getAddress(),
+				getCurrentTime(),
+				$customer->getId()
+			);
+			return insertUpadeRecord($pdo,$paramQuery,$query);	
+			
+		}
+
 		function updateAvatar($file,$idCustomer){
 			$pdo=parent::connectDatabase();
 			$query="UPDATE `customer` SET 

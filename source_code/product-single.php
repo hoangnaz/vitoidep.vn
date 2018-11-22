@@ -1,5 +1,13 @@
 <?php
 include_once 'template/master/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/product_info.php';
+$productBL=new product();
+$infoProduct=$productBL->getOneProductFollowName($_GET['name']);
+$lstTheSameProduct=$productBL->getSameProduct($infoProduct->sub_catalog);
+$lstSlice=array_slice($lstTheSameProduct,-4);
+
+$_SESSION['viewed'][$infoProduct->id_product]=$infoProduct;
+
 include_once 'template/master/menu_top.php';
 include_once 'template/master/main_menu.php';
 include_once 'template/master/partial/product_detail.php';

@@ -1,3 +1,64 @@
+function suscribleNow(){
+    
+    var subEmail=$("input#subEmail").val();
+    $('#error-mail-sub').html("")
+    if(subEmail==""){
+        $('#error-mail-sub').html("Vui lòng nhập địa chỉ email của bạn!");
+        $("input#subEmail").focus();  
+        return false;  
+    }
+    if(!isEmail(subEmail)){
+        $('#error-mail-sub').html("Vui lòng nhập đúng định dạng email!");
+        $("input#subEmail").focus();  
+        return false;  
+    }
+    swal({
+        text: "Chúc mừng  bạn đã đăng ký thành công.",
+        icon: "success"
+      });
+      $("input#subEmail").val("");
+}
+
+function sendContact(){
+
+    var ctName=$("input#ctname").val();
+    var ctEmail=$("input#ctemail").val();
+    var ctSubject=$("input#ctsubject").val();
+    var ctMessage=$("#ctmessage").val();
+    $('#mail-fail').html("")
+    $('#content-error').html("")
+    if(ctEmail==""){
+        $('#mail-fail').html("Vui lòng nhập địa chỉ email của bạn!");
+        $("input#ctemail").focus();  
+        return false;  
+    }
+    if(!isEmail(ctEmail)){
+        $('#mail-fail').html("Vui lòng nhập đúng định dạng email!");
+        $("input#ctemail").focus();  
+        return false;  
+    }
+    if(ctEmail.length >= 100){
+        $('#mail-fail').html("Email có độ dài tối đa là 100 ký tự!");
+        $("input#ctemail").focus();  
+        return false;  
+    }
+    if(ctMessage==""){
+        $('#content-error').html("Vui lòng nhập nội tên phản hồi!");
+        $("input#ctmessage").focus();  
+        return false;  
+    }
+    swal({
+        text: "Cảm ơn bạn đã gửi thông tin phản hồi.",
+        icon: "success"
+      });
+      $("input#ctname").val("");
+      $("input#ctemail").val("");
+      $("input#ctsubject").val("");
+      $("#ctmessage").val("");
+       
+    
+}
+
 function topFunction() {
     $('html, body').animate({
         scrollTop: $("#body").offset().top
@@ -16,55 +77,217 @@ function topFunction() {
     });
  }
  
-// JavaScript Document
-function delete_product_cart(id_pro)
-{
-	
-	var kq=confirm("Bạn thực sự muốn xóa sản phẩm này?");
-	if(kq==true)
-	{
-			$.ajax({
-			url : "function/delete_product_in_cart.php",
-			type : "get",
-			dataType:"text",
-			data : {
-			
-				 id : id_pro
-			},
-			success : function (result){
-				
-				
-				window.location=result;
-			}
-		});
-	
-	}
+ function confirm_info_order(){
+   
+    var orderFullName=$("input#full_name_confirm_order").val();
+    var orderAddress=$("input#user_address_order").val();
+    var orderPhone=$("input#phone_order").val();
+    var orderEmail=$("input#email_order").val();
+    var orderDelivery = $("input[name='delivery_method']:checked"). val();
+    $('#message-error-fullname').html("")
+    $('#message-error-address').html("")
+    $('#message-error-phone-order').html("")
+    $('#message-error-email_order').html("")
+  
+
+    if(orderFullName.length > 50){
+        $('#message-error-fullname').html("Họ tên có độ dài tối đa là 50 ký tự");
+        $("input#full_name_confirm_order").focus();  
+        return false;  
+    }
+    if(orderFullName=="")
+    {
+        $('#message-error-fullname').html("Vui lòng nhập họ tên");
+        $("input#full_name_confirm_order").focus();  
+        return false;  
+    }
+    
+    
+    if(orderAddress.length > 500){
+        $('#message-error-address').html("Địa chỉ tối đa là 500 ký tự");
+        $("input#user_address_order").focus();  
+        return false;  
+    }
+    if(orderAddress.length == 0){
+        $('#message-error-address').html("Vui lòng nhập địa chỉ");
+        $("input#user_address_order").focus();  
+        return false;  
+    }
+    if(orderPhone.length > 10){
+        $('#message-error-phone-order').html("Số điện thoại có độ dài tối đa là 10 ký tự");
+        $("input#phone_order").focus();  
+        return false;  
+    }
+    if(orderPhone == ""){
+        $('#message-error-phone-order').html("Vui lòng nhập số điện thoại");
+        $("input#phone_order").focus();  
+        return false;  
+    }
+
+    if(orderEmail=="" || !isEmail(orderEmail))
+    {
+        $('#message-error-email_order').html("Bạn chưa nhập email hoặc email không đúng định dạng");
+        $("input#email_order").focus();  
+        return false;  
+    }
+    if(orderPhone.length == ""){
+        $('#message-error-phone-order').html("Vui lòng bổ sung ít nhất số điện thoại");
+        $("input#phone_order").focus();  
+        return false;  
+    }
+    $('#popup_order_name').html(orderFullName);
+    $('#popup_order_address').html(orderAddress);
+    $('#popup_order_email').html(orderEmail);
+    $('#popup_order_phone').html(orderPhone);
+    $('#popup_order_delivery').html(orderDelivery);
+    $('#btn_confirm_all').modal('show'); 
+    $('#confirm_complete_order').click(function(){ 
+     
+        $.ajax({
+        url:'function/complete_order.php',
+        type:'POST',
+        dataType:'html',
+        data:{
+            txtFullName : $("input#full_name_confirm_order").val(),
+            txtPhone : $("input#phone_order").val(),
+            txtEmail : $("input#email_order").val(),
+            txtAdress : $("input#user_address_order").val(),
+            txtDelivery:$("input[name='delivery_method']:checked"). val()
+        }
+    }).done(function(ketqua) {
+       
+        if(ketqua==200){
+            $('#btn_confirm_all').modal('hide'); 
+            swal({
+                text: "Chúc mừng bạn đã đặt hàng thành công. Chúng tôi sẽ sớm liên hệ để chuyển hàng cho bạn.",
+                icon: "success"
+              }).then(()=>{
+                    window.location="index.php";
+              });
+
+        }
+        else{
+           
+            $('#btn_confirm_all').modal('hide'); 
+            swal({
+                text: "Rất tiếc quá trình xử lý đơn hàng thất bại. Bạn vui lòng thử lại.",
+                icon: "error"
+              }).then(()=>{
+                    window.location="index.php";
+              });   
+        }
+    });
+     });
+    
+    
+    
 }
 
 
+// JavaScript Document
+function delete_product_cart(id_pro)
+{
+   
 
- function shopping_cart(id_product)
+    swal({
+        text: "Bạn thực sự muốn xóa sản phẩm này?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                url : "function/delete_product_in_cart.php",
+                type : "get",
+                dataType:"text",
+                data : {
+                
+                     id : id_pro
+                },
+                success : function (result){
+                    
+                    
+                    window.location=result;
+                }
+            });
+        } 
+      });
+
+}
+
+
+ function shopping_cart(id_product,modal,number)
 {   
-          alert(id_product)
+          
 			$.ajax({
 			url : "function/cart_store.php",
 			type : "get",
 			dataType:"text",
 			data : {
 			
-				 id_product : id_product, number: 1
+				 id_product : id_product, number: number
 			},
 			success : function (result){
-				
-                topFunction();
-                setTimeout(function(){
-                    window.location.reload(1);
-                 }, 1200);
+				if(result!=200){
+                    swal({
+                        title: "Rất tiếc!",
+                        text: result,
+                        icon: "warning",
+                        dangerMode: true,
+                      })
+                }
+                else{
+                    if(modal==0){
+                        topFunction();
+                        setTimeout(function(){
+                            window.location.reload(1);
+                         }, 1200);
+                    }else{
+                        
+                        swal({
+                            title: "Thành công!",
+                            text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
+                            icon: "success"
+                          })
+                        $('#product-modal').on('hidden.bs.modal', function () {
+                            topFunction();
+                            setTimeout(function(){
+                                window.location.reload(1);
+                             }, 1200);
+                        });
+                    }
+                   
+                }
+                
 			}
 		});
 		
         
-	}
+    }
+    
+    function buy_now(id_product)
+    {   
+             
+                $.ajax({
+                url : "function/cart_store.php",
+                type : "get",
+                dataType:"text",
+                data : {
+                
+                     id_product : id_product, number: 1
+                },
+                success : function (result){
+                    
+                    topFunction();
+                    setTimeout(function(){
+                        window.location='shopping_cart.php'
+                     }, 1200);
+                }
+            });
+            
+            
+        }  
 
 function getresult(url,catalog,numberRecord,order) {
 
@@ -80,7 +303,40 @@ function getresult(url,catalog,numberRecord,order) {
 		error: function() 
 		{} 	        
    });
+   topFunction();
+
 }
+
+function updateDelivery(id_customer)
+{
+    var rgAddress=$.trim($("#txt_up_address").val());
+    $.ajax({
+        url:'function/update_address_deliver.php',
+        type:'POST',
+        dataType:'html',
+        data:{
+            id_customer:id_customer,
+            txtAdress : rgAddress
+        }
+    }).done(function(ketqua) {
+        
+        if(ketqua==200){
+            $("#btn_update_delivery").hide();
+            message='Bạn đã cập nhật thành công thông tin';            
+            $('#message-update').html(message); 
+            
+            setTimeout(function(){
+                window.location.href='shopping_cart.php';
+            },3000);
+        }
+        else {
+            message='Quá trình cập nhật thông tin thất bại. Vui lòng thử lại';            
+            $('#message-update').html(message);  
+        }
+       
+    });
+}
+
 function updateInfo(id_customer)
 {
     var rgPhone=$("input#rg_phone_number").val();
@@ -284,7 +540,7 @@ function signUp(){
                 txtPass : $("input#rg_pass").val()
             }
         }).done(function(ketqua) {
-            alert(ketqua)
+           
             if(ketqua==200){
                 $("#button-signup").hide();
                 message='Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp.'; 

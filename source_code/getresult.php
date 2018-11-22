@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+	error_reporting(0);
 	require_once $_SERVER['DOCUMENT_ROOT'].'/database/product_info.php';
 	require_once("pagination.class.php");
 	$pro=new productDB();
@@ -17,7 +17,7 @@
 		if(isset($_GET['numberRecord'])){
 			$recordNumber=$_GET['numberRecord'];
 		}else{
-			$recordNumber=10;
+			$recordNumber=12;
 		}
 		
 	}else{
@@ -66,7 +66,7 @@
 			$faq=$pro->getProductPagnitionByEqual($start,$perPage->perpage,$conditonSearch);
 			break;
 		case 'MEKENHANOI':
-			$conditonSearch["conditon"]="status_product";
+			$conditonSearch["conditon"]="producer_publisher";
 			$conditonSearch["value"]="MEKENHANOI";
 			$conditonSearch["order"]=$_SESSION['order_product'];
 			$numberRecord=$pro->getHightLightProductAndNew($conditonSearch);
@@ -109,6 +109,7 @@
 
 		$output .='<div class="col-md-4">
 							<div class="product-item">
+
 								<div class="product-thumb">';
 
 		
@@ -116,21 +117,23 @@
 			
 				$output .='<span class="bage"><i class="fa fa-bolt text-danger" aria-hidden="true"></i> - '.($v->point_promotion).' %</span>';
 			}
-			$output .='	<img class="img-responsive" src="images/shop/products/product-9.jpg" alt="product-img" />
+			$output .='	<img class="img-responsive" src="images/product/'.$v->image_product.'" alt="product-img" />
+
 									<div class="preview-meta">
 										<ul>
 											<li>
-												<span  data-toggle="modal" data-target="#product-modal">
-													<i class="tf-ion-ios-search-strong"></i>
+												<span  data-toggle="modal" data-target="#product-modal" onclick="show_detail('.$v->id_product.')">
+													<i class="tf-ion-ios-search-strong" "></i>
 												</span>
 											</li>
-											
-											
+
+
 										</ul>
 									</div>
 								</div>
 								<div class="product-content">
-									<h4><a href="product-single.html">'.$v->name_product.'</a></h4>
+									<h4><a href="product-single.php?name='.$v->name_product_no_vietnamse.'">'.$v->name_product.'</a></h4>
+
 									<p class="price">';
 									if($v->point_promotion > 0){
 										
@@ -146,8 +149,10 @@
 							
 									
 									$output .='<div style="margin:auto;">
-										<button type="button" class=" btn-shopping-list " onclick="shopping_cart('.$v->id_product.')"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
-										<button type="button" class=" btn-buynow-list "><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
+										<button type="button" class=" btn-shopping-list " onclick="shopping_cart('.$v->id_product.',0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
+										<button type="button" class=" btn-buynow-list " onclick="buy_now('.$v->id_product.')"><i  class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
+
+								
 									</div>
 								</div>
 								

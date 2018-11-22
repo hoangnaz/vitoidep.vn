@@ -82,21 +82,21 @@
 								<!-- Cart Item -->
 								<div class="media">
 									<a class="pull-left" href="#">
-										<img  class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
+										<img  class="media-object" src="images/product/<?php echo $value["info"]->image_product;?>" alt="image" />
 									</a>
 									<div class="media-body">
 										<h4 class="media-heading"><a href=""><?php echo $value["info"]->product_name;?></a></h4>
 										<div class="cart-price">
 										<span>Số lượng:<?php echo $value["number"];?></span>
-										<span>Giá:<?php echo number_format($value["info"]->price_product) ;?>VNĐ</span>
+										<span>Giá:<?php echo number_format((1-$value["info"]->point_promotion/100)*$value["info"]->price_product) ;?>VNĐ</span>
 										</div>
-										<h5><strong> Tổng : <?php  echo number_format($value["number"]*$value["info"]->price_product) ;?>VNĐ</strong></h5>
+										<h5><strong> Tổng : <?php  echo number_format($value["number"]*((1-$value["info"]->point_promotion/100)*$value["info"]->price_product)) ;?>VNĐ</strong></h5>
 									</div>
 									<a  class="remove" onclick="delete_product_cart(<?php echo $key;?>)"><i class="tf-ion-close"></i></a>
 								</div>
 								
 								<?php
-								$totalMoney+=($value["number"]*$value["info"]->price_product);
+								$totalMoney+=($value["number"]*((1-$value["info"]->point_promotion/100)*$value["info"]->price_product));
 							}
 							?>
 									<!-- / Cart Item -->
@@ -105,8 +105,10 @@
 									<span class="total-price"><?php echo number_format($totalMoney);?>VNĐ</span>
 								</div>
 								<ul class="text-center cart-buttons">
+
 									<li><a href="shopping_cart.php" class="btn btn-small">Giỏ hàng</a></li>
 									<li><a href="check_out.php" class="btn btn-small btn-solid-border">Thanh toán</a></li>
+
 								</ul>
 
 							<?php
@@ -123,11 +125,19 @@
                 </div>
 
 	          </li><!-- / Cart -->
-
-	          
+			<?php
+				if($_SESSION['customer']){
+					?>
+					<li >
+						<a href="user_message.php"><i class="fa fa-bell" aria-hidden="true"></i></a>
+					</li>
+					<?php
+				}
+			?>
+	         
 
 	          <!-- User Info -->
-				<li class="commonSelect">
+				<li >
 					<div class="dropdown">
 
 				<?php

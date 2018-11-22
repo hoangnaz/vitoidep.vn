@@ -1,7 +1,7 @@
 <?php
    
     require_once $_SERVER['DOCUMENT_ROOT'].'/database/product_info.php';
-   
+    error_reporting(0);
     class product{
         public const CONDITION_HIGHT = 'highlights';
         public const CONDITION_NEW = 'status_product';
@@ -17,6 +17,15 @@
             $conditionSearch['value']= $value;
             return $numberRecord=$pro->getHightLightProductAndNew($conditionSearch);  
         }
+        function getOneProductFollowName($value){
+            $pro=new productDB();
+            return  $productInfo= $pro->getInfoProductBaseNameVietNam($value);
+        }
+        function getSameProduct($value){
+            $pro=new productDB();
+            return  $productInfo= $pro->getProductFollowOption($value);
+        }
+
     }
     $productBL= new product();
 	// list san pham noi bat

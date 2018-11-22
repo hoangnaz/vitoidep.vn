@@ -1,10 +1,11 @@
 	
 <!-- Modal -->
 <div class="modal product-modal fade" id="edit_position">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="tf-ion-close"></i>
-		</button>
+		
 			<div class="modal-dialog " role="document">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					Đóng
+				</button>
 			<div class="modal-content">
 					<div class="modal-body">
 					<div class="row">
@@ -12,15 +13,16 @@
 							<div class="modal-image">
 								<p class="text-center ">Vui lòng nhập địa chỉ bạn muốn giao hàng ở đây
 								</p>
-								<form class="text-left clearfix" action="index.html">
-									<div class="form-group">
-									<textarea name="" id="" style="width:100%; " >224 Man Thiện, Tăng Nhơn Phú A, Quận 9, HCM</textarea>
-									</div>
+							
+									<div class="form-group text-left clearfix">
 									
-									<div class="text-center">
-										<button type="submit" class="btn btn-main green text-center">Xác nhận</button>
+									<textarea name="txt_up_address" id="txt_up_address" style="width:100%; " ><?php echo $_SESSION['customer']->address; ?></textarea>
 									</div>
-								</form>
+									<span  id="message-update" ></span>
+									<div class="text-center">
+										<button onclick="updateDelivery('<?php echo $_SESSION['customer']->id_customer; ?>')" class="btn btn-main green text-center" id="btn_update_delivery">Xác nhận</button>
+									</div>
+								
 								
 							</div>
 						</div>

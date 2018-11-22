@@ -1,7 +1,8 @@
 
 <?php
-	error_reporting(1);
-	
+
+	error_reporting(0);
+	require_once $_SERVER['DOCUMENT_ROOT'].'/database/product_info.php';
 	include 'template/master/header.php';
 	if($_SESSION['numberRecord']){
 		$numberRecord=$_SESSION['numberRecord'];
@@ -13,10 +14,12 @@
 	}else{
 		$order_droduct="ASC";
 	}
+	$productDB=new productDB();
+    $lstTopFive=$productDB->getFiveTopProduct();
 	include_once 'template/master/menu_top.php';
 	include_once 'template/master/main_menu.php';
 	include_once 'template/product_list/content.php';
-	include_once 'template/detail_product/the_same_catalog.php';
+	include_once 'template/product_list/product_viewed.php';
 	include_once 'template/master/footer.php';
 	include_once 'template/master/js_file.php';
 	include_once 'template/master/top_message.php';

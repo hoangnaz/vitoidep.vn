@@ -9,9 +9,10 @@
 				</div>
 				<div class="col-lg-8 col-md-offset-2">
 				    <div class="input-group subscription-form">
-				      <input type="text" class="form-control" placeholder="Enter Your Email Address">
-				      <span class="input-group-btn">
-				        <button class="btn btn-main" type="button">Subscribe Now!</button>
+				      <input type="text" class="form-control" placeholder="Vui lòng nhập email của bạn" id="subEmail">
+				      <span id="error-mail-sub"></span>
+							<span class="input-group-btn">
+				        <button class="btn btn-main" type="button" onclick="return suscribleNow()">Nhận theo dõi ngay!</button>
 				      </span>
 				    </div>
 			 	 </div>
