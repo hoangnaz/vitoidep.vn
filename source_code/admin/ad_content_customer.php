@@ -5,8 +5,6 @@
 
 
  <div class="col-lg-12">
-
-
 						<h4 class="text-center text-danger text-uppercase">Danh sách khách hàng</h4>
                         <div class="table-responsive">
 						<table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -48,9 +46,10 @@
 							 					<p ><i class="fa fa-2x fa-envelope-o" aria-hidden="true"> </i>   Email:  <?php echo $lst_cus->email;?></p>
 							 					<p><i class="fa fa-3x fa-mobile" aria-hidden="true"></i>    Số điện thoại: <?php echo $lst_cus->phone_number?></p>
 							 					<p ><i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>    Địa chỉ giao hàng mặc định: <?php echo $lst_cus->address;?></p>
-                                                 <?php
                                                 
-												
+                                                
+												<?php
+                                                $lst_order=$ad_select->list_order_by_customer($lst_cus->id_customer);
 												if(sizeof($lst_order)==0)
 												{
 													echo "<p class='text-center'>Khách hàng chưa có đơn đặt hàng</p>";
@@ -147,10 +146,5 @@
                             </table>
                         </div>
                         <div class="col-lg-12">
-                        <div id="pagination_page">
-							<?php
-                            
-                                echo $pagination;
-                            ?>
-                        </div>
+                       
                     </div>

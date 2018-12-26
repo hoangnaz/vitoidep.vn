@@ -2,14 +2,8 @@
 <?php
 	 $list_supplier=$ad_select->query_list_producer_publisher();
 	 $list_catalog=$ad_select->query_list_catalog();
-    $lst_product=$ad_select->query_list_product();
-	$count=count($lst_product);
-	$limit=6;
-	$posision=$ad_page->findStart($limit);
-	$pag=$ad_page->findPages($count,$limit);
-	$current=$_GET["page"];
-	$pagination=$ad_page->pageList($current,$pag);
-	$lst_product_pagination=$ad_select->query_list_product_page($posision,$limit);
+    $lst_product_pagination=$ad_select->query_list_product();
+	
     
 ?>
  <!-- /.row -->
@@ -22,12 +16,7 @@
                        
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 hidden-xs hidden-ms">
-                    <div class="col-md-4 col-lg-8">
-                    	 <input type="text"  class="form-control" value="" id="info_find" placeholder="Nhập sản phẩm muốn tìm">
-                    </div>
-                       <div class="col-md-4 col-lg-4">
-                       <button class="btn-info" onclick="find_product()" ><p>Tìm sản phẩm</p></button>
-                       </div>
+                   
                     </div>
                     <div id="content_find" style="margin-top:20px;">
                     </div>
@@ -35,7 +24,7 @@
                     <div class="col-lg-12">
                         <h3 class="text-center text-succes">DANH SÁCH SẢN PHẨM</h3>
                         <div class="table-responsive">
-                              <table class="table table-bordered table-hover table-striped">
+                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th><p class="text-center">MSP</p></th>
@@ -44,8 +33,9 @@
                                         <th><p class="text-center">Giá nhập sản phẩm</p></th>
                                         <th><p class="text-center">Giá bán</p></th>
                                         <th><p class="text-center">Số lượng tồn</p></th>
-                                        
-                                        <th colspan="4"><p class="text-center">Tác vụ</p></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,7 +48,7 @@
                                     <tr>
                                         <td class="text-center"><?php echo $lst_product->id_product;?></td>
                                         
-                                        <td>  <img src="assert/product/<?php echo $lst_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px">
+                                        <td>  <img src="../images/product/<?php echo $lst_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px">
                                        </td>
                                        <td><?php echo $lst_product->name_product;?></td>
                                        <?php

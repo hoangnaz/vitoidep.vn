@@ -12,7 +12,7 @@
 
     <!-- jQuery -->
    <script src="js/jquery.js"></script>
-
+   <script src="js/sweetjs.js"></script>
   <link rel="stylesheet" href="css/datatable.css"/>
   <script type="text/javascript" src="js/datatable.js"></script>
 
