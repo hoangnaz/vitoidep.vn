@@ -13,6 +13,6 @@
 	include("ad_header.php");
 	include("ad_side_bar.php");
 	include("ad_title.php");
-	include("ad_add_catalog.php");
+	include("ad_add_write_catalog.php");
 	include("ad_footer.php");
 ?>

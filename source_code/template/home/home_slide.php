@@ -14,14 +14,14 @@
 	                <!-- Third Slide -->
 	                <div class="item active">
 	                    <!-- Slide Background -->
-	                    <img src="images/slider/slider-4.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <img src="images/slider/slider-3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
 	                    <div class="bs-slider-overlay"></div>
 	                    <div class="container">
 	                        <div class="row">
 	                            <!-- Slide Text Layer -->
 	                            <div class="slide-text slide_style_left">
 	                                <h1 data-animation="animated zoomInRight">Vì tôi đẹp</h1>
-	                                <p data-animation="animated fadeInLeft">Dòng sản phẩm tự nhiên.</p>
+	                                <p data-animation="animated fadeInLeft">Dòng sản phẩm mẹ Ken, tinh khiết, 100% thiên nhiên</p>
 	                                <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
 	                                <a href="intro.php"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a>
 	                            </div>
@@ -33,14 +33,14 @@
 	                <!-- Second Slide -->
 	                <div class="item">
 	                    <!-- Slide Background -->
-	                    <img src="images/slider/slider-3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+	                    <img src="images/slider/slider-4.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
 	                    <div class="bs-slider-overlay"></div>
 	                    <!-- Slide Text Layer -->
 	                    <div class="slide-text slide_style_center">
-	                        <h1 data-animation="animated flipInX">Đẹp vì lụa, sang vì mỹ phẩm</h1>
+	                        <h1 data-animation="animated flipInX">Tung bay trong gió xuân, hương bay khắp ngàn</h1>
 	                        <p data-animation="animated lightSpeedIn">Hãy cùng chúng tôi chăm sóc cơ thể bạn</p>
 	                        <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInUp">Mua ngay</a>
-	                        <a href="intro.php"   class="btn btn-primary" data-animation="animated fadeInDown">Game show</a>
+	                        <a href="intro.php"   class="btn btn-primary" data-animation="animated fadeInDown">Về chúng tôi</a>
 	                    </div>
 	                </div>
 	                <!-- End of Slide -->
@@ -53,7 +53,7 @@
 	                    <!-- Slide Text Layer -->
 	                    <div class="slide-text slide_style_right">
 	                        <h1 data-animation="animated zoomInLeft">Vì bạn đẹp</h1>
-	                        <p data-animation="animated fadeInRight">Chúng tôi chung tay vì bạn .</p>
+	                        <p data-animation="animated fadeInRight">Chúng tôi chung tay vì bạn, vì tuổi trẻ và sắc đẹp .</p>
 	                        <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
 	                        <a href="contact.php" class="btn btn-primary" data-animation="animated fadeInRight">Liên hệ với chúng tôi</a>
 	                    </div>

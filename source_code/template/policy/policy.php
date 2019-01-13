@@ -10,7 +10,7 @@
 
 					<h4><strong>I. PH&Iacute; VẬN CHUYỂN</strong></h4>
 
-					<p>Đơn h&agrave;ng tr&ecirc;n 300.000 VNĐ sẽ được miễn ph&iacute; vận chuyển tr&ecirc;n To&agrave;n Quốc.</p>
+					<p>Đơn h&agrave;ng tr&ecirc;n 1000.000 VNĐ sẽ được miễn ph&iacute; vận chuyển tr&ecirc;n To&agrave;n Quốc.</p>
 
 					<p>Trong trường hợp trị gi&aacute; đơn h&agrave;ng chưa đủ mức miễn ph&iacute; vận chuyển th&igrave; ph&iacute; sẽ được &aacute;p dụng như sau:</p>
 
@@ -71,7 +71,7 @@
 
 					<p><strong>- L&ecirc; Thị Hiền: 0511000462289 , Vietcombank: chi nh&aacute;nh S&agrave;i Th&agrave;nh, TPHCM.</strong></p>
 
-					<p>- Hoặc th&ocirc;ng qua t&agrave;i khoản MoMo: L&ecirc; Thị Hiền: Số điện thoại: 0962867192</p>
+					<p>- Hoặc th&ocirc;ng qua t&agrave;i khoản MoMo: L&ecirc; Thị Hiền: Số điện thoại: 0962876192 </p>
 
 					<p>Rất mong được phục vụ qu&yacute; kh&aacute;ch,</p>
 

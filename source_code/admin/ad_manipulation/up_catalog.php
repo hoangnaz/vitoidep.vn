@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$url=$_SERVER['DOCUMENT_ROOT'];
 	if(isset($_POST["btn_update_catalog"]))
 	{
 		echo $id_catalog_product=$_GET["id"];
@@ -17,7 +18,7 @@
 		{
 	 // file upload sẽ được lưu vào thư mục
 
-		$path="../assert/catalog/";
+		$path=$url."/images/catalog/";
 		$tmp_name_catalog = $_FILES['txt_imgage_catalog']['tmp_name'];
 		move_uploaded_file($tmp_name_catalog,$path.$image_catalog);
 		include("../database/update_insert.php");

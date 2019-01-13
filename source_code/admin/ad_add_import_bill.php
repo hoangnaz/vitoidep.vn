@@ -60,7 +60,7 @@
 													?>
 							 						<tr>
                                                     	<td><?php echo $value["name_product"]?></td>
-							 							<td><img src="assert/product/<?php echo $value["image"]?>" class="img-responsive" alt="Image" width="100px"></td>
+							 							<td><img src="../images/product/<?php echo $value["image"]?>" class="img-responsive" alt="Image" width="100px"></td>
 							 							<td  width="100px"><input type="text" name="update_number<?php echo $value["id_product"]?>"  id="update_number<?php echo $value["id_product"]?>" class="form-control" value="<?php echo $value["number"] ?>" required pattern="" title=""></td>
 							 							<td  width="100px"><input type="text" name="update_price_import<?php echo $value["id_product"]?>"  id="update_price_import<?php echo $value["id_product"]?>" class="form-control" value="<?php echo $value["price_import"] ?>" required pattern="" title=""></td>
 							 						

@@ -1,13 +1,13 @@
 <section >
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-md-offset-1">
 				<div class="post post-single">
 					
-					<h2 class="post-title text-uppercase text-center text-danger">Chăm sóc cơ thể bằng dầu dưỡng</h2>
+					<h2 class="post-title text-uppercase text-center text-danger text-uppercase">Chăm sóc cơ thể bằng dầu dưỡng</h2>
 					  <div class="post-social-share">
-				        <h3 class="post-sub-heading">Làm đẹp</h3>
-				        <div class="social-media-icons">
+				        <h4 class="post-sub-heading ">Chuyên mục: Làm đẹp</h4>
+				        <!-- <div class="social-media-icons">
 				        	<ul>
 								<li><a class="facebook" href=""><i class="tf-ion-social-facebook"></i></a></li>
 								<li><a class="twitter" href=""><i class="tf-ion-social-twitter"></i></a></li>
@@ -15,7 +15,7 @@
 								<li><a class="instagram" href=""><i class="tf-ion-social-instagram"></i></a></li>
 								<li><a class="googleplus" href=""><i class="tf-ion-social-googleplus"></i></a></li>
 							</ul>
-				        </div>
+				        </div> -->
 				    </div>
 
 					<div class="post-meta">
@@ -35,22 +35,48 @@
 						</ul>
 					</div>
 					<div class="post-content post-excerpt">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere. </p>
-						<blockquote class="quote-post">
-				            <p>
-				                Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error
-				            </p>
-				        </blockquote>
-				        <div class="post-thumb">
-							<img class="img-responsive" src="images/blog/blog-post-1.jpg" alt="">
-						</div>
-				        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum illo deserunt necessitatibus quibusdam sint, eos explicabo tenetur molestiae vero facere, aspernatur sit mollitia perferendis reiciendis. Deleniti magni explicabo sed alias fugit amet animi molestias ipsum maiores. Praesentium sint, id laborum quos. Tempora inventore est, dolor corporis quis doloremque nostrum, eos velit culpa quasi labore. Provident laborum porro nihil iste, magnam officia nemo praesentium autem, libero vel officiis. Omnis pariatur nam voluptatem voluptate at officia repellat ea beatae eligendi? Mollitia error saepe, aperiam facere. Optio maiores deleniti veritatis eaque commodi atque aperiam, debitis iste alias eligendi ut facilis earum! Impedit, tempore.</p>
-				        <pre>.blog-classic {
-						    margin-bottom: 70px;
-						    padding-bottom: 70px;
-						    border-bottom: 1px solid #efefef;
-						}
-						</pre>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex error esse a dolore, architecto sapiente, aliquid commodi, laudantium eius nemo enim. Enim, fugit voluptatem rem molestiae. Sed totam quis accusantium iste nesciunt id exercitationem cumque repudiandae voluptas perspiciatis, consequatur quasi, molestias, culpa odio adipisci. Nesciunt optio fugiat iste quam modi, ex vitae odio pariatur! Corrupti explicabo at harum qui doloribus, sit dicta nemo, dolor, enim eum molestias fugiat obcaecati autem eligendi? Nisi delectus eaque architecto voluptatibus, unde sit minus quae quod eligendi soluta recusandae doloribus, officia, veritatis voluptatum eius aliquam quos. Consectetur, nisi? Veritatis totam, unde nostrum exercitationem tempora suscipit, molestias, deserunt ipsum laborum aut iste eaque? Vitae delectus dicta maxime non mollitia? Sapiente eos a quia eligendi deserunt repudiandae modi molestias tenetur autem pariatur ullam itaque, quas eveniet, illo quam rerum ex obcaecati voluptatum nesciunt incidunt culpa provident illum soluta. Voluptas possimus nesciunt inventore perspiciatis neque fugiat, magnam natus repellendus praesentium eum voluptatum, alias incidunt, tempora reprehenderit recusandae et numquam itaque ratione dolor voluptatibus in commodi ut! Neque deserunt nostrum commodi dolor natus quo, non vitae deleniti, vero voluptatem error aspernatur veniam expedita numquam amet quia in dolores velit esse molestiae! Iusto architecto accusantium quisquam recusandae quod vero quia.</p>
+					<p>&ldquo;N&oacute;i n&agrave;y con đừng buồn nha! Bộ con kh&ocirc;ng chịu ăn hay sao c&ocirc; thấy con ốm qu&aacute; vậy? Ốm m&agrave; thấy tội nghiệp lu&ocirc;n. Ăn nhiều v&ocirc; đi chứ ốm qu&aacute; dễ bệnh.&rdquo;</p>
+
+<p>Con n&oacute;i thật khi nghe c&ocirc; n&oacute;i con đang tươi tắnbỗng nhi&ecirc;n h&eacute;o &uacute;a lu&ocirc;n😭😭😭😭</p>
+
+<p>🤢🤢🤢&nbsp;ỐM THẤY TỘI NGHIỆP</p>
+
+<p>C&aacute;i cụm từ n&agrave;y nghe m&agrave; đau đau l&agrave;m sao. Ốm đ&acirc;u phải l&agrave; c&aacute;i tội. Ốm cũng đ&acirc;u phải Nghiệp. Vậy tại sao Ốm lại đ&aacute;ng thương x&oacute;t như vậy?</p>
+
+<p>🤧🤧🤧&nbsp;R&otilde; biết l&agrave; mọi người c&oacute; &yacute; tốt muốn khuy&ecirc;n m&igrave;nh mập l&ecirc;n. Nhưng m&agrave; đi đ&acirc;u cũng bị n&oacute;i miết riết th&agrave;nh nổi sợ h&atilde;i mỗi khi ai đ&oacute; hỏi m&igrave;nh &ldquo;bộ k&eacute;n ăn lắm hả&rdquo;. Kh&ocirc;ng lẻ đi giải th&iacute;ch với từng người thiệt qu&aacute; mệt mỏi. (Shop thấy một v&agrave;i bạn c&oacute; hiện tượng stress nặng khi bị ch&ecirc; mập, ốm, xấu...)</p>
+
+<p>💃💃💃&nbsp;ỐM th&igrave; đ&atilde; sao? Với shop th&igrave;:</p>
+
+<p>ỐM ĐẸP, ỐM SANG, ỐM HI&Ecirc;N NGANG v&agrave; dĩ nhi&ecirc;n rồi, MẬP CŨNG NHƯ THẾ NH&Eacute;&nbsp;<img alt="" src="https://www.facebook.com/images/emoji.php/v9/t6c/1/16/2764.png" style="height:16px; width:16px" />&lt;3</p>
+
+<p>C&aacute;c bạn nghĩ sao? Ốm mặc g&igrave; cũng được, Ốm m&agrave; khoẻ, Ốm đi đứng nhẹ nh&agrave;ng hi&ecirc;n ngang, Ốm m&agrave; t&acirc;m hồn kh&ocirc;ng Ốm l&agrave; được.</p>
+
+<p>☘️☘️☘️Ngoại h&igrave;nh mập ốm cao thấp kh&ocirc;ng ai c&oacute; quyền được chọn lựa. H&atilde;y t&ocirc;n trọng cơ thể m&agrave; Ba Mẹ đ&atilde; cho ch&uacute;ng ta. Bất kể như thế n&agrave;o, nếu ch&uacute;ng ta biết y&ecirc;u thương n&oacute;, chăm s&oacute;c bản th&acirc;n tốt th&igrave; ta lu&ocirc;n lu&ocirc;n đẹp.</p>
+
+<p>😊😊😊Ch&uacute;ng ta h&atilde;y tập th&oacute;i quen nh&igrave;n v&agrave;o điểm đẹp của người đối diện trước m&agrave; khen hơn l&agrave; soi điểm yếu của họ.</p>
+
+<p>- Nếu khu&ocirc;n mặt chưa đẹp m&agrave; c&oacute; m&aacute;i t&oacute;c đẹp, ta khen m&aacute;i t&oacute;c bạn đẹp.</p>
+
+<p>- Nếu mặt, t&oacute;c chưa đẹp. Nh&igrave;n v&agrave;o d&aacute;ng người c&oacute; c&aacute;i eo thon gọn m&agrave; khen.</p>
+
+<p>- Nếu mặt, t&oacute;c, eo chưa đẹp. Ph&aacute;t hiện ra bạn mặc &aacute;o đẹp, mang đ&ocirc;i gi&agrave;y đẹp hay đeo phụ kiện xinh m&agrave; khen.</p>
+
+<p>- Nếu tất cả những c&aacute;i tr&ecirc;n chưa đẹp. Nh&igrave;n bạn ấy cười v&agrave; khen nh&igrave;n tươi tắn.</p>
+
+<p>👉👉👉&nbsp;C&aacute;ch g&oacute;p &yacute; ch&acirc;n th&agrave;nh m&agrave; vẫn vui vẻ cho người kh&aacute;c, hiệu quả hơn l&agrave;:</p>
+
+<p>Thay v&igrave; CH&Ecirc; (từ ngữ ti&ecirc;u cực - Ốm, mập , l&ugrave;n, xấu, gh&ecirc;,...)</p>
+
+<p>Ta thay đổi c&aacute;ch n&oacute;i kh&aacute;c tốt hơn bằng</p>
+
+<p>KHEN+ NẾU + GIẢI PH&Aacute;P (l&ecirc;n c&acirc;n, giảm c&acirc;n, tập gym hay yoga,...)+ TH&Igrave; + TỪ TR&Aacute;I NGHĨA</p>
+
+<p>👍&nbsp;V&iacute; dụ: H&ocirc;m nay bạn mặc c&aacute;i &aacute;o đẹp qu&aacute;. Nếu bạn TĂNG TH&Ecirc;M 3 k&yacute; th&igrave; bạn sẽ ĐẸP hơn nữa.</p>
+
+<p>🎉🎉🎉&nbsp;H&atilde;y thể hiện Văn Ho&aacute; Khen v&agrave; G&oacute;p &Yacute; để gi&uacute;p nhau c&oacute; cuộc sống vui vẻ hạnh ph&uacute;c, tự tin v&agrave; chất lượng hơn c&aacute;c bạn nh&eacute;!</p>
+
+<p>Like, Share nếu bạn thấy &yacute; nghĩa nh&eacute;&nbsp;<img alt="" src="https://www.facebook.com/images/emoji.php/v9/t6c/1/16/2764.png" style="height:16px; width:16px" />&lt;3&nbsp;<img alt="" src="https://www.facebook.com/images/emoji.php/v9/t6c/1/16/2764.png" style="height:16px; width:16px" />&lt;3&nbsp;<img alt="" src="https://www.facebook.com/images/emoji.php/v9/t6c/1/16/2764.png" style="height:16px; width:16px" />&lt;3&nbsp;<br />
+cr: QCD<img alt="" src="/ckfinder/userfiles/images/49140121_938610489681430_2824362470850691072_n.jpg" style="height:960px; width:960px" /></p>
+
 				    </div>
 				  

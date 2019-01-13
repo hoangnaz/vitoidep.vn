@@ -40,12 +40,15 @@
 
 										<?php
 											foreach ($blCatalog->lstSubProduct() as $keyCatalog => $valueCatalog) {
+												if($valueCatalog->status == 0 && !empty($valueCatalog))
+												{
 													?>
 														 <div class="col-sm-3 col-xs-12">
 		                						<ul>
 																<li class="dropdown-header"><h5><?php echo  $keyCatalog;?></h5></li>
 															<?php
 																foreach ($valueCatalog as $key => $value) {
+																
 															?>
 																	<li><a href="danh_sach_san_pham.php?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
 															<?php	
@@ -54,6 +57,7 @@
 														</ul>
 													</div>
 													<?php
+													}
 												}
 									  	?>		              
 		                <!-- Mega Menu -->
@@ -66,42 +70,7 @@
 	            </div><!-- / .dropdown-menu -->
 			  </li><!-- / Pages -->
 			  
-	          <!-- Blog -->
-	          <!-- <li class="dropdown dropdown-slide">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="tf-ion-ios-arrow-down"></span></a>
-	            <ul class="dropdown-menu">
-	            	<div class="container-fluid">
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-	            			<li><a href="blog-full-width.php">
-									<h6> Chăm sóc da</h6>
-								</a>
-							</li>
-	            		</div>
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-	            			<li>
-	            				<a href="blog-full-width.php">
-	            					<h6> Hướng dẫn làm đẹp</h6>
-	            				</a>
-	            			</li>
-	            		</div>
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-	            			<li>
-	            				<a href="blog-full-width.php">
-	            			 		<h6>Game show</h6>
-	            				</a>
-	            			</li>
-	            		</div>
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-	            			<li>
-	            				<a href="blog-full-width.php">
-		            				<h6>Review sản phẩm</h6>
-	            				</a>
-	            			</li>
-	            		</div>
-	            	</div>
-	            </ul>
-	          </li> -->
-						<!-- / Blog -->
+	         
 
 			<!-- Branch -->
 	          <li class="dropdown dropdown-slide">
@@ -132,6 +101,38 @@
 	            			
 	            </ul>
 	          </li><!-- / Branch -->
+
+						 <!-- Blog -->
+						 <li class="dropdown dropdown-slide">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="tf-ion-ios-arrow-down"></span></a>
+	            <ul class="dropdown-menu">
+	            	<div class="container-fluid">
+	            	
+	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+	            			<li>
+	            				<a href="blog-full-width.php">
+	            					<h6> Hướng dẫn làm đẹp</h6>
+	            				</a>
+	            			</li>
+	            		</div>
+	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+	            			<li>
+	            				<a href="blog-full-width.php">
+	            			 		<h6>Chương trình khuyến mãi</h6>
+	            				</a>
+	            			</li>
+	            		</div>
+	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+	            			<li>
+	            				<a href="blog-full-width.php">
+		            				<h6>Review sản phẩm</h6>
+	            				</a>
+	            			</li>
+	            		</div>
+	            	</div>
+	            </ul>
+	          </li>
+						<!-- / Blog -->
 	        </ul>
 
 	      	</div>

@@ -1,12 +1,13 @@
 <?php
 	session_start();
+	$url=$_SERVER['DOCUMENT_ROOT'];
 	if(isset($_POST["btn_add_catalog"]))
 	{
 		$status=0;
-		echo $id_catalog_product="";
-		echo $catalog_name=$_POST["txt_catalog"];
-		echo $catalog_describle=$_POST["txt_describle_catalog"];
-		echo $image_catalog=$_FILES["txt_imgage_catalog"]["name"];
+		 $id_catalog_product="";
+		 $catalog_name=$_POST["txt_catalog"];
+		 $catalog_describle=$_POST["txt_describle_catalog"];
+		 $image_catalog=$_FILES["txt_imgage_catalog"]["name"];
 		 if($_FILES['txt_imgage_catalog']['name']==NULL)
 	 		{
 				$_SESSION["catalog"]=array("name"=>$catalog_name,"catalog_describle"=>$catalog_describle,"image_catalog"=>$image_catalog);
@@ -20,7 +21,7 @@
 		{
 	 // file upload sẽ được lưu vào thư mục
 
-		$path="../assert/catalog/";
+		$path=$url."/images/catalog/";
 		$tmp_name_catalog = $_FILES['txt_imgage_catalog']['tmp_name'];
 		move_uploaded_file($tmp_name_catalog,$path.$image_catalog);
 		include("../database/update_insert.php");

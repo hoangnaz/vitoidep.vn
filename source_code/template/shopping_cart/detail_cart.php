@@ -1,5 +1,5 @@
-<div style="clear:both;"></div>
-<div class="col-md-4 ">
+	<div style="clear:both;" class="hidden-lg hidden-md"></div>
+		<div class="col-md-4 ">
 			<?php
                        
 				if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0 ){

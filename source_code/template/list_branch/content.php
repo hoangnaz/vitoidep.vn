@@ -16,8 +16,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li>224 Phan Anh - Tân Phú - Hồ Chí Minh</li>
-                                    <li>Số điện thoại:</li>
-                                    <li>0988111443</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                              
@@ -32,8 +30,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li>244 Man Thiện - Quận 9 - Hồ Chí Minh</li>
-                                    <li>Số điện thoại:</li>
-                                    <li>0863933222</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                                
@@ -49,8 +45,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li> 43 Trần Văn Ơn - Phú Hòa - Thủ Dầu Một - Bình Dương </li>
-                                    <li>Số điện thoại:</li>
-                                    <li>0343437011</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                                 
@@ -65,8 +59,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li> 212 Hà Huy Giáp - Quận 12 - Hồ Chí Minh </li>
-                                    <li>Số điện thoại:</li>
-                                    <li>0862238111</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                                
@@ -81,8 +73,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li> 98 Phùng Văn Cung - Quận Bình Thạnh - Hồ Chí Minh </li>
-                                    <li>Số điện thoại:</li>
-                                    <li>086223111</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                                
@@ -97,8 +87,6 @@
                                 <ul>
                                     <li>Địa chỉ:</li>
                                     <li> 123 Võ Nguyên Giáp - Biên Hòa - Đồng Nai </li>
-                                    <li>Số điện thoại:</li>
-                                    <li>0853443111</li>
                                     <li>Hỗ trợ 24/7</li>
                                 </ul>
                                

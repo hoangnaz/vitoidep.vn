@@ -64,7 +64,7 @@
                                     <tr>
                                         <td class="text-center"><?php echo $lst_product->id_product;?></td>
                                         
-                                        <td>  <img src="assert/product/<?php echo $lst_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px">
+                                        <td>  <img src="../images/product/<?php echo $lst_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px">
                                        </td>
                                        <td><?php echo $lst_product->name_product;?></td>
                                        <?php
@@ -99,7 +99,7 @@
                                                                         <td colspan="2"><h3 class="text-center text-info"><?php echo $info_product->name_product;?></h3></td>
                                                                     </tr>
                                                                      <tr style="text-align:center;">
-                                                                        <td colspan="2" > <img src="assert/product/<?php echo $info_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px" style="margin:auto;"></td>
+                                                                        <td colspan="2" > <img src="../images/product/<?php echo $info_product->image_product;?>" class="img-responsive text-center" alt="Image" width="80px" style="margin:auto;"></td>
                                                                       
                                                                     </tr>
                                                                      <tr>

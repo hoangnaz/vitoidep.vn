@@ -1,14 +1,5 @@
 <?php
-	
-	$lst_catalog=$ad_select->query_list_catalog();
-	$count=count($lst_catalog);
-	$limit=3;
-	$posision=$ad_page->findStart($limit);
-	$pag=$ad_page->findPages($count,$limit);
-	$current=$_GET["page"];
-	$pagination=$ad_page->pageList($current,$pag);
-	$lst_catalog_pagination=$ad_select->query_list_catalog_page($posision,$limit);
-	//print_r($lst_custom_pagination);
+	$lst_catalog_pagination=$ad_select->query_list_catalog();
 ?>
   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -22,11 +13,11 @@
                                 <thead>
                                     <tr>
                                         <th width="120px"><p class="text-center">Mã danh mục</p></th>
-                                        <th width="250px"><p class="text-center">Tên danh mục</p></th>
-                                        <th><p class="text-center">Mô tả</p></th>
-                                        <th width="200px"><p class="text-center">Hình ảnh đại diện</p></th>
-                                         <th  width="150px"  ></th>
-                                         <th  width="150px"  ></th>
+                                        <th width="200px"><p class="text-center">Tên danh mục</p></th>
+                                        <th width="300px"><p class="text-center">Mô tả</p></th>
+                                        <th width="100px"><p class="text-center">Hình ảnh đại diện</p></th>
+                                         <th  width="40px"  ></th>
+                                         <th  width="40px"  ></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,7 +31,7 @@
                                         <td class="text-center"><?php echo $lst_cat->id_catalog_product;?></td>
                                         <td><?php echo $lst_cat->catalog_name;?></td>
                                         <td><?php echo $lst_cat->catalog_describle;?></td>
-                                        <td id="img_customer_detail"><img src="assert/catalog/<?php echo $lst_cat->image_catalog;?>" class="img-responsive" alt="Image" width="70px"></td>
+                                        <td id="img_customer_detail"><img src="../images/catalog/<?php echo $lst_cat->image_catalog;?>" class="img-responsive" alt="Image" width="70px"></td>
                                       
                                          <td width="60px">
                                          <a  data-toggle="modal" href='#cata<?php echo $lst_cat->id_catalog_product;?>'> <i class="fa fa-pencil-square-o text-danger" aria-hidden="true"></i></a>
@@ -146,14 +137,7 @@
                                 </tbody>
                             </table>
                         </div>
-                            <div class="col-lg-12">
-                                <div id="pagination_page">
-                                    <?php
-                                    
-                                        echo $pagination;
-                                    ?>
-                                </div>
-                        </div>
+                            
                     </div>
                    
                 </div>

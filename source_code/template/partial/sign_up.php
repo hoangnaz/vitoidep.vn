@@ -22,6 +22,7 @@
 											</div>
 											
 											<div class="block text-center">
+												<form class="text-left clearfix"> 
 													<div class="form-group">
 														<input type="email"  class="form-control" id="rg_full_name" placeholder="Vui lòng nhập tên của bạn">
 													</div>	
@@ -48,9 +49,9 @@
 													<span  id="message-error-re-pass"></span>
 													<span  id="message-sign-up" ></span>
 													<div class="text-center" id="button-signup">
-														<button  onclick="signUp()" class="btn btn-main text-center" >Đăng ký</button>
+														<button  onclick="return signUp()" onsubmit="event.preventDefault();" class="btn btn-main text-center" >Đăng ký</button>
 													</div>
-													
+												</form>	
 													</div>
 												</div>
 										</div>

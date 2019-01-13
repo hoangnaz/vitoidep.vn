@@ -14,6 +14,7 @@
 									<h5 class="media-heading"> Địa chỉ: <span  id="popup_order_address"></span></h5>
 									<h5 class="media-heading"> Hình thức thanh toán : <span  id="popup_order_delivery"></span></h5>
 					 			</div>
+								 <div style="clear:both" class="md-hidden lg-hidden"></div>
 								 <div class="table-responsive"> 
 										<table class="table table-hover">
 											<thead>

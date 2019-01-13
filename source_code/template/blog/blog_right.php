@@ -1,21 +1,17 @@
 	      	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		      	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		      			<div class="widget widget-category">
-							<h4 class="widget-title">Categories</h4>
+							<h4 class="widget-title">Danh mục blog</h4>
 							<ul class="widget-category-list">
-						        <li><a href="#">Animals</a>
+						        <li><a href="#">Chăm sóc sắc đẹp</a>
 						        </li>
-						        <li><a href="#">Landscape</a>
+						        <li><a href="#">Chương trình khuyến mãi</a>
 						        </li>
-						        <li><a href="#">Portrait</a>
-						        </li>
-						        <li><a href="#">Wild Life</a>
-						        </li>
-						        <li><a href="#">Video</a>
+						        <li><a href="#">Review sản phẩm</a>
 						        </li>
 						    </ul>
 						</div>
-		      			<h5 class="text-center text-uppercase"><b>Top xem nhiều nhất</b></h5>	
+		      			<h5 class="text-center text-uppercase"><b>Top 5 xem nhiều nhất</b></h5>	
 		      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		      				<div class="post">
 						<div class="post-media post-thumb">

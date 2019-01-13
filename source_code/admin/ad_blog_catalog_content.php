@@ -1,14 +1,6 @@
 <?php
-	
-	$lst_catalog=$ad_select->query_list_catalog();
-	$count=count($lst_catalog);
-	$limit=3;
-	$posision=$ad_page->findStart($limit);
-	$pag=$ad_page->findPages($count,$limit);
-	$current=$_GET["page"];
-	$pagination=$ad_page->pageList($current,$pag);
-	$lst_catalog_pagination=$ad_select->query_list_catalog_page($posision,$limit);
-	//print_r($lst_custom_pagination);
+	error_reporting(1);
+	$lst_catalog_pagination=$ad_select->get_list_write_catalog();
 ?>
   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -21,7 +13,7 @@
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th width="120px"><p class="text-center">Mã danh mục</p></th>
+                                        <th width="120px"><p class="text-center">Mã danh mục bài viết</p></th>
                                         <th width="250px"><p class="text-center">Tên danh mục</p></th>
                                         <th><p class="text-center">Mô tả</p></th>
                                        
@@ -37,19 +29,19 @@
 									?>
                                   
                                     <tr>
-                                        <td class="text-center"><?php echo $lst_cat->id_catalog_product;?></td>
-                                        <td><?php echo $lst_cat->catalog_name;?></td>
-                                        <td><?php echo $lst_cat->catalog_describle;?></td>
+                                        <td class="text-center"><?php echo $lst_cat->id_catalog;?></td>
+                                        <td><?php echo $lst_cat->name_blog;?></td>
+                                        <td><?php echo $lst_cat->description;?></td>
                                        
                                       
                                          <td width="60px">
-                                         <a  data-toggle="modal" href='#cata<?php echo $lst_cat->id_catalog_product;?>'> <i class="fa fa-pencil-square-o text-danger" aria-hidden="true"></i></a>
-                                            <div class="modal fade" id="cata<?php echo $lst_cat->id_catalog_product;?>">
+                                         <a  data-toggle="modal" href='#cata<?php echo $lst_cat->id_catalog;?>'> <i class="fa fa-pencil-square-o text-danger" aria-hidden="true"></i></a>
+                                            <div class="modal fade" id="cata<?php echo $lst_cat->id_catalog;?>">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                            <h4 class="modal-title text-center text-warning">CẬP NHẬT DANH MỤC</h4>
+                                                            <h4 class="modal-title text-center text-warning">CẬP NHẬT DANH MỤC BÀI VIẾT</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                                <div class="col-xs-12 col-sm-12  col-lg-12 form_info_input">

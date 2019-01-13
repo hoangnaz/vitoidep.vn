@@ -16,7 +16,7 @@
 		else
 		{
 			$_SESSION["info_staff"]=array("id_staff"=>$ck_login->id_staff,"fullname"=>$ck_login->fullname,"staff_account"=>$ck_login->staff_account,"email"=>$ck_login->email,"phone_number"=>$ck_login->phone_number,"date"=>$ck_login->date,"staff_role"=>$ck_login->staff_role);
-			echo $_SESSION["info_staff"]['staff_role'];
+			$_SESSION["info_staff"]['staff_role'];
 			if($_SESSION["info_staff"]['staff_role']==1)
 			{
 				echo "<script>window.location='../index.php'</script>";

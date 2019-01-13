@@ -1,5 +1,6 @@
 <?php
 	include("../database/select_data.php");
+	$url=$_SERVER['DOCUMENT_ROOT'];
 	$data_select=new select_data();
 	include("../database/update_insert.php");
 	$connect_data=new insert_update_data();
@@ -61,7 +62,7 @@
 		{
 	 // file upload sẽ được lưu vào thư mục
 
-		$path="../assert/product/";
+		 $path=$url."/images/product/";
 		$tmp_name_product = $_FILES['fl_imgage']['tmp_name'];
 		move_uploaded_file($tmp_name_product,$path.$image_product);
 		

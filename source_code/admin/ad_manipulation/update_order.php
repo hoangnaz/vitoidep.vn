@@ -29,7 +29,7 @@ $data_insert=new insert_update_data();
 		}
 		$date_deliver=date("d-m-Y",(strtotime(date("Y-m-d"))+"2 day"));
 					
-			$content="Xin chào ".$name_customer."! Chúng tôi vui mừng thông báo đơn hàng #".$_GET['id_order']." của bạn đã được chúng tôi phân công và chuẩn bị giao hàng đến bạn.<p> Nhân viên chúng tôi sẽ  giao hàng cho bạn dự kiến ngày ".$date_deliver." Nếu có bất kỳ thay đổi về ngày gửi. Vui lòng gửi mail phản hồi cho chúng tôi.</p> Hãy nhanh chóng ghé thăm <a href='http://localhost/WEB_THUC_TAP/index.php'> WEBHOCDUONG </a> để tìm thấy nhiều sản phẩm tốt hơn nữa nhé. Chúng tôi xin cảm ơn.";
+			$content="Xin chào ".$name_customer."! Chúng tôi vui mừng thông báo đơn hàng #".$_GET['id_order']." của bạn đã được chúng tôi phân công và chuẩn bị giao hàng đến bạn.<p> Nhân viên chúng tôi sẽ  giao hàng cho bạn dự kiến ngày ".$date_deliver." Nếu có bất kỳ thay đổi về ngày gửi. Vui lòng gửi mail phản hồi cho chúng tôi.</p> Hãy nhanh chóng ghé thăm <a href='https://avrdemo.000webhostapp.com/index.php'> VÌ TÔI ĐẸP </a> để tìm thấy nhiều sản phẩm tốt hơn nữa nhé. Chúng tôi xin cảm ơn.";
 	 			include_once("../smtpgmail/class.phpmailer.php");
         		$mail=new PHPMailer();
 						$mail->IsSMTP(); // Chứng thực SMTP
@@ -91,7 +91,7 @@ $data_insert=new insert_update_data();
 		{
 			$name_customer=$select_data->query_one_customer($info_bill->id_customer)->fullname;
 		}
-			$content="<p>Xin chào ".$name_customer."!<p><p> Đơn hàng #".$_GET['id_order']." của bạn đã thanh toán và  giao hàng thành công.</p><p>Chúng tôi xin chân thành cảm ơn bạn đã mua hàng tại website của chúng tôi.</p> Hãy nhanh chóng ghé thăm <a href='http://localhost/WEB_THUC_TAP/index.php'> WEBHOCDUONG </a> để tìm thấy nhiều sản phẩm tốt hơn nữa nhé. Chúng tôi xin cảm ơn.";
+			$content="<p>Xin chào ".$name_customer."!<p><p> Đơn hàng #".$_GET['id_order']." của bạn đã thanh toán và  giao hàng thành công.</p><p>Chúng tôi xin chân thành cảm ơn bạn đã mua hàng tại website của chúng tôi.</p> Hãy nhanh chóng ghé thăm <a href='https://avrdemo.000webhostapp.com/index.php'> VÌ TÔI ĐẸP </a> để tìm thấy nhiều sản phẩm tốt hơn nữa nhé. Chúng tôi xin cảm ơn.";
 	 			include_once("../smtpgmail/class.phpmailer.php");
         		$mail=new PHPMailer();
 						$mail->IsSMTP(); // Chứng thực SMTP

@@ -4,6 +4,18 @@
 
 	class select_data extends database
 	{
+
+		// SELECT LIST CATALOG WRITE
+		function get_list_write_catalog(){
+			$pdo= parent::conect_data();
+			$query="SELECT * FROM `blog_catalog`";
+			$PDO=$pdo->prepare($query);
+			$PDO->execute();
+			return $PDO->fetchAll(PDO::FETCH_OBJ);
+		}
+		
+
+
 		/*INFO ORDER*/
 			function check_id_order($id)
 		{

@@ -76,7 +76,7 @@
     
     //add message
     $userMassageBL= new userMassageBL();
-    $contentMassage="<p>Bạn đã đặt đơn hàng thành công vào thời gian: ".getCurrentTime()."</p><p>Vui lòng kiểm tra tại tag đơn hàng của bạn</p>";
+    $contentMassage="<p>Bạn đã đặt đơn hàng thành công vào thời gian: ".getCurrentTime()."</p><p>Vui lòng kiểm tra tại tag lịch sử mua hàng của bạn.</p>";
     $userMassageBL->massageUser($_SESSION['customer']->id_customer, $contentMassage);
     
 

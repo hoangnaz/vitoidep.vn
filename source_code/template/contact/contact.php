@@ -57,7 +57,7 @@
 						</li>
 						<li>
 							<i class="tf-ion-android-phone-portrait"></i>
-							<span>Số điện thoại: 0962678192</span>
+							<span>Số điện thoại: 0962876192 </span>
 						</li>
 				
 						<li>

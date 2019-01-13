@@ -287,7 +287,7 @@
             }
             else{
                 $name=$file['name'];
-                $folder='../images/user_info/'.$folderName;
+                $folder=$_SERVER['DOCUMENT_ROOT'].'/images/user_info/'.$folderName;
                 if(!is_dir($folder))
                 {
                     mkdir($folder);

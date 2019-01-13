@@ -25,7 +25,7 @@
 												</div>
 												<div class="block text-center">	
 													<h2 class="text-center">Chào bạn trở lại với vì tôi đẹp</h2>
-													 
+													<form class="text-left clearfix"> 
 														<div class="form-group">
 														  <input type="email" class="form-control" id="email"  placeholder="Email">
 														</div>
@@ -38,9 +38,9 @@
 														</div>
 														
 														<div class="text-center">
-														  <button  onclick="login()" class="btn btn-main text-center" >Login</button>
+														  <button  onsubmit="event.preventDefault();" onclick="return login()" class="btn btn-main text-center" >Login</button>
 														</div>
-													 
+													</form> 
 													 
 													  <p class="mt-20">Bạn quên mật khẩu của mình ?<a   data-toggle="modal" data-target="#get_password" > Click để lấy lại mật khẩu</a></p>
 												</div>

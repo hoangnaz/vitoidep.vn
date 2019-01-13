@@ -140,7 +140,7 @@
                                                        <tr>
                                                         <td><?php echo $lst_one_import->id_product;?></td>
                                                         <td><?php echo $lst_one_import->name_product;?></td>
-                                                        <td><img src="assert/product/<?php echo $lst_one_import->image_product;?>" class="img-responsive" alt="Image" width="60px"></td>
+                                                        <td><img src="../images/product/<?php echo $lst_one_import->image_product;?>" class="img-responsive" alt="Image" width="60px"></td>
                                                         <td><?php echo $lst_one_import->quantity_import;?></td>
                                                         <td><?php echo number_format($lst_one_import->import_price*$lst_one_import->quantity_import)."VNĐ";?></td>
                                                       </tr>

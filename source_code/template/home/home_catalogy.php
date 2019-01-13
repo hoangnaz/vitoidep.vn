@@ -12,7 +12,7 @@
 					<a href="danh_sach_san_pham.php?sanpham=MEKENHANOI">
 						<img src="images/catalog/son.jpg" alt="" />
 						<div class="content" >
-							<h2>Dòng sản phẩm Mẹ Kem</h2>
+							<h2>Dòng sản phẩm Mẹ Ken</h2>
 							<p>Dòng sản phẩm tự nhiên, chăm sóc làn môi của bạn</p>
 						</div>
 					</a>	

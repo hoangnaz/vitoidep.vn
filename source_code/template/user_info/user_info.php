@@ -1,4 +1,13 @@
 
+<?php
+  // handle get image of user
+  if ( isset($_SESSION['customer']->avatar) && empty($_SESSION['customer']->avatar) ){
+    $urlImageUser='default_avatar_user.png';
+  }
+  else {
+    $urlImageUser = $_SESSION['customer']->avatar;
+  }
+?>
 <section class="page-header">
 	<div class="container">
 		<div class="row">
@@ -23,7 +32,7 @@
         <div class="dashboard-wrapper dashboard-user-profile">
           <div class="media info_user">
             <div class="pull-left text-center" href="#">
-              <img class="media-object user-img" src="images/user_info/<?php echo $_SESSION['customer']->avatar;?>" id="img-avatar" alt="Image">
+              <img class="media-object user-img" src="images/user_info/<?php echo $urlImageUser;?>" id="img-avatar" alt="Image">
               <form  method="POST"  enctype="multipart/form-data" action="function/upload_avatar.php?id_customer=<?php echo $_SESSION['customer']->id_customer;?>"> 
               <div class="upload-btn-wrapper">
               

@@ -2,11 +2,13 @@
  <script>
 	search();
   </script>
-
+</head>
+<body id="body"   >
+<!-- Start Top Header Bar -->
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 header_top">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 message_deliver">
 		<div class="container-fluid delivery_ads">
-			<marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962678192</p></marquee>
+			<marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962876192 </p></marquee>
 		</div>  
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 search_form_fast">
@@ -21,13 +23,13 @@
 		<div class="row">
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<div class="contact-number">
-					<a href="tel:0988460072">
+					<a href="tel:0962876192">
 						<i class="tf-ion-ios-telephone"></i>
-						<span>0988334333</span>
+						<span>0962876192</span>
 					</a>
-					<a href="mailto:nguyenanhhoangltqbh@gmail.com" style="padding-left:10px;">
+					<a href="mailto:Vitoidep2018@gmail.com" style="padding-left:10px;">
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<span>vitoidep@gmail.com</span>
+						<span>Vitoidep2018@gmail.com</span>
 					</a>
 				</div>
 			</div>

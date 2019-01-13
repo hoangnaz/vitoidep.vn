@@ -13,13 +13,16 @@
 									<p class="text-center ">Vui lòng nhập địa chỉ email của bạn để chúng tôi có thể gửi cho bạn mật 
 										khẩu mới của bạn
 									</p>
-									<form class="text-left clearfix" action="index.php">
+									<form class="text-left clearfix">
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Email">
+											<input type="email" class="form-control" name='textResetEmmail' id='textResetEmmail' placeholder="Email">
+										</div>
+										<div class="col-xs-12 col-md-12">
+											<p  id="messageResetPass" class="text-warning"></p>
 										</div>
 										
 										<div class="text-center">
-											<button type="submit" class="btn btn-main text-center">Lấy mật khẩu mới</button>
+											<button  onsubmit="event.preventDefault();" onclick="return getPassWord()" class="btn btn-main text-center">Lấy mật khẩu mới</button>
 										</div>
 									</form>
 									
