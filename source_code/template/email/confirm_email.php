@@ -106,6 +106,46 @@
             $contentHTML.='</html>';						
                 return  $contentHTML;
         }
+		function getTemplateResetPassword($info, $newPassWord){
+			 $contentHTML ="";
+            $contentHTML.='<!DOCTYPE html>';
+            $contentHTML.='<html lang="">';
+            $contentHTML.='<head>';
+            $contentHTML.='<meta charset="utf-8">';
+            $contentHTML.='<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+            $contentHTML.='<meta name="viewport" content="width=device-width, initial-scale=1">';
+            $contentHTML.='<title>Email</title>';
+            $contentHTML.='</head>';
+            $contentHTML.='<body style="width:100%; color:#222;">';
+            $contentHTML.='<div style="width:100%; margin:auto;">';
+
+            $contentHTML.='<div class="container" style="border:2px solid #a19d9d; width: 70%; box-shadow: 2px; background-color:#F3F3F3;">';
+            
+
+            $contentHTML.='<div style="background-color: #FFF; margin-bottom: 20px; margin-top:20px;">';
+            $contentHTML.='<img src="cid:logo" style=" margin-left:30%;width: 40%; " >';
+
+            $contentHTML.='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="width: 100%; margin-top: 20px;  margin:auto;">';
+            $contentHTML.='<p style="padding-top: 50px; padding-left:20px;padding-right:20px;">Xin chào !'.$info['name'].'</p>';
+            $contentHTML.='<p style="padding-left:20px;padding-right:20px;">Mật khẩu truy cập mới của bạn là <b>'.$newPassWord.'</b></p>';
+            $contentHTML.='</div>';
+            $contentHTML.='</div>';
+            $contentHTML.='</hr>';
+            $contentHTML.='<div  style="text-align:center; margin-top:30px; padding-bottom:20px; width:100%;">';
+            $contentHTML.='    <p class="text-center">Nguyễn Kim, Phường 12, Quận 5 (2,40 km)Thành phố Hồ Chí Minh</p>';
+            $contentHTML.='</div>';
+            $contentHTML.='<div style="width: 100%; background-color: cornflowerblue; margin-top:10px;">';
+            $contentHTML.='<h4  style="padding-top:15px;padding-bottom:15px;text-align:center;">VÌ TÔI ĐẸP SHOP</h4>';
+            $contentHTML.='</div>';
+            $contentHTML.='</div>';
+            
+            $contentHTML.='<script src="Hello World"></script>';
+            $contentHTML.='</div>';
+            $contentHTML.='</body>';
+            $contentHTML.='</html>';						
+            return  $contentHTML;
+		
+		}
     }
 
 ?>

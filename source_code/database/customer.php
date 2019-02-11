@@ -183,6 +183,14 @@
 			
 		}
 
+		function resetPassword($userId, $newPassword){
+			$pdo=parent::connectDatabase();
+			$query = "UPDATE `customer` SET `password`=? WHERE `id_customer`=? ";
+			$paramQuery = array($userId,$newPassword);
+			return insertUpadeRecord($pdo,$paramQuery,$query);
+
+		}
+
 	}
 
 

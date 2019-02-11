@@ -568,6 +568,15 @@ function getPassWord() {
         $('#textResetEmmail').focus();
         return false;
     }
-  
-    alert(123);
+    $.ajax({
+        url: 'function/reset_password.php',
+        type: 'POST',
+        dataType: 'html',
+        data: {
+            emailReset: $('#textResetEmmail').val()
+        }
+    }).done(function (ketqua) {
+        alert(ketqua);
+    });
+   
 }
