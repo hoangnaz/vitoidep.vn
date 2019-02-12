@@ -3,8 +3,11 @@
     "",
     "\\database",
     "\\entities",
-    "\\js"
+    "\\function",
+    "\\js",
+    "\\template",
+    "\\template\\email"
   ],
-  "SelectedNode": "\\database\\customer.php",
+  "SelectedNode": "\\function\\complete_order.php",
   "PreviewInSolutionExplorer": false
 }
