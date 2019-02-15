@@ -1,13 +1,18 @@
 {
   "ExpandedNodes": [
     "",
-    "\\database",
-    "\\entities",
     "\\function",
-    "\\js",
+    "\\functionBL",
+    "\\library",
     "\\template",
-    "\\template\\email"
+    "\\template\\product_list",
+    "\\template\\recruiment_branch",
+    "\\template\\search",
+    "\\template\\shopping_cart",
+    "\\template\\single_blog",
+    "\\template\\user_info",
+    "\\template\\user_message"
   ],
-  "SelectedNode": "\\function\\complete_order.php",
+  "SelectedNode": "\\library\\const.php",
   "PreviewInSolutionExplorer": false
 }
