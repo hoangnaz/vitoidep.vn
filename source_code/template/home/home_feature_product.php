@@ -36,7 +36,7 @@
 								</div>
 							</div>
 							<div class="product-content">
-								<h4><a href="product-single.php?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
+								<h4><a href="product-single?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
 								<?php
 								if($value->point_promotion > 0){
 									?>
@@ -66,7 +66,7 @@
 			}
 		?>	
 			<div class="col-md-12 see_more">
-				<a href="danh_sach_san_pham.php?sanpham=noibat" class="btn btn-main">Xem thêm các sản phẩm</a>
+				<a href="danh_sach_san_pham?sanpham=noibat" class="btn btn-main">Xem thêm các sản phẩm</a>
 		</div>
 		</div>
 	</div>

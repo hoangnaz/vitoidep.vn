@@ -166,7 +166,7 @@ function confirm_info_order() {
                     text: "Chúc mừng bạn đã đặt hàng thành công. Chúng tôi sẽ sớm liên hệ để chuyển hàng cho bạn.",
                     icon: "success"
                 }).then(() => {
-                    window.location = "index.php";
+                    window.location = "index";
                 });
 
             } else {
@@ -432,7 +432,7 @@ function login() {
             message = "Thông tin đăng nhập chưa chính xác";
             $('#messageLogin').html(message);
         } else {
-            window.location.href = 'index.php';
+            window.location.href = 'index';
         }
     });
 }
@@ -568,6 +568,7 @@ function getPassWord() {
         $('#textResetEmmail').focus();
         return false;
     }
+   
     $.ajax({
         url: 'function/reset_password.php',
         type: 'POST',
@@ -577,6 +578,7 @@ function getPassWord() {
         }
     }).done(function (ketqua) {
         alert(ketqua);
+        window.location.href = 'http://localhost:84';
     });
    
 }

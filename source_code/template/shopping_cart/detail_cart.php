@@ -57,7 +57,7 @@
 										<hr>
 									</div>
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-												<a href="check_out.php" class="btn btn-transparent pull-left text-danger"><i class="fa fa-arrow-right" aria-hidden="true"></i>Xác nhận đơn hàng</a>
+												<a href="check_out" class="btn btn-transparent pull-left text-danger"><i class="fa fa-arrow-right" aria-hidden="true"></i>Xác nhận đơn hàng</a>
 									</div>
 								</div>
 							</form>

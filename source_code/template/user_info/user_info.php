@@ -24,9 +24,9 @@
     <div class="row">
       <div class="col-md-12">
         <ul class="list-inline dashboard-menu text-center">
-            <li class="active"><a href="user_info.php">Thông tin cá nhân</a></li>
-						<li class="margin_top_10"><a href="general_info.php">Lịch sử mua hàng</a></li>
-						<li  class="message"><a  href="user_message.php"> <i class="fa fa-bell" aria-hidden="true"></i> Thông báo của bạn</a></li>
+            <li class="active"><a href="user_info">Thông tin cá nhân</a></li>
+						<li class="margin_top_10"><a href="general_info">Lịch sử mua hàng</a></li>
+						<li  class="message"><a  href="user_message"> <i class="fa fa-bell" aria-hidden="true"></i> Thông báo của bạn</a></li>
         
         </ul>
         <div class="dashboard-wrapper dashboard-user-profile">
@@ -56,8 +56,8 @@
                 <li><p><span>Giới tính:</span><?php echo $_SESSION['customer']->sex=1?"Nam":"Nữ";?></p></li>
                 <li><p><span>Số điểm tích thưởng hiện có:</span></span><?php echo $_SESSION['customer']->point;?> điểm</p></li>
                 <li><p><span>Bạn hiện đang là thành viên :</span><?php echo rankUser($_SESSION['customer']->point);?></p></li>
-                <li><a href="user_info.php"><p>Xem các ưu đãi dành cho bạn và các thành viên vàng khác tại đây.
-                  Hãy thu thập nhiều điểm thưởng hơn nữa để nhận nhiều ưu đãi từ <a href="index.php">VÌ TÔI ĐẸP</a>
+                <li><a href="user_info"><p>Xem các ưu đãi dành cho bạn và các thành viên vàng khác tại đây.
+                  Hãy thu thập nhiều điểm thưởng hơn nữa để nhận nhiều ưu đãi từ <a href="index">VÌ TÔI ĐẸP</a>
                 </p></a></li>
                <li><a  data-toggle="modal" data-target="#updateInfo"><p class="text-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Bổ sung thêm thông tin cá nhân tại đây</p></a></li>
 

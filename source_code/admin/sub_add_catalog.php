@@ -9,7 +9,7 @@
 		{
 			header("location:mn_member.php");
 		}
-	error_reporting(0);
+	error_reporting(1);
 	include("ad_header.php");
 	include("ad_side_bar.php");
 	include("ad_title.php");

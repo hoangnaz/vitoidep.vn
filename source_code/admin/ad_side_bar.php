@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Vì tôi đẹp</a>
+                <a class="navbar-brand" href="index">Vì tôi đẹp</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

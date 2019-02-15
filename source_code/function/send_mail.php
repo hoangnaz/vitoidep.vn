@@ -18,8 +18,8 @@ class Mail{
                 $mail->Host="smtp.gmail.com";                // Enable SMTP authentication
                 $mail->Username = 'webhocduong@gmail.com';                 // SMTP username
                 $mail->Password = 'webhocduong7294';                           // SMTP password
-                $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-                $mail->Port = 465;                                    // TCP port to connect to
+                $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+                $mail->Port = 587;                                    // TCP port to connect to
 
                 //Recipients
                 $mail->setFrom('webhocduong@gmail.com', 'Vì tôi đẹp Shop');

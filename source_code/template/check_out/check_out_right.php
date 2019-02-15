@@ -14,7 +14,7 @@
                ?>
                <!-- PHP End process -->
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-										<p class="media-heading"><a href="product-single.php"><?php echo $value['info']->name_product;?></a></p>
+										<p class="media-heading"><a href="product-single"><?php echo $value['info']->name_product;?></a></p>
 										<p class="price"><span>Số lượng mua:</span><?php echo $value['number'];?></p>
 										<span class="remove" ><span>Thành tiền: 
                                  <?php 

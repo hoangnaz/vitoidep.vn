@@ -37,7 +37,7 @@
 															foreach ($valueCatalog as $key => $value) {
 														?>
 																
-																<li><a href="danh_sach_san_pham.php?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
+																<li><a href="danh_sach_san_pham?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
 														<?php	
 															}
 														?>
@@ -101,7 +101,7 @@
 											</div>
 											<div class="product-content">
 
-												<h4><a href="product-single.php?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
+												<h4><a href="product-single?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
 														<?php
 														if($value->point_promotion > 0){
 														?>

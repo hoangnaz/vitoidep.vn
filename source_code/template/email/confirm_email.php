@@ -106,7 +106,7 @@
             $contentHTML.='</html>';						
                 return  $contentHTML;
         }
-		function getTemplateResetPassword($info, $newPassWord){
+		function getTemplateResetPassword($newPassWord){
 			 $contentHTML ="";
             $contentHTML.='<!DOCTYPE html>';
             $contentHTML.='<html lang="">';
@@ -126,7 +126,7 @@
             $contentHTML.='<img src="cid:logo" style=" margin-left:30%;width: 40%; " >';
 
             $contentHTML.='<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="width: 100%; margin-top: 20px;  margin:auto;">';
-            $contentHTML.='<p style="padding-top: 50px; padding-left:20px;padding-right:20px;">Xin chào !'.$info['name'].'</p>';
+            $contentHTML.='<p style="padding-top: 50px; padding-left:20px;padding-right:20px;">Xin chào !</p>';
             $contentHTML.='<p style="padding-left:20px;padding-right:20px;">Mật khẩu truy cập mới của bạn là <b>'.$newPassWord.'</b></p>';
             $contentHTML.='</div>';
             $contentHTML.='</div>';

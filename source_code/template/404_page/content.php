@@ -33,7 +33,7 @@
     </style>
     <body id="body">
         <div>
-            <a href="index.php"><h3>TRỞ VỀ TRANG CHỦ <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> </h3> </a>
+            <a href="index"><h3>TRỞ VỀ TRANG CHỦ <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> </h3> </a>
         </div>
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

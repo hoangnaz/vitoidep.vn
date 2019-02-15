@@ -35,7 +35,7 @@
 									</div>
 								</div>
 								<div class="product-content">
-									<h4><a href="product-single.php?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
+									<h4><a href="product-single?name=<?php echo $value->name_product_no_vietnamse;?>"><?php echo $value->name_product;?></a></h4>
 									<?php
 									if($value->point_promotion > 0){
 										?>

@@ -79,7 +79,7 @@
                     <hr>
                 </div>			
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <a href="index.php" class="btn  btn-shopping  pull-left"><i class="fa fa-arrow-left" aria-hidden="true"></i>Thêm sản phẩm</a>
+                    <a href="index" class="btn  btn-shopping  pull-left"><i class="fa fa-arrow-left" aria-hidden="true"></i>Thêm sản phẩm</a>
                 </div>
             </div>
             <?php

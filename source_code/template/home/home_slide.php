@@ -22,8 +22,8 @@
 	                            <div class="slide-text slide_style_left">
 	                                <h1 data-animation="animated zoomInRight">Vì tôi đẹp</h1>
 	                                <p data-animation="animated fadeInLeft">Dòng sản phẩm mẹ Ken, tinh khiết, 100% thiên nhiên</p>
-	                                <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
-	                                <a href="intro.php"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a>
+	                                <a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
+	                                <a href="intro"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -39,8 +39,8 @@
 	                    <div class="slide-text slide_style_center">
 	                        <h1 data-animation="animated flipInX">Tung bay trong gió xuân, hương bay khắp ngàn</h1>
 	                        <p data-animation="animated lightSpeedIn">Hãy cùng chúng tôi chăm sóc cơ thể bạn</p>
-	                        <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInUp">Mua ngay</a>
-	                        <a href="intro.php"   class="btn btn-primary" data-animation="animated fadeInDown">Về chúng tôi</a>
+	                        <a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInUp">Mua ngay</a>
+	                        <a href="intro"   class="btn btn-primary" data-animation="animated fadeInDown">Về chúng tôi</a>
 	                    </div>
 	                </div>
 	                <!-- End of Slide -->
@@ -54,8 +54,8 @@
 	                    <div class="slide-text slide_style_right">
 	                        <h1 data-animation="animated zoomInLeft">Vì bạn đẹp</h1>
 	                        <p data-animation="animated fadeInRight">Chúng tôi chung tay vì bạn, vì tuổi trẻ và sắc đẹp .</p>
-	                        <a href="danh_sach_san_pham.php?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
-	                        <a href="contact.php" class="btn btn-primary" data-animation="animated fadeInRight">Liên hệ với chúng tôi</a>
+	                        <a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
+	                        <a href="contact" class="btn btn-primary" data-animation="animated fadeInRight">Liên hệ với chúng tôi</a>
 	                    </div>
 	                </div>
 	                <!-- End of Slide -->

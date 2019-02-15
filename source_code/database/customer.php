@@ -183,11 +183,19 @@
 			
 		}
 
-		function resetPassword($userId, $newPassword){
+		function resetPassword($email, $newPassword){
 			$pdo=parent::connectDatabase();
-			$query = "UPDATE `customer` SET `password`=? WHERE `id_customer`=? ";
-			$paramQuery = array($userId,$newPassword);
-			return insertUpadeRecord($pdo,$paramQuery,$query);
+			$chkEmail = checkUniqueAccount($pdo,"customer",'email',$email);	
+			if(!$chkEmail == true)
+			{
+				return 400;
+			}
+			else {
+				$query = "UPDATE `customer` SET `password`=? WHERE `email`=? ";
+				$paramQuery = array($userId,$newPassword);
+				return insertUpadeRecord($pdo,$paramQuery,$query);
+			}
+			
 
 		}
 

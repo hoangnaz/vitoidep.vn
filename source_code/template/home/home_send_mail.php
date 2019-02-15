@@ -12,7 +12,7 @@
 				      <input type="text" class="form-control" placeholder="Vui lòng nhập email của bạn" id="subEmail">
 				      <span id="error-mail-sub"></span>
 							<span class="input-group-btn">
-				        <button class="btn btn-main" type="button" onclick="return suscribleNow()">Nhận theo dõi ngay!</button>
+				        <button class="btn btn-main" type="button" onclick="return suscribleNow()">XÁC NHẬN</button>
 				      </span>
 				    </div>
 			 	 </div>

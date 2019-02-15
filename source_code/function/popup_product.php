@@ -27,7 +27,7 @@
              </div>
                 <a class="btn btn-main" onclick="shopping_cart('.$productInfo->id_product.',1,1)">Thêm vào giỏ hàng</a>
                 
-                <a  href="product-single.php?name='.$productInfo->name_product_no_vietnamse.'" class="btn btn-transparent">Xem thông tin sản phẩm</a>
+                <a  href="product-single?name='.$productInfo->name_product_no_vietnamse.'" class="btn btn-transparent">Xem thông tin sản phẩm</a>
             </div>
         </div>
     </div>';

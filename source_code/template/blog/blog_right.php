@@ -15,11 +15,11 @@
 		      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		      				<div class="post">
 						<div class="post-media post-thumb">
-						<a href="blog-single.php">
+						<a href="blog-single">
 							<img src="images/blog/blog-post-2.jpg" alt="">
 						</a>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -31,7 +31,7 @@
 								
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -43,7 +43,7 @@
 								
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -55,7 +55,7 @@
 								
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -75,7 +75,7 @@
 		      			<h5 class="text-center text-uppercase"><b>Top review sảm phẩm</b></h5>	
 		      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		      				<div class="post">						
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -86,7 +86,7 @@
 								</li>								
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -98,7 +98,7 @@
 								
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Straight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Straight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>
@@ -109,7 +109,7 @@
 								</li>
 							</ul>
 						</div>
-						<h5 ><a href="blog-single.php">Two Ways To Wear Sssssssssssssssstraight Shoes</a></h5>
+						<h5 ><a href="blog-single">Two Ways To Wear Sssssssssssssssstraight Shoes</a></h5>
 						<div class="post-meta-right ">
 							<ul>
 								<li>

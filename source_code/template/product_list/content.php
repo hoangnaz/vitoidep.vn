@@ -47,7 +47,7 @@
 														foreach ($valueCatalog as $key => $value) {
 													?>
 															
-															<li><a href="danh_sach_san_pham.php?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
+															<li><a href="danh_sach_san_pham?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
 													<?php	
 														}
 													?>
@@ -76,7 +76,7 @@
 								if($top==true){
 									?>
 									<div class="post-media post-thumb">
-										<a class="text-info" href="product-single.php?name=<?php echo $infoProduct->name_product_no_vietnamse;?>">
+										<a class="text-info" href="product-single?name=<?php echo $infoProduct->name_product_no_vietnamse;?>">
 											<img src="images/product/<?php echo $infoProduct->image_product;?>" alt="">
 										</a>
 									</div>
@@ -87,14 +87,14 @@
 								
 								?>
 									
-									<h6 ><a class="text-waring"  href="product-single.php?name=<?php echo $infoProduct->name_product_no_vietnamse;?>"><?php echo $infoProduct->name_product;?></a></h5>
+									<h6 ><a class="text-waring"  href="product-single?name=<?php echo $infoProduct->name_product_no_vietnamse;?>"><?php echo $infoProduct->name_product;?></a></h5>
 									<div class="post-meta-right ">
 										<ul>
 											<li>
 												<a href="">Còn lại:<?php echo $infoProduct->quantity_inventory;?>  sản phẩm</a>
 											</li>
 											<li>
-											<a href="product-single.php?name=<?php echo $infoProduct->name_product_no_vietnamse;?>"><i class="fa fa-money" aria-hidden="true"></i><?php echo $infoProduct->price_product*(1-($infoProduct->point_promotion)/100);?> VNĐ / Thỏi </a>
+											<a href="product-single?name=<?php echo $infoProduct->name_product_no_vietnamse;?>"><i class="fa fa-money" aria-hidden="true"></i><?php echo $infoProduct->price_product*(1-($infoProduct->point_promotion)/100);?> VNĐ / Thỏi </a>
 											</li>
 											
 										</ul>

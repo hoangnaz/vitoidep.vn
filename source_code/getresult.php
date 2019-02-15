@@ -132,7 +132,7 @@
 									</div>
 								</div>
 								<div class="product-content">
-									<h4><a href="product-single.php?name='.$v->name_product_no_vietnamse.'">'.$v->name_product.'</a></h4>
+									<h4><a href="product-single?name='.$v->name_product_no_vietnamse.'">'.$v->name_product.'</a></h4>
 
 									<p class="price">';
 									if($v->point_promotion > 0){

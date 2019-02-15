@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	 require_once $_SERVER['DOCUMENT_ROOT'].'/functionBL/catalog_product.php';  
 	 $blCatalog= new catalogProduct();
 		error_reporting(0);
@@ -22,19 +22,19 @@
 	        <ul class="nav navbar-nav">
 	          <!-- Home -->
 	          <li class="dropdown ">
-	            <a href="index.php">Trang chủ</a>
+	            <a href="index">Trang chủ</a>
 	          </li><!-- / Home -->
 	          <!-- Intro -->
 	          <li>
-	            <a href="intro.php">Giới thiệu</a>
+	            <a href="intro">Giới thiệu</a>
 	          </li><!-- / Intro -->
 	          <!-- Contact -->
 	          <li>
-	            <a href="contact.php">Liên hệ</a>
+	            <a href="contact">Liên hệ</a>
 	          </li><!-- / Contact -->
 	            <!-- Product -->
 	          <li class="dropdown full-width dropdown-slide">
-	            <a href="shop.php" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm <span class="tf-ion-ios-arrow-down"></span></a>
+	            <a  class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm <span class="tf-ion-ios-arrow-down"></span></a>
 	            <div class="dropdown-menu">
 	              	<div class="row">
 
@@ -50,7 +50,7 @@
 																foreach ($valueCatalog as $key => $value) {
 																
 															?>
-																	<li><a href="danh_sach_san_pham.php?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
+																	<li><a href="danh_sach_san_pham?sanpham=<?php echo $value->sub_catalog_id; ?>"><?php  echo $value->sub_catalog_name;?></a></li>
 															<?php	
 																}
 															?>
@@ -62,7 +62,7 @@
 									  	?>		              
 		                <!-- Mega Menu -->
 		                <div class="col-sm-3 col-xs-12">
-		                	<a href="shop.php">
+		                	<a>
 			                	<img class="img-responsive" src="images/logo.png" alt="menu image" />
 		                	</a>
 		                </div>
@@ -78,21 +78,21 @@
 	            <ul class="dropdown-menu">
 	            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="recruiment_branch.php">
+	            				<a href="recruiment_branch">
 		            				<h6>Tuyển dụng đại lý</h6>
 	            				</a>
 	            			</li>
 	            	</div>
 	            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="list_branch.php">
+	            				<a href="list_branch">
 		            				<h6>Danh sách đại lý bán hàng</h6>
 	            				</a>
 	            			</li>
 	            	</div>
 								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 	            			<li>
-	            				<a href="policy.php">
+	            				<a href="policy">
 		            				<h6>Chính sách bán hàng</h6>
 	            				</a>
 	            			</li>
@@ -110,21 +110,21 @@
 	            	
 	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
 	            			<li>
-	            				<a href="blog-full-width.php">
+	            				<a href="blog-full-width">
 	            					<h6> Hướng dẫn làm đẹp</h6>
 	            				</a>
 	            			</li>
 	            		</div>
 	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
 	            			<li>
-	            				<a href="blog-full-width.php">
+	            				<a href="blog-full-width">
 	            			 		<h6>Chương trình khuyến mãi</h6>
 	            				</a>
 	            			</li>
 	            		</div>
 	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
 	            			<li>
-	            				<a href="blog-full-width.php">
+	            				<a href="blog-full-width">
 		            				<h6>Review sản phẩm</h6>
 	            				</a>
 	            			</li>

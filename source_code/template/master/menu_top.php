@@ -37,7 +37,7 @@
 				<!-- Site Logo -->
 
 				<div class="logo text-center hidden-xs hidden-sm">
-					<a href="index.php">
+					<a href="index">
 						<img src="images/logo.png" class="img-responsive img-logo" alt="Image"  height="29px" >
 					</a>
 				</div>
@@ -83,7 +83,7 @@
 								?>
 								<!-- Cart Item -->
 								<div class="media">
-									<a class="pull-left" href="#">
+									<a class="pull-left" href="product-single?name=<?php echo $value["info"]->name_product_no_vietnamse;?>">
 										<img  class="media-object" src="images/product/<?php echo $value["info"]->image_product;?>" alt="image" />
 									</a>
 									<div class="media-body">
