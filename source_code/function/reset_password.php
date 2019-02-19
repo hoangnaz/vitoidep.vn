@@ -6,8 +6,8 @@
 	require_once $_SERVER['DOCUMENT_ROOT'].'/function/send_mail.php';
 	require_once $_SERVER['DOCUMENT_ROOT'].'/library/const.php';
 	define(RESETPASS,'RESET PASSWORD');
-	if(isset($_POST['emailReset'])){
-		$emailReset = $_POST['emailReset'];
+	if(isset($_POST['textResetEmmail'])){
+		$emailReset = $_POST['textResetEmmail'];
 	}
 	$newPassword = rand(10000000,99999999);
 	$customer = new customerDB();

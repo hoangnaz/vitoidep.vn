@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="title text-center">
-				<h2><b>Sản phẩm nổi bật</b></h2>
+				<h2><b>Danh sách sản phẩm nổi bật</b></h2>
 			</div>
 		</div>
 		<div class="row">

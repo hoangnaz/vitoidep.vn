@@ -8,7 +8,8 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 header_top">
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 message_deliver">
 		<div class="container-fluid delivery_ads">
-			<marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()"><p>Miễn phí vận chuyển trong phạm vi 7km. <i class="fa fa-phone-square" aria-hidden="true"></i> 0962876192 </p></marquee>
+			<marquee class="maquee" direction="right"  onMouseOver="this.stop()" onMouseOut="this.start()">
+			<p>Miễn phí vận chuyển cho đơn hàng trị giá từ 1.000.000 VNĐ  <i class="fa fa-phone-square" aria-hidden="true"></i> 0962876192 </p></marquee>
 		</div>  
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 search_form_fast">

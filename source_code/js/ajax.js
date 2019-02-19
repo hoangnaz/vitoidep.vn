@@ -397,7 +397,7 @@ function updateInfo(id_customer) {
 
 function login() {
     var user = $("input#email").val();
-
+    var kq;
     var pass = $("input#password").val();
     if (user == "") {
         $('#messageLogin').html("Bạn chưa nhập tài khoản/ email");
@@ -421,20 +421,26 @@ function login() {
     $.ajax({
         url: 'function/login.php',
         type: 'POST',
+        async: false,
+        cache: false,
         dataType: 'html',
         data: {
             txtEmail: $("input#email").val(),
             txtPassword: $("input#password").val()
         }
     }).done(function(ketqua) {
-        console.log(ketqua)
-        if (ketqua == 2) {
-            message = "Thông tin đăng nhập chưa chính xác";
-            $('#messageLogin').html(message);
-        } else {
-            window.location.href = 'index';
-        }
+       
+        kq = ketqua;
     });
+    
+    if (kq == 2) {
+        message = "Thông tin đăng nhập chưa chính xác";
+        $('#messageLogin').html(message);
+        return false;
+    } else {
+        window.location.href = 'index.php';
+    }
+    return false;
 }
 
 function signUp() {
@@ -515,6 +521,8 @@ function signUp() {
     $.ajax({
         url: 'function/sign_up.php',
         type: 'POST',
+        async: false,
+        cache: false,
         dataType: 'html',
         data: {
             txtFullName: $("input#rg_full_name").val(),
@@ -557,6 +565,7 @@ function share_twiter(url) {
 }
 
 function getPassWord() {
+    var kq;
     var passwordReset = $('#textResetEmmail').val();
     if (passwordReset == ""){
         $('#messageResetPass').html('Vui lòng nhập địa chỉ email');
@@ -568,17 +577,34 @@ function getPassWord() {
         $('#textResetEmmail').focus();
         return false;
     }
-   
+    $('#messageResetPass').html('Vui lòng đợi xử lý');
     $.ajax({
         url: 'function/reset_password.php',
         type: 'POST',
         dataType: 'html',
+        async: false,
+        cache: false,
         data: {
-            emailReset: $('#textResetEmmail').val()
+            textResetEmmail: $('#textResetEmmail').val()
         }
     }).done(function (ketqua) {
-        alert(ketqua);
-        window.location.href = 'http://localhost:84';
+        kq=ketqua;  
     });
-   
+    
+    if(kq==200)
+    {
+        $('#textResetEmmail').hide();
+        $('#btn_reset_pass').hide();
+        $('#messageResetPass').html('Quá trình tạo mật khẩu mới thành công. Vui lòng kiểm tra email của bạn. Chúng tôi đã tạo mới mật khẩu cho bạn');
+        return false;
+    } else {
+        $('#messageResetPass').html('Vui lòng nhập đúng địa chỉ Email');
+        $('#textResetEmmail').focus();
+        return false;
+    }
+        
 }
+function close_signin(){
+    $('#sign_in').modal('hide');
+  
+} 

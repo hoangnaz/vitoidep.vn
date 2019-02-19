@@ -17,7 +17,6 @@
             <div class="alert alert-warning">
                 <p class="text-center">THÊM SẢN PHẨM MỚI</p>
             </div>
-			<button onclick="abc()">aaaaaaaaaaa</button>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 form_info_input">
 				<form action="ad_manipulation/ad_product.php" method="POST" role="form" enctype="multipart/form-data">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >

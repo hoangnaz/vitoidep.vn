@@ -1730,7 +1730,13 @@ Website :	www.themefisher.com
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        
+        .maintanance_blog{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin:auto;
+            text-align: center;
+            background-color: #fff;
+        }
         .widget {}
         /*=================================================================
   Single Blog Page
@@ -2758,7 +2764,7 @@ Website :	www.themefisher.com
         
         .btn-buynow,
         .btn-buynow-list {
-            background: rgb(232, 235, 216);
+            background: rgb(199, 202, 186);
             display: inline-block;
             font-size: 11px;
             letter-spacing: 1px;
@@ -2896,4 +2902,7 @@ Website :	www.themefisher.com
         #rg_address {
             resize: none;
             width: 100%;
+        }
+        .content_catalog{
+            color: #fa7e07;
         }

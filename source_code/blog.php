@@ -2,8 +2,9 @@
 	include 'template/master/header.php';
 	include_once 'template/master/menu_top.php';
 	include_once 'template/master/main_menu.php';
-	include_once 'template/blog/blog_left_beautifull.php';
-	include_once 'template/blog/blog_right.php';
+	// include_once 'template/blog/blog_left_beautifull.php';
+	// include_once 'template/blog/blog_right.php';
+	 include_once 'template/blog/maintanace.php';
 	include_once 'template/master/footer.php';
 	include_once 'template/master/top_message.php';
 	include_once 'template/master/js_file.php';

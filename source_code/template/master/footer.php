@@ -26,19 +26,26 @@
 					</ul>
 					<ul class="footer-menu">
 						<li>
-							<a href="contact.php">LIÊN HỆ</a>
+							<a href="contact">LIÊN HỆ</a>
 						</li>
 						<li>
-							<a href="">SHIPPING</a>
+							<a href="recruiment_branch">DANH SÁCH ĐẠI LÝ</a>
 						</li>
 						<li>
-							<a href="">CHĂM SÓC KHÁCH HÀNG</a>
+							<a href="recruiment_branch">TUYỂN DỤNG ĐẠI LÝ</a>
 						</li>
 						<li>
-							<a href="">CHÍNH SÁCH</a>
+							<a href="policy">CHÍNH SÁCH</a>
 						</li>
 					</ul>
 					<p class="copyright-text">Website của Vitoidep.vn. @2018 - 12</p>
+					<p>
+					
+						<!-- Start of CuterCounter Code -->
+						<a href="http://www.cutercounter.com/" target="_blank">
+						<img src="http://www.cutercounter.com/hit.php?id=gvmnknco&nd=8&style=2" border="0" alt="hit counter"></a>
+						<!-- End of CuterCounter Code -->
+					</p>
 				</div>
 				<div class=" col-md-3">
 					<div class="col-md-12 text-center facebook">

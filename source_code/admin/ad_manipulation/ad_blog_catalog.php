@@ -47,9 +47,7 @@
 		echo $id_catalog_product="";
 		echo $catalog_name=$_POST["txt_catalog_blog"];
 		echo $catalog_describle=$_POST["txt_describle_catalog_blog"];
-		$name_vietnam = utf8tourl(utf8convert($catalog_name));
-		echo $image_catalog=$_FILES["txt_imgage_catalog"]["name"];
-		 
+		$name_vietnam = utf8tourl(utf8convert($catalog_name)); 
 				$_SESSION["catalog"]=array("name"=>$catalog_name,"catalog_describle"=>$catalog_describle,"image_catalog"=>$image_catalog);
 			
 		

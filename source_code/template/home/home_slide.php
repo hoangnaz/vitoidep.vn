@@ -12,7 +12,7 @@
 	            <!-- Wrapper For Slides -->
 	            <div class="carousel-inner" role="listbox">
 	                <!-- Third Slide -->
-	                <div class="item active">
+	                <div class="item ">
 	                    <!-- Slide Background -->
 	                    <img src="images/slider/slider-3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
 	                    <div class="bs-slider-overlay"></div>
@@ -31,14 +31,14 @@
 	                <!-- End of Slide -->
 
 	                <!-- Second Slide -->
-	                <div class="item">
+	                <div class="item active">
 	                    <!-- Slide Background -->
 	                    <img src="images/slider/slider-4.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
 	                    <div class="bs-slider-overlay"></div>
 	                    <!-- Slide Text Layer -->
 	                    <div class="slide-text slide_style_center">
-	                        <h1 data-animation="animated flipInX">Tung bay trong gió xuân, hương bay khắp ngàn</h1>
-	                        <p data-animation="animated lightSpeedIn">Hãy cùng chúng tôi chăm sóc cơ thể bạn</p>
+	                        <h1 data-animation="animated flipInX">Sản phẩm 100% thiên nhiên, từ vùng nguyên liệu mẹ Ken</h1>
+	                        <p data-animation="animated lightSpeedIn">Sạch, chất lượng và tinh khiết</p>
 	                        <a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInUp">Mua ngay</a>
 	                        <a href="intro"   class="btn btn-primary" data-animation="animated fadeInDown">Về chúng tôi</a>
 	                    </div>
@@ -52,8 +52,8 @@
 	                    <div class="bs-slider-overlay"></div>
 	                    <!-- Slide Text Layer -->
 	                    <div class="slide-text slide_style_right">
-	                        <h1 data-animation="animated zoomInLeft">Vì bạn đẹp</h1>
-	                        <p data-animation="animated fadeInRight">Chúng tôi chung tay vì bạn, vì tuổi trẻ và sắc đẹp .</p>
+	                        <h1 data-animation="animated zoomInLeft">Vì tôi đẹp</h1>
+	                        <p data-animation="animated fadeInRight">Nhà phân phối và bán lẻ hàng đầu của thương hiệu mẹ Ken và 10X_beauty</p>
 	                        <a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
 	                        <a href="contact" class="btn btn-primary" data-animation="animated fadeInRight">Liên hệ với chúng tôi</a>
 	                    </div>

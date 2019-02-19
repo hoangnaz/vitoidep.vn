@@ -12,7 +12,6 @@
             }
             catch(PDOException $e){
                 echo database::MESSAGE;
-                
             }
         }
     } 

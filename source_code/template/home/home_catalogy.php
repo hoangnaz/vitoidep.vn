@@ -10,10 +10,10 @@
 			<div class="col-md-6">
 				<div class="category-box">
 					<a href="danh_sach_san_pham.php?sanpham=MEKENHANOI">
-						<img src="images/catalog/son.jpg" alt="" />
+						<img src="images/catalog/me_ken.jpg" alt="" />
 						<div class="content" >
 							<h2>Dòng sản phẩm Mẹ Ken</h2>
-							<p>Dòng sản phẩm tự nhiên, chăm sóc làn môi của bạn</p>
+							<p class='content_catalog'>Dòng sản phẩm tự nhiên, chăm sóc và bảo vệ cơ thể bạn</p>
 						</div>
 					</a>	
 				</div>
@@ -21,10 +21,10 @@
 			<div class="col-md-6">
 			<div class="category-box">
 					<a href="danh_sach_san_pham?sanpham=10XBEAUTY">
-						<img src="images/catalog/ngu_coc.jpg" alt="" />
+						<img src="images/catalog/catalog_10x_beautifull.png" alt="" />
 						<div class="content">
 							<h2>10X beauty</h2>
-							<p>Các sản phẩm ngũ cốc thiên nhiên</p>
+							<p class='content_catalog'>Các dòng sản phẩm chức năng, giảm cân làm đẹp</p>
 						</div>
 					</a>	
 				</div>

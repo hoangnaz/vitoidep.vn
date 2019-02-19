@@ -27,7 +27,7 @@
 													<h2 class="text-center">Chào bạn trở lại với vì tôi đẹp</h2>
 													<form class="text-left clearfix"> 
 														<div class="form-group">
-														  <input type="email" class="form-control" id="email"  placeholder="Email">
+														  <input  class="form-control" id="email"  placeholder="Email">
 														</div>
 														<div class="form-group">
 														  <input type="password" class="form-control" placeholder="Password" id="password" >
@@ -42,7 +42,7 @@
 														</div>
 													</form> 
 													 
-													  <p class="mt-20">Bạn quên mật khẩu của mình ?<a   data-toggle="modal" data-target="#get_password" > Click để lấy lại mật khẩu</a></p>
+													  <p class="mt-20">Bạn quên mật khẩu của mình ?<a   data-toggle="modal" data-target="#get_password" onclick="return close_signin()"> Click để lấy lại mật khẩu</a></p>
 												</div>
 											</div>
 										</div>

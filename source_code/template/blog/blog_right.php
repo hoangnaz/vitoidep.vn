@@ -3,11 +3,13 @@
 		      			<div class="widget widget-category">
 							<h4 class="widget-title">Danh mục blog</h4>
 							<ul class="widget-category-list">
-						        <li><a href="#">Chăm sóc sắc đẹp</a>
+						        <li><a href="#">Đánh giá sản phẩm</a>
 						        </li>
-						        <li><a href="#">Chương trình khuyến mãi</a>
+						        <li><a href="#">Bí quyết làm đẹp</a>
 						        </li>
-						        <li><a href="#">Review sản phẩm</a>
+						        <li><a href="#">Mẹo vặt cuộc sống</a>
+						        </li>
+								<li><a href="#">Tâm sự, chia sẻ</a>
 						        </li>
 						    </ul>
 						</div>

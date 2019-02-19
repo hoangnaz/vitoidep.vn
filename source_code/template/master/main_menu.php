@@ -106,29 +106,38 @@
 						 <li class="dropdown dropdown-slide">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="tf-ion-ios-arrow-down"></span></a>
 	            <ul class="dropdown-menu">
-	            	<div class="container-fluid">
+	            	<div class="container">
 	            	
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+									<div class="col-sm-3 col-xs-12">
+										<li>
+											<a href="blog">
+												<h6> Đánh giá sản phẩm</h6>
+											</a>
+										</li>
+									</div>
+									<div class="col-sm-3 col-xs-12">
 	            			<li>
-	            				<a href="blog-full-width">
-	            					<h6> Hướng dẫn làm đẹp</h6>
+	            				<a href="blog">
+	            			 		<h6>Bí quyết làm đẹp</h6>
 	            				</a>
 	            			</li>
 	            		</div>
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+									<div class="col-sm-3 col-xs-12">
 	            			<li>
-	            				<a href="blog-full-width">
-	            			 		<h6>Chương trình khuyến mãi</h6>
+	            				<a href="blog">
+		            				<h6>Mẹo vặt cuộc sống</h6>
 	            				</a>
 	            			</li>
 	            		</div>
-	            		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-	            			<li>
-	            				<a href="blog-full-width">
-		            				<h6>Review sản phẩm</h6>
-	            				</a>
-	            			</li>
-	            		</div>
+	            	
+									<div class="col-sm-3 col-xs-12">
+										<li>
+											<a href="blog">
+												<h6>Tâm sự, chia sẻ</h6>
+											</a>
+										</li>
+									</div>
+									</div>
 	            	</div>
 	            </ul>
 	          </li>

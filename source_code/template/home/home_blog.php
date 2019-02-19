@@ -1,12 +1,12 @@
 <!-- blog section -->
-<!-- <section class="section  bg-gray section">
+ <section class="section  bg-gray section">
 	<div class="container">
-		<div class="row">
+		<!-- <div class="row">
 			<div class="title">
 				<h2>Trang blog của chúng tôi</h2>
 			</div>
-		</div>
-		<div class="row">
+		</div> -->
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<div class="col-sm-12 col-md-3">
 					<div class="col-md-12">
@@ -45,9 +45,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
-</section> -->
-<!--
-Start Call To Action
-==================================== -->
+</section> 
+
+<!-- Start Call To Action -->

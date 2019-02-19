@@ -26,7 +26,7 @@
                           <p class="text-center">THÊM DANH MỤC MỚI BÀI VIẾT MỚI</p>
                         </div>
                        <div class="col-xs-12 col-sm-12 col-lg-12 form_info_input">
-						 					<form action="ad_manipulation/ad_catalog.php" method="POST" role="form" enctype="multipart/form-data">
+						 					<form action="ad_manipulation/ad_blog_catalog.php" method="POST" role="form" enctype="multipart/form-data">
 						 					
 						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
 						 						<div class="form-group">
@@ -60,7 +60,7 @@
 
 						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						 						<div class="form-group" style="text-align:center;">
-						 								<button type="submit" name="btn_add_catalog" onclick="return check_catalog_blog()" class="btn btn-primary text-center">Tạo danh mục blog</button>
+						 								<button type="submit" name="btn_add_write_catalog" onclick="return check_catalog_blog()" class="btn btn-primary text-center">Tạo danh mục blog</button>
 
 						 						</div>
 						 					

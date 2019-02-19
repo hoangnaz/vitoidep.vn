@@ -1,7 +1,7 @@
 
 <?php
 	 $list_supplier=$ad_select->query_list_producer_publisher();
-	 $list_catalog=$ad_select->query_list_catalog();
+	 $list_catalog=$ad_select->query_list_sub_catalog();
     $lst_product_pagination=$ad_select->query_list_product();
 	
     
@@ -225,7 +225,7 @@
 																if($list_cl->status==0)
 																{
 															?>
-                                                            	 <option value="<?php echo $list_cl->id_catalog_product?>">-- <?php echo $list_cl->catalog_name?> --</option>
+                                                            	<option value="<?php echo $list_cl->sub_catalog_id?>">-- <?php echo $list_cl->sub_catalog_name?> --</option>
 															<?php
 																}
                                                             }

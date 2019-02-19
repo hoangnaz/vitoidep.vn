@@ -4,7 +4,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-12 img-sale">
-					<img src="images/ads/saleheovang.png" class="img-responsive banner_img" alt="Image">
+					<!-- <img src="images/ads/delivery_banner.png" class="img-responsive banner_img" alt="Image"> -->
+					<!-- open image when have event.  -->
 				</div>
 				
 			</div>

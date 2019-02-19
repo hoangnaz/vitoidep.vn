@@ -13,7 +13,7 @@
 									<p class="text-center ">Vui lòng nhập địa chỉ email của bạn để chúng tôi có thể gửi cho bạn mật 
 										khẩu mới của bạn
 									</p>
-									<form class="text-left clearfix">
+									<form class="text-left clearfix" >
 										<div class="form-group">
 											<input type="email" class="form-control" name='textResetEmmail' id='textResetEmmail' placeholder="Email">
 										</div>
@@ -22,7 +22,7 @@
 										</div>
 										
 										<div class="text-center">
-											<button  onsubmit="event.preventDefault();" onclick="return getPassWord()" class="btn btn-main text-center">Lấy mật khẩu mới</button>
+											<button   onclick="return getPassWord()"  class="btn btn-main text-center" id='btn_reset_pass' >Lấy mật khẩu mới</button>
 										</div>
 									</form>
 									

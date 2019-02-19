@@ -192,7 +192,7 @@
 			}
 			else {
 				$query = "UPDATE `customer` SET `password`=? WHERE `email`=? ";
-				$paramQuery = array($userId,$newPassword);
+				$paramQuery = array(sha1($newPassword),$email);
 				return insertUpadeRecord($pdo,$paramQuery,$query);
 			}
 			
