@@ -31,7 +31,8 @@
     <![endif]-->
    
 	<script src="ckeditor/ckeditor.js"></script>
-    
+  <script src="js/check_validation_data.js"></script>
+  
 </head>
 
 <body>

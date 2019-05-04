@@ -7,42 +7,22 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<?php
+				foreach ($allBlogFollowCatalog As  $blogPostLst) {
+					?>
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<img src="images/blog/1.jpg" class="img-responsive" alt="Image">
+						<img src="images/user_info/<?php echo $blogPostLst->image_blog;?>" class="img-responsive" alt="Image">
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_blog">
-						<a href=""><p class="text-center">Hương sắc ngọc ngà</p></a>
-						<p class="text-right time_blog_publish"><i>2018-10-08 20:10:00</i></p>
+						<a  href="blog-single.php?post=<?php echo $blogPostLst->blog_id;?>"><p class="text-center"><?php echo $blogPostLst->blog_name;?></p></a>
+						<p class="text-right time_blog_publish"><i><?php echo $blogPostLst->date_update;?></i></p>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-						<img src="images/blog/4.jpg" class="img-responsive" alt="Image">
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_blog">
-						<a href=""><p class="text-center">Hương sắc ngọc ngà</p></a>
-						<p class="text-right time_blog_publish"><i>2018-10-08 20:10:00</i></p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<img src="images/blog/3.jpg" class="img-responsive" alt="Image">
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_blog">
-						<a href=""><p class="text-center">Hương sắc ngọc ngà</p></a>
-						<p class="text-right time_blog_publish"><i>2018-10-08 20:10:00</i></p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<img src="images/blog/2.jpg" class="img-responsive" alt="Image">
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_blog ">
-						<a href=""><p class="text-center">Hương sắc ngọc ngà</p></a>
-						<p class="text-right time_blog_publish"><i>2018-10-08 20:10:00</i></p>
-					</div>
-				</div>
+				<?php
+				}
+			?>
+				
 			</div>
 		</div>
 	</div>

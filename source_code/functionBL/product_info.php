@@ -3,8 +3,8 @@
     require_once $_SERVER['DOCUMENT_ROOT'].'/database/product_info.php';
     error_reporting(0);
     class product{
-        public const CONDITION_HIGHT = 'highlights';
-        public const CONDITION_NEW = 'status_product';
+         const CONDITION_HIGHT = 'highlights';
+         const CONDITION_NEW = 'status_product';
         function getHightLightProduct($value){
             $pro=new productDB();
             $conditionSearch['conditon']= "highlights";

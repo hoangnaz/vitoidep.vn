@@ -61,7 +61,172 @@
                                         <td width="120px"><?php echo number_format($lst_product->price_product);?> VNĐ</td>
                                  
                                        <td class="text-center"><?php echo $lst_product->quantity_inventory;?></td>
-                                    
+                                            
+                                            
+                                            <div class="modal fade" id="update_product<?php echo $lst_product->id_product;?>">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                            <h2 class="modal-title text-center text-danger"> THÔNG TIN SẢN PHẨM</h2>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <form action="ad_manipulation/up_product.php?id_product=<?php echo $lst_product->id_product;?>" method="POST" role="form" enctype="multipart/form-data">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
+                                                            <div class="form-group">
+                                                                <div class="col-lg-5">
+                                                                    <label for="pd_name">Tên sản phẩm:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <input type="text" name="txt_pd_name" class="form-control" id="pd_name"  required value="<?php echo $info_product->name_product;?>">
+                                                                </div>
+                                                            
+                                                            </div>
+						 					
+						 					            </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
+                                                            <div class="form-group">
+                                                                <div class="col-lg-5">
+                                                                    <label for="pd_price">Đơn giá sản phẩm:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <input type="number" name="txt_pd_price" min="0" class="form-control" id="pd_price"  required value="<?php echo $info_product->price_product;?>" title="Đơn giá không thể nhỏ hơn 0">
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        
+                                                        </div>
+                                            
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
+                                                            <div class="form-group">
+                                                                <div class="col-lg-5">
+                                                                    <label for="pd_price_pro">Khuyến mãi:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <input type="number" name="txt_pd_promotion" class="form-control" id="pd_price_pro"  required value="<?php echo $info_product->promotion_product;?>" max="100" min="0" pattern=".{0,100}">
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        
+                                                        </div>
+						 					
+						 					
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                <div class="col-lg-5">
+                                                                    <label for="unit">Đơn vị tính:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <input type="text" name="txt_unit" class="form-control" id="unit"  required value="<?php echo $info_product->unit;?>">
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        
+                                                        </div>
+						 					
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                
+                                                                <div class="col-lg-5">
+                                                                    <label for="supplier">Nhà cung cấp:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <select name="supplier" id="input" class="form-control">
+                                                                        <option value="">-- Vui lòng chọn nhà sản xuất/ xuất bản nếu muốn cập nhật--</option>
+                                                                        <?php foreach( $list_supplier as $list_sp)
+                                                                        {
+                                                                            if($list_sp->status==0)
+                                                                            {
+                                                                        ?>
+                                                                            <option value="<?php echo $list_sp->id_producer_publisher?>">-- <?php echo $list_sp->name_producer_publisher?> --</option>
+                                                                        <?php
+                                                                            }
+                                                                        }
+                                                                        ?>                                                            </select>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                            
+                                                        
+                                                        
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                
+                                                                <div class="col-lg-5">
+                                                                    <label for="catalog">Danh mục sản phẩm:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <select name="catalog" id="input" class="form-control">
+                                                                        <option value="">-- Chọn danh mục bạn muốn cập nhật cho sản phẩm --</option>
+                                                                    <?php foreach( $list_catalog as $list_cl)
+                                                                        {
+                                                                            if($list_cl->status==0)
+                                                                            {
+                                                                        ?>
+                                                                            <option value="<?php echo $list_cl->sub_catalog_id?>">-- <?php echo $list_cl->sub_catalog_name?> --</option>
+                                                                        <?php
+                                                                            }
+                                                                        }
+                                                                        ?>        
+                                                                        </select>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                            
+                                                        
+                                                        
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                <div class="col-lg-5">
+                                                                    <label for="describle">Mô tả:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <textarea type="text" name="txt_describle" class="form-control" id="describle<?php echo $lst_product->id_product;?>"  required><?php echo $info_product->describle_product;?></textarea>
+                                                                        <script>    CKEDITOR.replace( 'describle<?php echo $lst_product->id_product;?>');</script>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group">
+                                                                
+                                                                <div class="col-lg-5">
+                                                                    <label for="imgage">Hình đại diện:</label>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                            
+                                                                        <input type="file" name="fl_imgage" class="form-control" id="imgage">
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <div class="form-group" style="text-align:center;">
+                                                                    <button type="submit" name="btn_update_product" class="btn btn-primary text-center">Cập nhật sản phẩm</button>
+
+                                                            </div>
+                                                        
+                                                        </div>
+                                                        </form>
+						 				
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
                                        <td>
                                         <a  data-toggle="modal" href='#info_pro<?php echo $lst_product->id_product;?>'> <i class="fa fa-info-circle text-info" aria-hidden="true"></i></a>
                                           
@@ -115,181 +280,8 @@
                                             </div>
                                        </td>
                                         <td>
-                                        <a  data-toggle="modal" href='#upda_pro<?php echo $lst_product->id_product;?>'> <i class="fa fa-pencil-square-o text-danger" aria-hidden="true"></i></a>
-                                            <div class="modal fade" id="upda_pro<?php echo $lst_product->id_product;?>">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                            <h4 class="modal-title text-center text-warning">CẬP NHẬT THÔNG TIN</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 form_info_input">
-                                                                   	<form action="ad_manipulation/up_product.php?id_product=<?php echo $lst_product->id_product;?>" method="POST" role="form" enctype="multipart/form-data">
-						 					
-						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
-						 						<div class="form-group">
-						 							<div class="col-lg-5">
-						 								<label for="pd_name">Tên sản phẩm:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<input type="text" name="txt_pd_name" class="form-control" id="pd_name"  required value="<?php echo $info_product->name_product;?>">
-						 							</div>
-						 						
-						 						</div>
-						 					
-						 					</div>
-						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
-						 						<div class="form-group">
-						 							<div class="col-lg-5">
-						 								<label for="pd_price">Đơn giá sản phẩm:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<input type="number" name="txt_pd_price" min="0" class="form-control" id="pd_price"  required value="<?php echo $info_product->price_product;?>" title="Đơn giá không thể nhỏ hơn 0">
-						 							</div>
-						 						
-						 						</div>
-						 					
-						 					</div>
+                                        <a  data-toggle="modal" href='#update_product<?php echo $lst_product->id_product;?>'> <i class="fa fa-pencil-square-o text-danger" aria-hidden="true"></i></a>
                                             
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data" >
-						 						<div class="form-group">
-						 							<div class="col-lg-5">
-						 								<label for="pd_price_pro">Khuyến mãi:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<input type="number" name="txt_pd_promotion" class="form-control" id="pd_price_pro"  required value="<?php echo $info_product->promotion_product;?>" max="100" min="0" pattern=".{0,100}">
-						 							</div>
-						 						
-						 						</div>
-						 					
-						 					</div>
-						 					
-						 					
-						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group">
-						 							<div class="col-lg-5">
-						 								<label for="unit">Đơn vị tính:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<input type="text" name="txt_unit" class="form-control" id="unit"  required value="<?php echo $info_product->unit;?>">
-						 							</div>
-						 						
-						 						</div>
-						 					
-						 					</div>
-						 					
-				 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group">
-						 							
-						 							<div class="col-lg-5">
-						 								<label for="supplier">Nhà cung cấp:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<select name="supplier" id="input" class="form-control">
-                                                             <option value="">-- Vui lòng chọn nhà sản xuất/ xuất bản nếu muốn cập nhật--</option>
-                                                            <?php foreach( $list_supplier as $list_sp)
-															{
-																if($list_sp->status==0)
-																{
-															?>
-                                                            	 <option value="<?php echo $list_sp->id_producer_publisher?>">-- <?php echo $list_sp->name_producer_publisher?> --</option>
-															<?php
-																}
-                                                            }
-                                                            ?>                                                            </select>
-						 							</div>
-						 						
-						 						</div>
-						 						
-						 					
-						 					
-						 					</div>
-						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group">
-						 							
-						 							<div class="col-lg-5">
-						 								<label for="catalog">Danh mục sản phẩm:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<select name="catalog" id="input" class="form-control">
-                                                             <option value="">-- Chọn danh mục bạn muốn cập nhật cho sản phẩm --</option>
-                                                      	   <?php foreach( $list_catalog as $list_cl)
-															{
-																if($list_cl->status==0)
-																{
-															?>
-                                                            	<option value="<?php echo $list_cl->sub_catalog_id?>">-- <?php echo $list_cl->sub_catalog_name?> --</option>
-															<?php
-																}
-                                                            }
-                                                            ?>        
-                                                            </select>
-						 							</div>
-						 						
-						 						</div>
-						 						
-						 					
-						 					
-						 					</div>
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group">
-						 							<div class="col-lg-5">
-						 								<label for="describle">Mô tả:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<textarea type="text" name="txt_describle" class="form-control" id="describle<?php echo $lst_product->id_product;?>"  required><?php echo $info_product->describle_product;?></textarea>
-                                                              <script>    CKEDITOR.replace( 'describle<?php echo $lst_product->id_product;?>');</script>
-						 							</div>
-						 						
-						 						</div>
-						 					
-						 					</div>
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group">
-						 							
-						 							<div class="col-lg-5">
-						 								<label for="imgage">Hình đại diện:</label>
-						 							</div>
-						 							<div class="col-lg-7">
-						 						
-						 									<input type="file" name="fl_imgage" class="form-control" id="imgage">
-						 							</div>
-						 						
-						 						</div>
-						 						
-						 					
-						 					
-						 					</div>
-						 				
-
-						 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						 						<div class="form-group" style="text-align:center;">
-						 								<button type="submit" name="btn_update_product" class="btn btn-primary text-center">Cập nhật sản phẩm</button>
-
-						 						</div>
-						 					
-						 					</div>	
-						 						
-						 					
-						 					</form>
-
-
-                                                </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                           
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                        </td>
                                         
 											  <?php 

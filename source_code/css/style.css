@@ -131,7 +131,7 @@ Website :	www.themefisher.com
         .btn-solid-border:hover,
         .btn-transparent:hover,
         .btn-small:hover {
-            background: black;
+            background: #00bfff;
             color: #fff;
         }
         
@@ -1568,15 +1568,16 @@ Website :	www.themefisher.com
         /*=================================================================
   Latest Posts
 ==================================================================*/
-        
+        .blog_summary{
+           
+        }
         .blog {
             background: #F6F6F6;
         }
         
         .post {
             background: #fff;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            padding-bottom: -10px;
         }
         
         .post .post-media.post-thumb img {
@@ -1637,17 +1638,23 @@ Website :	www.themefisher.com
         .post .post-meta .post-author {
             color: #000;
         }
-        
+        .post-content {
+            width: 100%;
+        }
         .post .post-content {
             padding: 5px 20px;
         }
-        
+        .post-content img{
+            margin: auto;
+            width: 70%;
+            height: auto;
+        }
         .post .post-content p {
             color: #444;
             font-size: 14px;
             margin: 10px 0;
         }
-        
+       
         .post .post-content .btn-main,
         .post .post-content .btn-solid-border,
         .post .post-content .btn-transparent,
@@ -1752,7 +1759,7 @@ Website :	www.themefisher.com
             letter-spacing: 2px;
             font-weight: 300;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 10px;
             margin-bottom: 20px;
         }
         
@@ -2764,7 +2771,7 @@ Website :	www.themefisher.com
         
         .btn-buynow,
         .btn-buynow-list {
-            background: rgb(199, 202, 186);
+            background: rgb(236, 149, 41);
             display: inline-block;
             font-size: 11px;
             letter-spacing: 1px;
@@ -2905,4 +2912,7 @@ Website :	www.themefisher.com
         }
         .content_catalog{
             color: #fa7e07;
+        }
+        .fb-livechat, .fb-widget{
+            display: block !important;
         }

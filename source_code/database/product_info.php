@@ -6,11 +6,11 @@
   
     class productDB extends databaseConnect
     {
-        public const TABLE_NAME = 'product_info';
-        public const CONDITION = 'sub_catalog';
-        public const CONDITION_FAST_SEARCH = 'name_product';
-        public const CONDITION_NAME_VN = 'name_product_no_vietnamse';
-        public const CONDITION_GET_ONE_PRODUCT = 'id_product';
+         const TABLE_NAME = 'product_info';
+         const CONDITION = 'sub_catalog';
+         const CONDITION_FAST_SEARCH = 'name_product';
+         const CONDITION_NAME_VN = 'name_product_no_vietnamse';
+         const CONDITION_GET_ONE_PRODUCT = 'id_product';
         
       
      

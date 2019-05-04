@@ -41,6 +41,14 @@ function delete_order(id_order,id_page)
 	}
 }
 
+function delete_catalog_blog(id,status)
+{
+	if(confirm("Bạn thực sự muốn thu hồi quyền xuất bản danh mục này?"))
+	{
+		window.location="ad_manipulation/blog_delete_blog_catalog.php?id_catalog_blog=" + id+"&status="+ status;
+	}
+}
+
 function delete_catalog(id,status)
 {
 	if(confirm("Bạn thực sự muốn thu hồi quyền xuất bản danh mục này?"))
@@ -48,6 +56,15 @@ function delete_catalog(id,status)
 		window.location="ad_manipulation/delete_catalog.php?id_catalog=" + id+"&status="+ status;
 	}
 }
+
+function recyecle_catalog_blog(id,status)
+{
+	if(confirm("Bạn thực sự muốn xuất bản danh mục này?"))
+	{
+		window.location="ad_manipulation/blog_delete_blog_catalog.php?id_catalog_blog=" + id+"&status="+ status;
+	}
+}
+
 function recyecle_catalog(id,status)
 {
 	if(confirm("Bạn thực sự muốn xuất bản danh mục này?"))

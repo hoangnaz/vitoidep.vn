@@ -63,8 +63,8 @@
 		$connect_data->insert_product_info($id_product,$name_product, $new_str ,$image,$describle,$quantity,$catalog_product,$price,$unit,$promotion,$supplier,$hightlight,$status);
 		unset($_SESSION["product"]);
 		echo '<script>';
-		echo 'myFn();';
-				
+		echo 'alert("Thêm mới thành công sản phẩm")';
+		echo "window.location='../mn_product.php'";		
 				
 				echo "</script>";
 		}
@@ -75,21 +75,3 @@
 
 	
 ?>
-<header>
-
-<script type="text/javascript" src="./js/sweetjs.js"></script>
-<script type="text/javascript">
-
-function myFn(){
-        swal({ 
-              title: "Success",
-              text: "Thank you for contacting us. We will get back to you soon!",
-              type: "success" 
-        },
-             function(){
-                //event to perform on click of ok button of sweetalert
-        });
-}
-</script>
-
-</header>

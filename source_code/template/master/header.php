@@ -35,6 +35,24 @@
   <script src="js/ajax.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : 507849789726858,
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.12'
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/vn_VN/sdk/xfbml.customerchat.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+   
 <?php
   if(isset($infoProduct))
   {
@@ -44,6 +62,21 @@
       <meta property="og:url" content="http://vitoidep.vn/product-single.php?name=<?php echo $infoProduct->name_product_no_vietnamse;?>" />
       <meta property="og:description" content="<?php echo $infoProduct->name_product;?>" />
       <meta property="og:image" content="http://vitoidep.vn//images/product/<?php echo $infoProduct->image_product;?>" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1920" />
+      <meta property="og:image:height" content="1024" />
+      <meta property="article:author" content="https://www.facebook.com/nguyenanhhoang.7.2" />
+    <?php
+  }
+  if(isset($infoPost))
+  {
+    ?>
+     <meta property="og:type" content="article" />
+      <meta property="og:title" content="<?php echo $infoPost->blog_name;?>" />
+      <meta property="og:url" content="http://vitoidep.vn/blog-single.php?post=<?php echo $infoPost->viet_nam_title;?>" />
+      <meta property="og:description" content="<?php echo $infoProduct->name_product;?>" />
+      <meta property="og:image" content="http://vitoidep.vn/images/user_info/<?php echo $infoPost->image_blog;?>" />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1920" />

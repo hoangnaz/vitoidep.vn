@@ -57,7 +57,10 @@
                         <a href="mn_customer.php"><i class="fa fa-fw fa-table"></i>Quản lý khách hàng</a>
                     </li>
                     <li>
-                        <a href="mn_blog_catalog.php"><i class="fa fa-fw fa-table"></i>Quản lý danh mục bài viết</a>
+                        <a href="blog_mn_blog_catalog.php"><i class="fa fa-fw fa-table"></i>Quản lý danh mục blog</a>
+                    </li>
+                    <li>
+                        <a href="write_blog_mn.php"><i class="fa fa-fw fa-table"></i>Quản lý blog</a>
                     </li>
                     <li>
                         <a href="mn_catalog.php"><i class="fa fa-fw fa-edit"></i> Quản lý danh mục</a>
@@ -65,7 +68,7 @@
                     <li>
                         <a href="mn_sub_catalog.php"><i class="fa fa-fw fa-edit"></i> Danh mục con sản phẩm</a>
                     </li>
-                      <li>
+                    <li>
                         <a href="mn_supplier.php"><i class="fa fa-fw fa-edit"></i> Nhà sản xuất, xuất bản</a>
                     </li>
                   

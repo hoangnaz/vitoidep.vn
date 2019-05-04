@@ -5,8 +5,8 @@
 
     class subCatalogDB extends databaseConnect
     {
-        private const TABLE_NAME = 'sub_catalog';
-        private const FIELD_CONDITION = 'catalog_id';
+        const TABLE_NAME = 'sub_catalog';
+        const FIELD_CONDITION = 'catalog_id';
   
         public function getListSubCatalog()
         {

@@ -9,6 +9,7 @@
         <div class="col-md-8 col-sm-6 col-xs-12">
             <div class="modal-image">
                 <img class="img-responsive" src="images/product/'.$productInfo->image_product.'" alt="product-img" />
+                   <a  href="product-single?name='.$productInfo->name_product_no_vietnamse.'" ><h4 class="text-uppercase text-center">Xem thông tin sản phẩm</h4></a>
             </div>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -25,9 +26,9 @@
                 '.$productInfo->describle_product.'
                 </div>
              </div>
-                <a class="btn btn-main" onclick="shopping_cart('.$productInfo->id_product.',1,1)">Thêm vào giỏ hàng</a>
+                <a class="btn-buynow" onclick="shopping_cart('.$productInfo->id_product.',1,1)">Thêm vào giỏ hàng</a>
                 
-                <a  href="product-single?name='.$productInfo->name_product_no_vietnamse.'" class="btn btn-transparent">Xem thông tin sản phẩm</a>
+               
             </div>
         </div>
     </div>';

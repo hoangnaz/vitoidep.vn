@@ -1,4 +1,11 @@
 <!-- Main jQuery -->
+		 <div  class="fb-customerchat"
+	      page_id="1273114829448314"
+	      theme_color="#0084ff"
+	      logged_in_greeting="Chào bạn, bạn muốn tìm phương pháp giảm cân hiệu quả?"
+	      logged_out_greeting="Chào bạn, bạn muốn tìm phương pháp giảm cân hiệu quả?">
+	    
+	    </div>
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,9 +32,10 @@
 		<script src="js/show_popup_detail_product.js"></script>
 		<script src="js/scroll_top.js"></script>
 		
+		
 		<!-- When the user scrolls down 20px from the top of the document, show the button -->
 		<!--Start of Tawk.to Script-->
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 		(function(){
 		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -37,7 +45,7 @@
 		s1.setAttribute('crossorigin','*');
 		s0.parentNode.insertBefore(s1,s0);
 		})();
-		</script>
+		</script> -->
 		<!--End of Tawk.to Script-->
 	</body>
 

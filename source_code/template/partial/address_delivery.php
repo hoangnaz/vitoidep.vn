@@ -20,7 +20,7 @@
 									</div>
 									<span  id="message-update" ></span>
 									<div class="text-center">
-										<button onclick="updateDelivery('<?php echo $_SESSION['customer']->id_customer; ?>')" class="btn btn-main green text-center" id="btn_update_delivery">Xác nhận</button>
+										<button onclick="updateDelivery('<?php echo $_SESSION['customer']->id_customer; ?>')" class="btn btn-buynow green text-center" id="btn_update_delivery">Xác nhận</button>
 									</div>
 								
 								

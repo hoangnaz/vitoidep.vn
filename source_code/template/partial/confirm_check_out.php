@@ -74,7 +74,7 @@
 								  </li>
 					
 								  <li class="text-center">
-										<button  class="btn btn-main" id="confirm_complete_order">Hoàn tất</button>
+										<button  class="btn btn-buynow" id="confirm_complete_order">Hoàn tất</button>
 								  </li>
 							   </ul>
 							  

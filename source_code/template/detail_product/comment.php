@@ -12,7 +12,7 @@
 						</div>
 						<div id="reviews" class="tab-pane fade">
 							<div class="post-comments">
-							<div class="fb-comments" data-href="http://localhost:84/product-single?name=<?php echo $infoProduct->name_product_no_vietnamse; ?>" data-numposts="5">
+							<div class="fb-comments" data-href="ocalhost:84/blog-single.php?post=<?php echo $infoProduct->blog_id;?>" data-numposts="5">
 							</div>
 						    	
 							</div>

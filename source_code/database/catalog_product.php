@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/entities/catalog_product.php';
 
     class catalogProductDB extends databaseConnect
     {
-        public const TABLE_NAME = 'catalog_product';
+        const TABLE_NAME = 'catalog_product';
 		public function getListCatalogProduct(){
 			
 			$pdo=parent::connectDatabase();
