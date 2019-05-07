@@ -224,26 +224,30 @@ function shopping_cart(id_product, modal, number) {
     $.ajax({
         url: "function/cart_store.php",
         type: "get",
-        dataType: "text",
+        dataType: "JSON",
         data: {
 
             id_product: id_product,
             number: number
         },
-        success: function(result) {
-            if (result != 200) {
+        success: function(response) {
+           
+            if (response.result != 200) {
                 swal({
                     title: "Rất tiếc!",
-                    text: result,
+                    text: response.alert,
                     icon: "warning",
                     dangerMode: true,
                 })
             } else {
                 if (modal == 0) {
-                    topFunction();
-                    setTimeout(function() {
-                        window.location.reload(1);
-                    }, 1200);
+                    swal({
+                        title: "Thành công!",
+                        text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
+                        icon: "success"
+                    })
+                    $(".number_cart").hide();
+                    $("#shopping_cart").hide();
                 } else {
 
                     swal({
@@ -252,10 +256,7 @@ function shopping_cart(id_product, modal, number) {
                         icon: "success"
                     })
                     $('#product-modal').on('hidden.bs.modal', function() {
-                        topFunction();
-                        setTimeout(function() {
-                            window.location.reload(1);
-                        }, 1200);
+                        $("#test").append(response.alert);
                     });
                 }
 

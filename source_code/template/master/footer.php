@@ -38,7 +38,9 @@
 							<a href="policy">CHÍNH SÁCH</a>
 						</li>
 					</ul>
-					<p class="copyright-text">Website của Vitoidep.vn. @2018 - 12</p>
+				
+					<p class="copyright-text">VÌ TÔI ĐẸP SHOP</p>
+					<p style="color:#fa8a1d;"> <b>LÀ NƠI TA ĐẾN - TA ĐẸP VÀ TA VUI</b></p>
 					<p>
 					
 						<!-- Start of CuterCounter Code -->

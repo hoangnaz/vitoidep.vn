@@ -12,12 +12,19 @@
 		// check number max can buy
 		if($productInformation->quantity_inventory <= ($number_buy + $_SESSION["product_cart"][$id_pro]["number"]) ){
 			
-			echo "Hiện tại chúng tôi chỉ còn ".$productInformation->quantity_inventory." sản phẩm";
+			$return_arr["result"] = 400;
+			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["alert"] = "Hiện tại chúng tôi chỉ còn ".$productInformation->quantity_inventory." sản phẩm";
+			echo json_encode($return_arr);
+			
 		}else{
 			// exist product. Increment one unit.
 			$_SESSION["product_cart"][$id_pro]["number"]+=$number_buy;
 			$_SESSION["product_cart"][$id_pro]["info"]=$productInformation;
-			echo SUCCESS;
+			$return_arr["result"] = SUCCESS;
+			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["alert"] = "ok";
+			echo json_encode($return_arr);
 		}
 	}
 	else{
@@ -32,7 +39,11 @@
 				// exist product. Increment one unit.
 				$_SESSION["product_cart"][$id_pro]["number"]=$number_buy;	
 				$_SESSION["product_cart"][$id_pro]["info"]=$productInformation;
-				echo SUCCESS;
+			
+			$return_arr["result"] = SUCCESS;
+			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["alert"] = "ok";
+			echo json_encode($return_arr);
 			}
 			
 		}		

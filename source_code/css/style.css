@@ -107,7 +107,7 @@ Website :	www.themefisher.com
         .btn-solid-border,
         .btn-transparent,
         .btn-small {
-            background: #000;
+            background: #3eca2d;
             color: #fff;
             display: inline-block;
             font-size: 11px;
@@ -241,7 +241,7 @@ Website :	www.themefisher.com
         }
         
         .title {
-            padding: 20px 0 30px;
+            padding: 5px 0 5px;
         }
         
         .title h2 {
@@ -693,7 +693,7 @@ Website :	www.themefisher.com
         .top-header .container {
             padding-top: 35px;
             padding-bottom: 35px;
-            border-bottom: 1px solid #dedede;
+            border-bottom: 1px solid #3eca2d;
         }
         
         .top-header .dropdown-menu {
@@ -1054,6 +1054,7 @@ Website :	www.themefisher.com
         
         .product-item .product-content h4 a {
             color: #000;
+            font: bold !important;
         }
         
         .product-modal {
@@ -2203,11 +2204,11 @@ Website :	www.themefisher.com
         /*/////////////////////*/
         
         .header_top {
-            height: 90px;
+            height: 80px;
             margin-bottom: 30px;
-        }
+            margin-top: -10px;
         
-        .message_deliver {}
+        }
         
         .search_form_fast {
             padding-top: 20px;
@@ -2645,7 +2646,7 @@ Website :	www.themefisher.com
             padding: 17px 30px;
             white-space: nowrap;
             letter-spacing: 1px;
-            background: #00bfff;
+            background: #3eca2d;
             display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
@@ -2729,7 +2730,7 @@ Website :	www.themefisher.com
         .btn-solid-border,
         .btn-transparent,
         .btn-small {
-            background: #000;
+            background: #fa8a1d;
             color: #fff;
             display: inline-block;
             font-size: 11px;
@@ -2743,7 +2744,7 @@ Website :	www.themefisher.com
         
         .btn-shopping,
         .btn-shopping-list {
-            background: #00bfff4d;
+            background: #3eca2d;
             display: inline-block;
             font-size: 11px;
             letter-spacing: 1px;
@@ -2771,7 +2772,7 @@ Website :	www.themefisher.com
         
         .btn-buynow,
         .btn-buynow-list {
-            background: rgb(236, 149, 41);
+            background: #fa8a1d;
             display: inline-block;
             font-size: 11px;
             letter-spacing: 1px;
@@ -2916,3 +2917,21 @@ Website :	www.themefisher.com
         .fb-livechat, .fb-widget{
             display: block !important;
         }
+
+
+  /* Menu       */
+  .menu{
+      border-bottom: #3eca2d 2px solid;
+  }
+  .navbar-nav{
+    margin-bottom: -25px;
+    margin-top: -30px;
+  }
+  .slide-image{
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+  #bootstrap-touch-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+  }

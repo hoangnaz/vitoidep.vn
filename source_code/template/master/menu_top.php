@@ -60,7 +60,7 @@
 					if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0){
 						?>
 						<i class="tf-ion-android-cart text-success"></i>
-						<span class="text-success">(
+						<span class="text-success number_cart">(
 						<?php
 						echo count($_SESSION["product_cart"]);
 						echo ")</span>";
@@ -76,6 +76,7 @@
 				</a>
 	            <div class="dropdown-menu cart-dropdown">
 					<div id="shopping_cart"> 
+				
 					<!-- Show shopping cart -->
 					<?php
 						if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0 ){
