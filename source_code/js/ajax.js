@@ -231,7 +231,10 @@ function shopping_cart(id_product, modal, number) {
             number: number
         },
         success: function(response) {
+          
            
+           var arrayProduct = Object.values(response.data);
+           console.log( $arrayProduct);
             if (response.result != 200) {
                 swal({
                     title: "Rất tiếc!",
@@ -248,6 +251,25 @@ function shopping_cart(id_product, modal, number) {
                     })
                     $(".number_cart").hide();
                     $("#shopping_cart").hide();
+                    $("#ajax_shopping_cart").append("<p>123</p>");
+                    var len = arrayProduct.length;
+                        for(var i=0; i<len; i++){
+                            var id_product = arrayProduct[i].id_product;
+                            var name_product_no_vietnamse = arrayProduct[i].name_product_no_vietnamse;
+                            var product_name = arrayProduct[i].product_name;
+                            var point_promotion = arrayProduct[i].point_promotion;
+                            var price_product = arrayProduct[i].price_product;
+                            var image_product = arrayProduct[i].image_product;
+
+                            var tr_str = "<tr>" +
+                                "<td align='center'>" + (i+1) + "</td>" +
+                                "<td align='center'>" + username + "</td>" +
+                                "<td align='center'>" + name + "</td>" +
+                                "<td align='center'>" + email + "</td>" +
+                                "</tr>";
+
+                            $("#userTable tbody").append(tr_str);
+                        }
                 } else {
 
                     swal({

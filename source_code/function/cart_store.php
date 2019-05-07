@@ -13,7 +13,7 @@
 		if($productInformation->quantity_inventory <= ($number_buy + $_SESSION["product_cart"][$id_pro]["number"]) ){
 			
 			$return_arr["result"] = 400;
-			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["data"] = $_SESSION["product_cart"];
 			$return_arr["alert"] = "Hiện tại chúng tôi chỉ còn ".$productInformation->quantity_inventory." sản phẩm";
 			echo json_encode($return_arr);
 			
@@ -22,7 +22,7 @@
 			$_SESSION["product_cart"][$id_pro]["number"]+=$number_buy;
 			$_SESSION["product_cart"][$id_pro]["info"]=$productInformation;
 			$return_arr["result"] = SUCCESS;
-			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["data"] = $_SESSION["product_cart"];
 			$return_arr["alert"] = "ok";
 			echo json_encode($return_arr);
 		}
@@ -41,7 +41,7 @@
 				$_SESSION["product_cart"][$id_pro]["info"]=$productInformation;
 			
 			$return_arr["result"] = SUCCESS;
-			$return_arr["data"] = array("cart"=>$_SESSION["product_cart"]);
+			$return_arr["data"] = $_SESSION["product_cart"];
 			$return_arr["alert"] = "ok";
 			echo json_encode($return_arr);
 			}

@@ -35,23 +35,7 @@
   <script src="js/ajax.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : 507849789726858,
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v2.12'
-        });
-      };
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/vn_VN/sdk/xfbml.customerchat.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
+<!--  -->
    
 <?php
   if(isset($infoProduct))

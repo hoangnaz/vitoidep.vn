@@ -75,6 +75,9 @@
 					?>
 				</a>
 	            <div class="dropdown-menu cart-dropdown">
+					<div id="ajax_shopping_cart">
+						
+					</div>			
 					<div id="shopping_cart"> 
 				
 					<!-- Show shopping cart -->
