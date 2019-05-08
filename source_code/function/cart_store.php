@@ -15,8 +15,7 @@
 			$return_arr["result"] = 400;
 			$return_arr["data"] = $_SESSION["product_cart"];
 			$return_arr["alert"] = "Hiện tại chúng tôi chỉ còn ".$productInformation->quantity_inventory." sản phẩm";
-			echo json_encode($return_arr);
-			
+			echo json_encode($return_arr);		
 		}else{
 			// exist product. Increment one unit.
 			$_SESSION["product_cart"][$id_pro]["number"]+=$number_buy;

@@ -60,6 +60,8 @@
 					if($_SESSION["product_cart"] && count($_SESSION["product_cart"])>0){
 						?>
 						<i class="tf-ion-android-cart text-success"></i>
+						<span class="text-success ajax_number_cart">
+						</span>
 						<span class="text-success number_cart">(
 						<?php
 						echo count($_SESSION["product_cart"]);

@@ -231,10 +231,13 @@ function shopping_cart(id_product, modal, number) {
             number: number
         },
         success: function(response) {
-          
-           
-           var arrayProduct = Object.values(response.data);
-           console.log( $arrayProduct);
+        
+            var result = Array.from(response.data);
+         console.log(response.data);
+
+       
+
+            alert(typeof(result));
             if (response.result != 200) {
                 swal({
                     title: "Rất tiếc!",
@@ -243,47 +246,63 @@ function shopping_cart(id_product, modal, number) {
                     dangerMode: true,
                 })
             } else {
-                if (modal == 0) {
-                    swal({
-                        title: "Thành công!",
-                        text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
-                        icon: "success"
-                    })
-                    $(".number_cart").hide();
-                    $("#shopping_cart").hide();
-                    $("#ajax_shopping_cart").append("<p>123</p>");
-                    var len = arrayProduct.length;
-                        for(var i=0; i<len; i++){
-                            var id_product = arrayProduct[i].id_product;
-                            var name_product_no_vietnamse = arrayProduct[i].name_product_no_vietnamse;
-                            var product_name = arrayProduct[i].product_name;
-                            var point_promotion = arrayProduct[i].point_promotion;
-                            var price_product = arrayProduct[i].price_product;
-                            var image_product = arrayProduct[i].image_product;
+                
+                swal({
+                    title: "Thành công!",
+                    text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
+                    icon: "success"
+                })
+                $(".number_cart").hide();
+               
+            
+                var totalMoney = 0;
+                var tr_str = "";
+                var countProduct = 0;
+                Object.keys(response.data).forEach(function(key) {
+                    console.log(response.data[key].info.id_product);
+                
+                
+                        var id_product = response.data[key].info.id_product;
+                        var name_product_no_vietnamse = response.data[key].info.name_product_no_vietnamse;
+                        var product_name = response.data[key].info.name_product;
+                        var point_promotion = response.data[key].info.point_promotion;
+                        var price_product = response.data[key].info.price_product;
+                        var image_product = response.data[key].info.image_product;
+                        var number = response.data[key].number;
+                    
+                        tr_str = tr_str + '<div class="media">'+
+                        '<a class="pull-left" href="product-single?name='+name_product_no_vietnamse+'">'+
+                            '<img  class="media-object" src="images/product/'+image_product+'" alt="image" /></a>'+
+                        '<div class="media-body">'+
+                            '<h4 class="media-heading"><a href=""></a></h4>'+
+                            '<div class="cart-price">'+
+                            '<span> Số lượng : '+ number +'</span>'+
+                            '<span> Giá:'+ ( 1 - point_promotion/100 )* price_product +'VNĐ</span>'+
+                            '</div>' +
+                            '<h5><strong> Tổng : '+ number*(1-point_promotion/100)*price_product +'VNĐ</strong></h5>' +
+                        '</div>' +
+                        '<a  class="remove" onclick="delete_product_cart('+ id_product +')"><i class="tf-ion-close"></i></a>'+
+                    '</div>';
+                    totalMoney = totalMoney + (number * ((1-point_promotion/100)*price_product));
+                    countProduct++;
+                });   
+                
+                tr_str  = tr_str + 
+                '<div class="cart-summary">' +
+                '<span>Tổng tiền:</span>'+
+                '<span class="total-price">'+totalMoney+ 'VNĐ</span>' +
+            '</div>'+
+            '<ul class="text-center cart-buttons">'+
 
-                            var tr_str = "<tr>" +
-                                "<td align='center'>" + (i+1) + "</td>" +
-                                "<td align='center'>" + username + "</td>" +
-                                "<td align='center'>" + name + "</td>" +
-                                "<td align='center'>" + email + "</td>" +
-                                "</tr>";
+                '<li><a href="shopping_cart.php" class="btn btn-small">Giỏ hàng</a></li>  '+ 
+                '<li><a href="check_out.php" class="btn btn-small btn-solid-border">Thanh toán</a></li>'+
 
-                            $("#userTable tbody").append(tr_str);
-                        }
-                } else {
-
-                    swal({
-                        title: "Thành công!",
-                        text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
-                        icon: "success"
-                    })
-                    $('#product-modal').on('hidden.bs.modal', function() {
-                        $("#test").append(response.alert);
-                    });
-                }
-
-            }
-
+            '</ul>';
+            $("#shopping_cart").html(tr_str);
+            $(".ajax_number_cart").html('');
+            
+            $(".ajax_number_cart").append("("+countProduct + ")");
+            } 
         }
     });
 
@@ -558,7 +577,6 @@ function signUp() {
         if (ketqua == 200) {
             $("#button-signup").hide();
             message = 'Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp.';
-            message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
             $('#message-sign-up').html(message);
 
         } else if (ketqua == 400) {
@@ -570,6 +588,7 @@ function signUp() {
             message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
             $('#message-sign-up').html(message);
         }
+        $('#sign_up').show();
     });
 
 }

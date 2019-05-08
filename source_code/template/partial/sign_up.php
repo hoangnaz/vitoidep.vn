@@ -24,11 +24,11 @@
 											<div class="block text-center">
 												<form class="text-left clearfix"> 
 													<div class="form-group">
-														<input type="email"  class="form-control" id="rg_full_name" placeholder="Vui lòng nhập tên của bạn">
+														<input type="text"  class="form-control" id="rg_full_name" placeholder="Vui lòng nhập tên của bạn">
 													</div>	
 													<span  id="message-error-fullname"></span>
 													<div class="form-group">
-														<input type="email"  class="form-control" id="rg_account"  placeholder="Vui lòng nhập tài khoản đăng nhập">
+														<input type="text"  class="form-control" id="rg_account"  placeholder="Vui lòng nhập tài khoản đăng nhập">
 													</div>
 													<span  id="message-error-account"></span>
 													<div class="form-group">
