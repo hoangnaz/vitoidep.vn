@@ -235,9 +235,6 @@ function shopping_cart(id_product, modal, number) {
             var result = Array.from(response.data);
          console.log(response.data);
 
-       
-
-            alert(typeof(result));
             if (response.result != 200) {
                 swal({
                     title: "Rất tiếc!",
@@ -481,6 +478,83 @@ function login() {
         return false;
     } else {
         window.location.href = 'index.php';
+    }
+    return false;
+}
+
+function update_pasword() {
+    var oldPass = $("input#password_old").val();
+    var newPass = $("input#new_password").val();
+    var reNewPass = $("input#re_password").val();
+    var currentPass = $("input#current_password").val();
+    var kq;
+    
+    if (oldPass == "") {
+        $('#messagUpdatePass').html("Vui lòng nhập mật khẩu hiện tại");
+        $("input#password_old").focus();
+        return false;
+    }
+    
+    if (oldPass == currentPass) {
+        $('#messagUpdatePass').html("Mật khẩu hiện tại không chính xác");
+        $("input#password_old").focus();
+        return false;
+    } 
+
+    if (newPass == "") {
+        $('#messagUpdatePass').html("Vui lòng nhập mật khẩu mới");
+        $("input#new_password").focus();
+        return false;
+    }
+
+
+    if (reNewPass == "") {
+        $('#messagUpdatePass').html("Vui lòng nhập mật khẩu xác nhận mật khẩu");
+        $("input#re_password").focus();
+        return false;
+    }
+
+
+    if (oldPass == newPass) {
+        $('#messagUpdatePass').html("Nhập khẩu mới và mật khẩu cũ không thể giống nhau");
+        $("input#new_password").focus();
+        return false;
+    }
+
+    if (reNewPass != newPass) {
+        $('#messagUpdatePass').html("Mật khẩu mới và xác nhận mật khẩu không giống nhau");
+        $("input#new_password").focus();
+        return false;
+    }
+
+
+    $.ajax({
+        url: 'function/reset_password.php',
+        type: 'POST',
+        async: false,
+        cache: false,
+        dataType: 'html',
+        data: {
+            password: $("input#new_password").val(),
+            id_customer: $("input#id_customer").val()
+        }
+    }).done(function(ketqua) {
+       
+        kq = ketqua;
+    });
+    
+    if (kq == 2) {
+        message = "Cập nhật mật khẩu thành công. Mật khẩu cũ sẽ hết hạn khi bạn hoàn thành phiên đăng nhập này.";
+        $('#messageLogin').html(message);
+        return false;
+    } else {
+         message = "Cập nhật mật khẩu thành công. Mật khẩu cũ sẽ hết hạn khi bạn hoàn thành phiên đăng nhập này.";
+        $('#messageLogin').html(message);
+        $('#password_old').hide();
+        $('#new_password').hide();
+        $('#re_password').hide();
+        $('#button_update_pass').hide();
+        return false;
     }
     return false;
 }
