@@ -8,25 +8,26 @@
 							<form action="">
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 									<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-										<p>Số lượng sản phẩm: <?php echo count($_SESSION["product_cart"]);?> sản phẩm</p>
+										<p><b>Số lượng:</b> <?php echo count($_SESSION["product_cart"]);?> sản phẩm</p>
 									</div>
 									<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 										<p><?php echo number_format($_SESSION['total_price']);?> VNĐ</p>
 									</div>
 									<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-										<p>	Chi phí giao hàng</p>
+										<p><b>	Chi phí giao hàng :</b></p>
 									</div>
 									<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-										<p>Không mất phí</p>
+										<p>Không mất phí </p>
 									</div>
+									<hr></hr>
 									<form action="" method="POST" role="form">
 										<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-											<input type="text" name="" placeholder="Mã giảm giá" id="input" class="form-control" value="" required="required" pattern="" title="">
+											<!-- <input type="text" name="" placeholder="Mã giảm giá" id="input" class="form-control" value="" required="required" pattern="" title=""> -->
 										</div>
 										
 										<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 										
-											<a class="btn btn-buynow">Áp dụng</a>
+											<!-- <a class="btn btn-buynow">Áp dụng</a> -->
 										</div>
 									</form>
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

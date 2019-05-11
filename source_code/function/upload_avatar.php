@@ -1,18 +1,15 @@
 <?php
     session_start();
     include '../database/customer.php';
+    unset( $_SESSION['error_image']);
     $file=$_FILES['myfile'];
     $path=$_GET['id_customer'];
     $resultUploadFile=uploadImage($file,$path);
     switch ($resultUploadFile){
         case FAIL_EXTENSION_FILE:{
-           echo  "Chưa đúng định dạng file";
-           break;
-        }
-       
-        case FAIL_MAX_FILE:{
-            echo "File chứa dung lượng quá lớn;";
-            break;
+            $_SESSION['error_image'] = "Chưa đúng định dạng file hoặc dung lượng quá lớn";
+           header("Location:../user_info.php"); 
+           
         }
         default:{
             $connectDB = new  customerDB();

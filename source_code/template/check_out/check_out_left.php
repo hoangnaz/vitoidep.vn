@@ -63,7 +63,7 @@
                      <p>Chuyển khoản</p>
                   </label>
                   <p>Hiện tại chúng tôi đang hoàn thành phương thức thanh toán trực tuyến. Vì vậy chúng
-                     tôi sẽ cũng cấp giải pháp là gửi tiền vào tài khoản như trong <a href="">danh sách tài khoản </a>
+                     tôi sẽ cũng cấp giải pháp là gửi tiền vào tài khoản như trong <a data-toggle="modal" href='#list_bank'>danh sách tài khoản </a>
                      trong đây. Chúng tôi sẽ liên hệ trực tiếp để xác nhận với các bạn.
                   </p>
                   

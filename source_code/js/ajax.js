@@ -492,13 +492,14 @@ function signUp() {
     var rgEmailConfirm = $("input#rg_email_again").val();
     var rgPass = $("input#rg_pass").val();
     var rgPassConfirm = $("input#rg_pass_again").val();
-    $('#message-sign-up').html("")
-    $('#message-error-fullname').html("")
-    $('#message-error-account').html("")
-    $('#message-error-email').html("")
-    $('#message-error-re-email').html("")
-    $('#message-error-pass').html("")
-    $('#message-error-re-pass').html("")
+    $('#message-sign-up').html("");
+    $('#message-error-fullname').html("");
+    $('#message-error-account').html("");
+    $('#message-error-email').html("");
+    $('#message-error-re-email').html("");
+    $('#message-error-pass').html("");
+    $('#message-error-re-pass').html("");
+    $('#message-sign-up').html("");
 
     if (rgFullName.length > 50) {
         $('#message-error-fullname').html("Họ tên có độ dài tối đa là 50 ký tự");
@@ -578,19 +579,22 @@ function signUp() {
             $("#button-signup").hide();
             message = 'Chúc mừng bạn đã tạo thành công tài khoảng tại Vì tôi đẹp.';
             $('#message-sign-up').html(message);
+           
 
         } else if (ketqua == 400) {
-            message = 'Tài khoảng hoặc email đã tồn tại.';
-            message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
+            message = 'Tài khoản hoặc email đã tồn tại.';
+           // message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
             $('#message-sign-up').html(message);
+           
         } else {
             message = 'Quá trình đăng ký xảy ra lỗi vui lòng thử lại';
-            message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
+           // message += '<a data-toggle="modal" data-target="#sign_up"  ><p class="text-info text-underline">Đăng nhập ngay nhé.</p></a>';
             $('#message-sign-up').html(message);
+          
         }
-        $('#sign_up').show();
+       
     });
-
+    return false;
 }
 
 function isEmail(email) {

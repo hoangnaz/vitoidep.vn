@@ -44,7 +44,17 @@
                   <button type="submit" class="btn_upload">Xác nhận</button> 
                 </form>
               </div>
-              
+              <?php if($_SESSION['error_image'] && $_SESSION['error_image'] != ""){
+                ?>
+              <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+               
+                   <?php echo $_SESSION['error_image'];?>
+                
+              </div>
+            <?php
+             }
+            ?>
               
             </div>
             <div class="media-body">

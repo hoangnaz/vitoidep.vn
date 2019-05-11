@@ -49,7 +49,7 @@
 													<span  id="message-error-re-pass"></span>
 													<span  id="message-sign-up" ></span>
 													<div class="text-center" id="button-signup">
-														<button  onclick="return signUp()" onsubmit="event.preventDefault();" class="btn btn-main text-center" >Đăng ký</button>
+														<button  onsubmit="event.preventDefault();"   onclick="return signUp()"class="btn btn-main text-center" >Đăng ký</button>
 													</div>
 												</form>	
 													</div>
