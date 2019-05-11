@@ -21,6 +21,7 @@
 	include_once 'template/partial/sign_in.php';
 	include_once 'template/partial/sign_up.php';
 	include_once 'template/partial/get_password.php';
+	include_once 'template/partial/update_password.php';
 	include_once 'template/partial/detail_product.php';
 ?>
 

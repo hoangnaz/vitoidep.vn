@@ -199,6 +199,21 @@
 
 		}
 
+		function updatePassword($password,$idCustomer){
+			$pdo=parent::connectDatabase();
+			$query="UPDATE `customer` SET 
+									`password`=?,
+									`update_date`=?
+									WHERE `id_customer`=?"; 
+			$paramQuery=array(
+				$password,
+				getCurrentTime(),
+				$idCustomer
+			);
+			return insertUpadeRecord($pdo,$paramQuery,$query);	
+			
+		}
+
 	}
 
 
