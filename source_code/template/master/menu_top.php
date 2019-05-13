@@ -164,6 +164,7 @@
 									<a href="user_info.php" >Thông tin cá nhân</a>
 									</li>
 									<li><a href="general_info.php" >Lịch sử mua hàng</a></li>
+									<li>	<a href=""  data-toggle="modal" data-target="#updatePassword">Thay đổi mật khẩu</a></li>
 									<li><a href="function/logout.php" >Đăng xuất</a></li>
 									</ul>
 								

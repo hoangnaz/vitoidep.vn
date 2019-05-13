@@ -13,7 +13,7 @@
 										<p >Xin chào </p>
 										<p ><b class="text-uppercase"><?php echo $_SESSION['customer']->fullname; ?></b></p>
 										<p>Để đảm bảo thông tin tài khoản của bạn. Hãy thường xuyên cập nhật mật khẩu nhé.</p>
-
+									
 										<img class="img-responsive" src="images/logo.png" alt="updateinfo image" />
 									
 									</div>
@@ -35,7 +35,7 @@
 												
 												<form class="text-left clearfix"> 
 													<div class="form-group">
-													  <input  class="form-control" id="password_old"  placeholder="Mật khẩu hiện tại">
+													  <input type="password"  class="form-control" id="password_old"  placeholder="Mật khẩu hiện tại">
 													</div>
 													<div class="form-group">
 													  <input type="password" class="form-control" placeholder="Mật khẩu mới" id="new_password" >

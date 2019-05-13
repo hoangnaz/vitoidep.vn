@@ -494,12 +494,6 @@ function update_pasword() {
         $("input#password_old").focus();
         return false;
     }
-    
-    if (oldPass == currentPass) {
-        $('#messagUpdatePass').html("Mật khẩu hiện tại không chính xác");
-        $("input#password_old").focus();
-        return false;
-    } 
 
     if (newPass == "") {
         $('#messagUpdatePass').html("Vui lòng nhập mật khẩu mới");
@@ -529,33 +523,39 @@ function update_pasword() {
 
 
     $.ajax({
-        url: 'function/reset_password.php',
+        url: 'function/update_password.php',
         type: 'POST',
         async: false,
         cache: false,
         dataType: 'html',
         data: {
             password: $("input#new_password").val(),
+            old_pass: $("input#password_old").val(),
+            currentPass: $("input#current_password").val(),
             id_customer: $("input#id_customer").val()
         }
     }).done(function(ketqua) {
-       
-        kq = ketqua;
+        if (ketqua == 300) {
+            message = "Mật khẩu hiện tại không tồn tại. Vui lòng kiểm tra lại";
+            $('#messagUpdatePass').html(message);
+            return false;
+        }
+        if (ketqua == 400) {
+            message = "Quá trình cập nhật mật khẩu thất bại. Vui lòng thử lại.";
+            $('#messagUpdatePass').html(message);
+            return false;
+        } else {
+             message = "Cập nhật mật khẩu thành công. Mật khẩu cũ sẽ hết hạn khi bạn hoàn thành phiên đăng nhập này.";
+            $('#messagUpdatePass').html(message);
+            $('#password_old').hide();
+            $('#new_password').hide();
+            $('#re_password').hide();
+            $('#button_update_pass').hide();
+            return false;
+        }
     });
     
-    if (kq == 2) {
-        message = "Cập nhật mật khẩu thành công. Mật khẩu cũ sẽ hết hạn khi bạn hoàn thành phiên đăng nhập này.";
-        $('#messageLogin').html(message);
-        return false;
-    } else {
-         message = "Cập nhật mật khẩu thành công. Mật khẩu cũ sẽ hết hạn khi bạn hoàn thành phiên đăng nhập này.";
-        $('#messageLogin').html(message);
-        $('#password_old').hide();
-        $('#new_password').hide();
-        $('#re_password').hide();
-        $('#button_update_pass').hide();
-        return false;
-    }
+   
     return false;
 }
 
