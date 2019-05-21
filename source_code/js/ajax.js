@@ -231,75 +231,84 @@ function shopping_cart(id_product, modal, number) {
             number: number
         },
         success: function(response) {
-        
-            var result = Array.from(response.data);
-         console.log(response.data);
-
-            if (response.result != 200) {
+            if(response == 1001){
                 swal({
                     title: "Rất tiếc!",
-                    text: response.alert,
+                    text: "Sản phẩm tạm thời hết hàng",
                     icon: "warning",
                     dangerMode: true,
                 })
-            } else {
-                
-                swal({
-                    title: "Thành công!",
-                    text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
-                    icon: "success"
-                })
-                $(".number_cart").hide();
-               
-            
-                var totalMoney = 0;
-                var tr_str = "";
-                var countProduct = 0;
-                Object.keys(response.data).forEach(function(key) {
-                    console.log(response.data[key].info.id_product);
-                
-                
-                        var id_product = response.data[key].info.id_product;
-                        var name_product_no_vietnamse = response.data[key].info.name_product_no_vietnamse;
-                        var product_name = response.data[key].info.name_product;
-                        var point_promotion = response.data[key].info.point_promotion;
-                        var price_product = response.data[key].info.price_product;
-                        var image_product = response.data[key].info.image_product;
-                        var number = response.data[key].number;
+            }else{
+                var result = Array.from(response.data);
+                console.log(response.data);
+       
+                if (response.result != 200) {
+                    swal({
+                        title: "Rất tiếc!",
+                        text: response.alert,
+                        icon: "warning",
+                        dangerMode: true,
+                    })
+                } else {
                     
-                        tr_str = tr_str + '<div class="media">'+
-                        '<a class="pull-left" href="product-single?name='+name_product_no_vietnamse+'">'+
-                            '<img  class="media-object" src="images/product/'+image_product+'" alt="image" /></a>'+
-                        '<div class="media-body">'+
-                            '<h4 class="media-heading"><a href=""></a></h4>'+
-                            '<div class="cart-price">'+
-                            '<span> Số lượng : '+ number +'</span>'+
-                            '<span> Giá:'+ ( 1 - point_promotion/100 )* price_product +'VNĐ</span>'+
-                            '</div>' +
-                            '<h5><strong> Tổng : '+ number*(1-point_promotion/100)*price_product +'VNĐ</strong></h5>' +
-                        '</div>' +
-                        '<a  class="remove" onclick="delete_product_cart('+ id_product +')"><i class="tf-ion-close"></i></a>'+
-                    '</div>';
-                    totalMoney = totalMoney + (number * ((1-point_promotion/100)*price_product));
-                    countProduct++;
-                });   
+                    swal({
+                        title: "Thành công!",
+                        text: 'Bạn đã thêm thành công sản phẩm vào giỏ hàng',
+                        icon: "success"
+                    })
+                    $(".number_cart").hide();
+                   
                 
-                tr_str  = tr_str + 
-                '<div class="cart-summary">' +
-                '<span>Tổng tiền:</span>'+
-                '<span class="total-price">'+totalMoney+ 'VNĐ</span>' +
-            '</div>'+
-            '<ul class="text-center cart-buttons">'+
+                    var totalMoney = 0;
+                    var tr_str = "";
+                    var countProduct = 0;
+                    Object.keys(response.data).forEach(function(key) {
+                     
+                            var id_product = response.data[key].info.id_product;
+                            var name_product_no_vietnamse = response.data[key].info.name_product_no_vietnamse;
+                            var product_name = response.data[key].info.name_product;
+                            var point_promotion = response.data[key].info.point_promotion;
+                            var price_product = response.data[key].info.price_product;
+                            var image_product = response.data[key].info.image_product;
+                            var number = response.data[key].number;
+                        
+                            tr_str = tr_str + '<div class="media">'+
+                            '<a class="pull-left" href="product-single?name='+name_product_no_vietnamse+'">'+
+                                '<img  class="media-object" src="images/product/'+image_product+'" alt="image" /></a>'+
+                            '<div class="media-body">'+
+                                '<h4 class="media-heading"><a href=""></a></h4>'+
+                                '<div class="cart-price">'+
+                                '<span> Số lượng : '+ number +'</span>'+
+                                '<span> Giá:'+ ( 1 - point_promotion/100 )* price_product +'VNĐ</span>'+
+                                '</div>' +
+                                '<h5><strong> Tổng : '+ number*(1-point_promotion/100)*price_product +'VNĐ</strong></h5>' +
+                            '</div>' +
+                            '<a  class="remove" onclick="delete_product_cart('+ id_product +')"><i class="tf-ion-close"></i></a>'+
+                        '</div>';
+                        totalMoney = totalMoney + (number * ((1-point_promotion/100)*price_product));
+                        countProduct++;
+                    });   
+                    
+                    tr_str  = tr_str + 
+                    '<div class="cart-summary">' +
+                    '<span>Tổng tiền:</span>'+
+                    '<span class="total-price">'+totalMoney+ 'VNĐ</span>' +
+                '</div>'+
+                '<ul class="text-center cart-buttons">'+
+    
+                    '<li><a href="shopping_cart.php" class="btn btn-small">Giỏ hàng</a></li>  '+ 
+                    '<li><a href="check_out.php" class="btn btn-small btn-solid-border">Thanh toán</a></li>'+
+    
+                '</ul>';
+                $("#shopping_cart").html(tr_str);
+                $(".ajax_number_cart").html('');
+                
+                $(".ajax_number_cart").append("("+countProduct + ")");
+                } 
+            }
 
-                '<li><a href="shopping_cart.php" class="btn btn-small">Giỏ hàng</a></li>  '+ 
-                '<li><a href="check_out.php" class="btn btn-small btn-solid-border">Thanh toán</a></li>'+
-
-            '</ul>';
-            $("#shopping_cart").html(tr_str);
-            $(".ajax_number_cart").html('');
+           
             
-            $(".ajax_number_cart").append("("+countProduct + ")");
-            } 
         }
     });
 

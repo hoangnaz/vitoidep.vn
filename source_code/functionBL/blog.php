@@ -1,6 +1,5 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/database/blog_post.php';
-
     class blogPostBL{
         function getBlogPost($blogPostId){
             $blogDB = new blogPostDB();

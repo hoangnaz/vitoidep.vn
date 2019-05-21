@@ -216,7 +216,21 @@
 			$PDO=$pdo->prepare($query);
 			$param=array($id_product,$name_product,$new_str,$image,$describle,$quantity,$catalog_product,$price,$unit,$promotion,$supplier,$hightlight,$status);
 			$insert_product=$PDO->execute($param);
-			return $insert_product;
+			if($insert_product)
+			{
+				echo "<script>";
+				echo "alert('Tạo thất bại sản phẩm mới');";
+				echo "window.location='../mn_product.php'";
+				echo "</script>";		
+			}
+			else
+			{
+				echo "<script>";
+				echo "alert('Tạo thành công');";
+				echo "window.location='../mn_product.php'";
+				echo "</script>";
+			}
+			
 			
 		}
 		

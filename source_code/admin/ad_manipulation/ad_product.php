@@ -1,6 +1,4 @@
-
 <?php
-
 	session_start();
 	$url=$_SERVER['DOCUMENT_ROOT'];
 	function utf8convert($str) {
@@ -28,6 +26,7 @@
         $text = str_replace("--","-",$text);
 		return $text;
 	}
+
 	if(isset($_POST["btn_add_product"]))
 	{
 		$id_product= rand(10000,999999);
@@ -62,11 +61,11 @@
 		$connect_data=new insert_update_data();
 		$connect_data->insert_product_info($id_product,$name_product, $new_str ,$image,$describle,$quantity,$catalog_product,$price,$unit,$promotion,$supplier,$hightlight,$status);
 		unset($_SESSION["product"]);
+	
 		echo '<script>';
 		echo 'alert("Thêm mới thành công sản phẩm")';
 		echo "window.location='../mn_product.php'";		
-				
-				echo "</script>";
+		echo "</script>";
 		}
 	}
 	
