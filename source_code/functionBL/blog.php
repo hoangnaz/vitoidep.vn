@@ -18,4 +18,3 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/database/blog_post.php';
         }
     }
 ?>
-

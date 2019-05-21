@@ -15,6 +15,17 @@
 		
 	}
 ?>
+<section class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="content">
+					<h3 class="page-name">Blog Vì Tôi Đẹp</h3>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 <div >
 	<div class="container">
@@ -37,7 +48,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="post">
 										<div class="post-media post-thumb">
-											<a href="blog-single.php">
+											<a href="blog-single.php?post=<?php echo $lstBlogPost->blog_id;?>">
 												<img src="images/user_info/<?php echo $lstBlogPost->image_blog;?>" alt="">
 											</a>
 										</div>

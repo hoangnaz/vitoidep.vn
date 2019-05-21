@@ -1,10 +1,10 @@
 <!-- product-category -->
-<section class="product-category section">
-	<div class="container">
+<section class="section">
+	<div class="container product-category1">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="title text-center">
-					<h2><b>Dòng sản phẩm</b></h2>
+					<h2><b>VÌ TÔI ĐẸP CÓ HAI DÒNG SẢN PHẨM</b></h2>
 				</div>
 			</div>
 			<div class="col-md-6">

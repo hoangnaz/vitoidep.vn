@@ -23,6 +23,14 @@
   <script src="js/sweetjs.js"></script>
   <link rel="stylesheet" href="css/branch.css">
   <link rel="stylesheet" href="css/pagnigation.css">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet"> 
+  <link href="css/lightbox.css" rel="stylesheet"> 
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
   <!-- add_fontawawe -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 	<!-- slide_main -->

@@ -149,10 +149,8 @@
 							
 									
 									$output .='<div style="margin:auto;">
-										<button type="button" class=" btn-shopping-list " onclick="shopping_cart('.$v->id_product.',0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
-										<button type="button" class=" btn-buynow-list " onclick="buy_now('.$v->id_product.')"><i  class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
-
-								
+										<button type="button" class=" btn-shopping-list " onclick="shopping_cart('.$v->id_product.',0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Chọn mua</button>
+									
 									</div>
 								</div>
 								

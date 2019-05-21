@@ -15,7 +15,7 @@
 	include_once 'template/master/js_file.php';
 	include_once 'template/partial/sign_in.php';
 	include_once 'template/partial/intro_minh_chau.php';
-	include_once 'template/partial/intro_le_hien.php';
+	include_once 'template/partial/intro_hien_le.php';
 	include_once 'template/partial/sign_up.php';
 	include_once 'template/partial/get_password.php';
 	include_once 'template/partial/update_password.php';

@@ -25,8 +25,8 @@
 										<div class="slide-text slide_style_left">
 											<h1 data-animation="animated zoomInRight">Vì tôi đẹp</h1>
 											<p data-animation="animated fadeInLeft">Dòng sản phẩm mẹ Ken, tinh khiết, 100% thiên nhiên</p>
-											<a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
-											<a href="intro"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a>
+											<a href="intro"  class="btn btn-primary" data-animation="animated fadeInLeft">Mua ngay</a>
+											<!-- <a href="intro"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a> -->
 										</div>
 									</div>
 								</div>
@@ -103,8 +103,8 @@
 										<div class="slide-text slide_style_left">
 											<h1 data-animation="animated zoomInRight">Vì tôi đẹp</h1>
 											<p data-animation="animated fadeInLeft">Dòng sản phẩm mẹ Ken, tinh khiết, 100% thiên nhiên</p>
-											<a href="danh_sach_san_pham?sanpham=noibat"  class="btn btn-default" data-animation="animated fadeInLeft">Mua ngay</a>
-											<a href="intro"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a>
+											<a href="intro"  class="btn btn-primary" data-animation="animated fadeInLeft">Mua ngay</a>
+											<!-- <a href="intro"   class="btn btn-primary" data-animation="animated fadeInRight">Về chúng tôi</a> -->
 										</div>
 									</div>
 								</div>

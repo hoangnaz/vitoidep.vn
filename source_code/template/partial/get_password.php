@@ -10,8 +10,7 @@
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<div class="modal-image">
-									<p class="text-center ">Vui lòng nhập địa chỉ email của bạn để chúng tôi có thể gửi cho bạn mật 
-										khẩu mới của bạn
+									<p class="text-center ">HỒ LÊ MINH CHÂU
 									</p>
 									<form class="text-left clearfix" >
 										<div class="form-group">

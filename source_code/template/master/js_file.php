@@ -31,6 +31,11 @@
 		
 		<script src="js/show_popup_detail_product.js"></script>
 		<script src="js/scroll_top.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>   
 		
 		
 		<!-- When the user scrolls down 20px from the top of the document, show the button -->

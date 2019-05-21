@@ -31,7 +31,7 @@
                     </li><!-- / Home -->
                     <!-- Intro -->
                     <li>
-                        <a href="intro">Giới thiệu</a>
+                        <a href="intro">Vì tôi đẹp Shop</a>
                     </li><!-- / Intro -->
                     <!-- Contact -->
                     <li>

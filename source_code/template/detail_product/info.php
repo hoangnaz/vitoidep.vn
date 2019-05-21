@@ -116,6 +116,8 @@
 					</div>
 				<div>
 				<a  class="btn btn-main mt-20" onclick="shopping_cart(<?php echo $infoProduct->id_product;?>,0,document.getElementById('product-quantity').value)">Thêm vào giỏ hàng</a>
+				<a  class="btn  btn-shopping  mt-20 buy-now bg-success" onclick="buy_now(<?php  echo  $infoProduct->id_product;?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</a>
+							
 			</div>
 		
 			<!-- <div class="product-category">

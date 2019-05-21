@@ -16,7 +16,7 @@
 	include_once 'template/intro/feature_product.php';
 	include_once 'template/intro/adv_2.php';
 	include_once 'template/intro/new_product.php';
-	include_once 'template/intro/dau_goi_sua_tam.php';
+	include_once 'template/intro/header_show.php';
 	include_once 'template/intro/care_skin.php';
 	include_once 'template/master/footer.php';
 	include_once 'template/master/top_message.php';

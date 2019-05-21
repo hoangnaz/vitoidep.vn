@@ -24,7 +24,7 @@
 			<div class="col-md-3">
 
 				
-				<div class="widget product-category">
+				<div class="widget">
 					<h4 class="widget-title">Danh mục</h4>
 					<div class="panel-group commonAccordion" id="accordion" role="tablist" aria-multiselectable="false">
 									<?php
@@ -115,7 +115,7 @@
 					</div>
 				</div>
 				  
-				<!-- <div class="widget">
+				<div class="widget">
 				<h4 class="widget-title">CHỌN THEO MỨC GIÁ</h4>
 				<div class="radio">
 					<label>
@@ -136,7 +136,7 @@
 					</label>
 				</div>
 				
-				</div> -->
+				</div>
 			
        		</div>
 			<div class="col-md-9">

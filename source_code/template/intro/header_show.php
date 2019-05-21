@@ -1,17 +1,17 @@
 <!-- Feature product -->
-<section class="products section bg-gray">
+<section class="products section bg-gray" id="skin_care">
 	<div class="container">
 		<div class="row">
 			<div class="title text-center">
-				<h2><b>Danh sách sản phẩm nổi bật</b></h2>
+				<h2>Sản phẩm sữa tắm, tinh chất dinh dưỡng</h2>
 			</div>
 		</div>
 		<div class="row">
 		
 		<?php
-			foreach ($lstHighLightProduct as $key => $value) {
+			foreach ($listDauGoiSuaTam as $key => $value) {
 				?>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<div class="product-item">
 							<div class="product-thumb">
 
@@ -52,8 +52,8 @@
 							
 
 								<div style="margin:auto;">
-									<button type="button" class=" btn-shopping " onclick="shopping_cart(<?php echo $value->id_product;?>,0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Thêm vào giỏ</button>
-									<button type="button" class=" btn-buynow " onclick="buy_now(<?php echo $value->id_product;?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button>
+									<button type="button" class=" btn-shopping " onclick="shopping_cart(<?php echo $value->id_product;?>,0,1)"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Chọn mua</button>
+									<!-- <button type="button" class=" btn-buynow " onclick="buy_now(<?php // echo  $value->id_product;?>)"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</button> -->
 								</div>
 								
 
@@ -66,7 +66,7 @@
 			}
 		?>	
 			<div class="col-md-12 see_more">
-				<a href="danh_sach_san_pham?sanpham=noibat" class="btn btn-main">Xem thêm các sản phẩm</a>
+				<a href="danh_sach_san_pham?sanpham=cham_soc_da_mat" class="btn btn-main">Xem thêm các sản phẩm</a>
 		</div>
 		</div>
 	</div>

@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="col-md-3">
 			<div class="row">
-				<div class="widget product-category">
+				<div class="widget">
 					<h4 class="widget-title">Danh mục</h4>
 						<div class="panel-group commonAccordion" id="accordion" role="tablist" aria-multiselectable="false">
 							<?php

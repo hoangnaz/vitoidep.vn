@@ -2938,3 +2938,11 @@ Website :	www.themefisher.com
     margin-left: -15px;
     margin-right: -15px;
   }
+  .image_banner_intro{
+      padding-top: 10px;
+  }
+  .image-intro{
+      width: 50% !important;
+      height: 50% !important;
+      margin-left: 25%;
+  }
