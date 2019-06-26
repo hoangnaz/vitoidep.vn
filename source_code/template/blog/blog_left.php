@@ -32,7 +32,7 @@
 		<div class="row">
 			<div class="col-md-9">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title_name_blog">
-				<h2 class="page-name"><p class="text-uppercase"><b><?php echo $title;?></b></p></h2>
+				<h2 class="page-name"><p class="text-uppercase"><b><?php //echo $title;?></b></p></h2>
 				<hr>
 				<?php
 					if(count($allRecorde)==0){

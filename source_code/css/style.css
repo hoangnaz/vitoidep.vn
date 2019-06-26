@@ -252,8 +252,7 @@ Website :	www.themefisher.com
         
         .category-box {
             background-size: cover;
-            margin-bottom: 30px;
-            min-height: 350px;
+            min-height: 320px;
             position: relative;
             overflow: hidden;
             width: 100%;
@@ -1085,8 +1084,7 @@ Website :	www.themefisher.com
             top: 20px;
             font-size: 15px;
             outline: none;
-            color: white;
-            background-color: #000000;
+            color: #fa8a1d;
             opacity: 1;
         }
         
@@ -1114,6 +1112,19 @@ Website :	www.themefisher.com
             border-radius: 0;
             box-shadow: none;
             border: none;
+        
+        }
+
+        .modal-content-popup {
+           
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+        #btn_popup_index{
+            margin-top: 60px;
+            font-size: x-large;
+            margin-right: 20px;
         }
         
         .product-modal .modal-content .modal-body {
@@ -1185,10 +1196,7 @@ Website :	www.themefisher.com
         .product-shorting span {
             margin-right: 15px;
         }
-        .product-category1{
-            background-image: url('../images/home/under.png');
-            background-repeat: no-repeat;
-        }
+       
         .product-category ul {
             padding-left: 15px;
         }
@@ -2169,7 +2177,7 @@ Website :	www.themefisher.com
         }
         
         .footer .copyright-text {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         
         .social-media li {

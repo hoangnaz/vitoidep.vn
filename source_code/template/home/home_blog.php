@@ -1,5 +1,5 @@
 <!-- blog section -->
- <section class="section  bg-gray section">
+ <!-- <section class="section  bg-gray section">
 	<div class="container">
 		<div class="row">
 			<div class="title">
@@ -27,6 +27,6 @@
 			</div>
 		</div> 
 	</div>
-</section> 
+</section>  -->
 
 <!-- Start Call To Action -->

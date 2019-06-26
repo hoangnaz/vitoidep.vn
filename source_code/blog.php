@@ -1,25 +1,25 @@
 <?php
-	if(isset($_GET['chuyen_muc'])){
-		$catalogBlog= $_GET['chuyen_muc'];
-		switch ($catalogBlog) {
-			case 'review-danh-gia-san-pham':
-				$title = "Review đánh giá sản phẩm";
-				break;
-			case 'meo-vat-cuoc-song':
-				$title = "Mẹo vặt cuộc sống";
-				break;
-			case 'bi-quyet-lam-dep':
-				$title = "Bí quyết làm đẹp";
-				break;
-			case 'tam-su-chia-se':
-				$title = "Tâm sự chia sẻ";
-				break;
+	// if(isset($_GET['chuyen_muc'])){
+	// 	$catalogBlog= $_GET['chuyen_muc'];
+	// 	switch ($catalogBlog) {
+	// 		case 'review-danh-gia-san-pham':
+	// 			$title = "Review đánh giá sản phẩm";
+	// 			break;
+	// 		case 'meo-vat-cuoc-song':
+	// 			$title = "Mẹo vặt cuộc sống";
+	// 			break;
+	// 		case 'bi-quyet-lam-dep':
+	// 			$title = "Bí quyết làm đẹp";
+	// 			break;
+	// 		case 'tam-su-chia-se':
+	// 			$title = "Tâm sự chia sẻ";
+	// 			break;
 				
-			default:
-				header("Location:404_page.php");
-			break;
-		}
-	}
+	// 		default:
+	// 			header("Location:404_page.php");
+	// 		break;
+	// 	}
+	// }
 	
 	include 'template/master/header.php';
 	include_once 'template/master/menu_top.php';

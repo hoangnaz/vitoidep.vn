@@ -19,15 +19,15 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <p><img src="images/home/clients.png" class="img-responsive" alt=""></p>
-                        <h1 class="title">Xin chào bạn</h1>
-						<p><b>Chào mừng bạn đến với Vì Tôi Đẹp shop</b></p>
-                        <p>Chúng tôi sẽ truyền cảm hứng cho bạn để sống “chất lượng” hơn thông qua việc
+                        <!-- <p><img src="images/home/clients.png" class="img-responsive" alt=""></p> -->
+                      
+						<h2 class='title'><b>I'm Vì tôi đẹp </b></h2>
+                        <p>Mình sẽ truyền cảm hứng cho bạn để sống “chất lượng” hơn thông qua việc
 							nâng cấp sức khỏe, nâng cấp cái đẹp, nâng cấp làn da, 
 							và nâng cấp sự tự tin bên trong bạn.
  						<br> Cùng xem chúng tôi mang đến gì cho bạn </p>
                     </div>
-                    <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <!-- <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="col-xs-3 col-sm-2">
                             <a href="#"><img src="images/home/client1.png" class="img-responsive" alt=""></a>
 							<p>Lắng nghe chia sẻ từ bạn</p>
@@ -52,7 +52,7 @@
                             <a href="#"><img src="images/home/client6.png" class="img-responsive" alt=""></a>
 							<p>Tạo ra cho bạn một cuộc sống mới</p>
 						</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
         </div>
    </section>
 
-   <section id="features">
+   <!-- <section id="features">
         <div class="container">
             <div class="row">
                 
@@ -97,14 +97,14 @@
 				</div>
             </div>
         </div>
-    </section>
+    </section> -->
 	<section >
-        <div class="container" id="services">
+        <div class="container" >
             <div class="row">
                 <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="single-service">
                         <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                            <img src="images/home/icon1.png" alt="">
+                            <a href="intro"><img src="images/home/icon1.png" alt=""></a>
                         </div>
                         <h2>VÌ ĐẸP</h2>
                         <p>Vẻ đẹp đến từ mọi góc nhìn. Hãy cảm nhận thiên nhiên hoà quyện trong từng sản phẩm - và chắc chắn Bạn sẽ yêu thích!</p>
@@ -134,47 +134,26 @@
         </div>
     </section>
     <!--/#services-->
-	<section id="features">
-        <div class="container">
+	<!-- <section id="features" class="bg-gray">
+        <div class="container" >
             <div class="row">
 				<h2 class="text-center">NHỮNG NGƯỜI NÂNG TẦM VÌ TÔI ĐẸP</h2>
 				<div class="single-features">
-					<div class="col-sm-8 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-						<h2>Hồ Lê Minh Châu – “Hotgirl Nổi Loạn”</h2>
-						<P>Làm đẹp, trước hết là có tâm
-						Đó là quan niệm làm đẹp của chị Minh Châu - người đứng đầu của doanh nghiệp Mẹ Ken.
-						 Với chị Châu, sự bền bĩ lâu dài dù trong kinh doanh hay trong làm đẹp cũng phải xuất 
-						 phát từ cái tâm. Cái tâm để gửi vào sản phẩm của mình sao cho thật sạch, thật chất 
-						 lượng, đặt lợi ích khách hàng lên đầu tiên và tiến xa hơn nữa cái đẹp đi liền cái tâm,
-						  để giải quyết được nhiều vấn đề xã hội, những câu chuyện nhân văn khác.
-						</P>
-						<p>Trước hết nói về cái tâm với nghề, hễ khách hàng tìm đến Mẹ Ken, 
-						khách hàng luôn được tư vấn chăm sóc sắc đẹp một cách tỉ mỉ và cặn kẽ,
-						 được xem kỹ da và tư vấn chính xác từng sản phẩm để giúp người dùng
-						  đạt được hiệu quả làm đẹp tốt nhất. 
-						Hài lòng là tâm lý chung của bất kỳ ai khi đến với Mẹ Ken.</p>
-						<a data-toggle="modal" href='#intro_minh_chau'><i>Xem thêm</i></a>
+					<div class="col-sm-12  col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2" data-wow-duration="500ms" data-wow-delay="300ms">
+					
+                        <div class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images/home/ho_thi_minh_chau.png" class="img-responsive" alt="">
+                        </div>
+						<a data-toggle="modal" href='#intro_minh_chau'><i><h4  class="text-center">Chị Hồ Lê Minh Châu </h4></i></a>
 					</div>
-					<div class="col-sm-3 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-						<img src="images/home/ho_thi_minh_chau.png" class="img-responsive" alt="">
-					</div>
-                </div>
-				<div class="single-features">
-                    <div class="col-sm-3 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="col-sm-12  col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-2" data-wow-duration="500ms" data-wow-delay="300ms">
+					
+                        <div class="wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                         <img src="../images/home/le_hien.png" class="img-responsive" alt="">
-                    </div>
-                    <div class="col-sm-8 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Lê Hiền, Chị chủ nhỏ #vitoidep Shop</h2>
-                        <P>Câu chuyện Shop đã có nhiều sự kiện đáng nhớ- mỗi một năm trôi qua đã để lại những
-						 sự kiện lịch sử phát triển của Vì tôi đẹp. Sau gần 1 năm phát triển và được những 
-						 thành tựu đầu tiên 12 tháng 01- là một cái mốc. Vào ngày này chúng tôi đã trở thành 
-						 nhà phân phối chính thức cho Công ty, là người đưa sản phẩm thiên nhiên Mẹ Ken đến
-						  tay người tiêu dùng. Cơ hội, tham vọng và mục tiêu của chúng tôi đã phát triển lền
-						   nhiều, và đó là thời điểm để thương hiệu phát triển lên cùng. </P>
-						   <a data-toggle="modal" href='#intro_hien_le'><i>Xem thêm</i></a>
-                    </div>
+                        </div>
+						<a data-toggle="modal" href='#intro_hien_le'><i><h4 class="text-center">Lê Hiền </h4></i></a>
+					</div>
                 </div>
-				
 			</div>
         </div>
-    </section>
+    </section> -->

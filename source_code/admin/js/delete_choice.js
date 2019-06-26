@@ -43,6 +43,7 @@ function delete_order(id_order,id_page)
 
 function delete_catalog_blog(id,status)
 {
+	alert(123);
 	if(confirm("Bạn thực sự muốn thu hồi quyền xuất bản danh mục này?"))
 	{
 		window.location="ad_manipulation/blog_delete_blog_catalog.php?id_catalog_blog=" + id+"&status="+ status;

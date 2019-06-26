@@ -5,3 +5,4 @@ RewriteCond %{HTTP:X-Forwarded-Proto} =http
 RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
 ErrorDocument 404 /404_page.php
 RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+DirectoryIndex index.php index.html

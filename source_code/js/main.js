@@ -111,3 +111,11 @@ jQuery(function($) {'use strict';
 	}
 
 });
+
+$( document ).ready(function() {
+	setTimeout(function(){
+		$("#showPopUpHome").click();
+		
+	},2000);
+	
+});

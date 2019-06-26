@@ -4,7 +4,7 @@
 	
 	<div class="modal-dialog " role="document">
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		 Đóng
+		 X
 	</button>
 		<div class="modal-content">
 			<div class="modal-body" id="info_product_popup">

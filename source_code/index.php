@@ -18,6 +18,7 @@
 	include_once 'template/partial/intro_hien_le.php';
 	include_once 'template/partial/sign_up.php';
 	include_once 'template/partial/get_password.php';
+	include_once 'template/partial/pop_up_index.php';
 	include_once 'template/partial/update_password.php';
 	
 ?>

@@ -9,35 +9,38 @@
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="https://www.instagram.com/vitoidep">
 								<i class="tf-ion-social-instagram"></i>
 							</a>
 						</li>
 						<li>
-							<a href="">
-								<i class="tf-ion-social-twitter"></i>
+							<a href="https://youtube.com/c/VìTôiđẹpShopsanphamthiennhienMeKen">
+								<i class="tf-ion-social-youtube"></i>
 							</a>
 						</li>
 						<li>
-							<a href="">
-								<i class="tf-ion-social-pinterest"></i>
+							<a href="mailto:Vitoidep2018@gmail.com">
+								<i class="tf-ion-ios-email"></i>
 							</a>
 						</li>
 					</ul>
 					<ul class="footer-menu">
+					
 						<li>
-							<a href="contact">LIÊN HỆ</a>
+							<i class="tf-ion-ios-home"></i>
+							<span>Nguyễn Kim, Phường 12, Quận 5 (2,40 km)Thành phố Hồ Chí Minh</span>
 						</li>
 						<li>
-							<a href="recruiment_branch">DANH SÁCH ĐẠI LÝ</a>
+							<i class="tf-ion-android-phone-portrait"></i>
+							<span>Số điện thoại: 0962876192 </span>
 						</li>
+				
 						<li>
-							<a href="recruiment_branch">TUYỂN DỤNG ĐẠI LÝ</a>
-						</li>
-						<li>
-							<a href="policy">CHÍNH SÁCH</a>
+							<i class="tf-ion-android-mail"></i>
+							<span>Email: vitoidep@gmail.com</span>
 						</li>
 					</ul>
+					
 				
 					<p class="copyright-text">VÌ TÔI ĐẸP SHOP</p>
 					<p style="color:#fa8a1d;"> <b>LÀ NƠI TA ĐẾN - TA ĐẸP VÀ TA VUI</b></p>
@@ -49,13 +52,20 @@
 						<!-- End of CuterCounter Code -->
 					</p>
 				</div>
+				
+				<div class="col-md-3">
+					<a href="uu_dai" target="_blank">
+							<p> Ưu đãi cho bạn -> Click ngay </p>
+							<img src="../images/home/uu_dai.png" class="img-responsive" alt="Image">
+					</a>		
+							
+					
+				</div>
 				<div class=" col-md-3">
 					<div class="col-md-12 text-center facebook">
 						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fvitoidep.myphamthiennhien%2F&events&width=260&height=180&small_header=true&adapt_container_width=true&hide_cover=false&appId" width="260" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="row">
+					<!-- <div class="row">
 				
 						<div class="col-xs-3 col-sm-3 col-md-5  col-md-offset-1  col-lg-5 col-lg-offset-1  chanel_online">
 							<a href=" https://www.lazada.vn/shop/vi-toi-dep"><img src="images/link/lazada.png" class="img-responsive" width="60px" alt="Image"></a>
@@ -69,7 +79,7 @@
 						<div class="col-xs-3 col-sm-3 col-md-5   col-lg-5   chanel_online">
 							<a href="  https://goo.gl/ZwjA6w"><img src="images/link/shoppe.jpg" class="img-responsive"  width="60px" alt="Image"></a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 		</div>
 </footer>
