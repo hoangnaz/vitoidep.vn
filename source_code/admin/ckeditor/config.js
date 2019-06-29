@@ -10,17 +10,17 @@ CKEDITOR.editorConfig = function(config) {
 
     // The toolbar groups arrangement, optimized for two toolbar rows.
 
-    config.filebrowserBrowseUrl = 'http://vitoidep.vn/admin/ckfinder/ckfinder.html';
+    config.filebrowserBrowseUrl = 'http://localhost:85/admin/ckfinder/ckfinder.html';
 
-    config.filebrowserImageBrowseUrl = 'http://vitoidep.vn/admin/ckfinder/ckfinder.html?type=Images';
+    config.filebrowserImageBrowseUrl = 'http://localhost:85/admin/ckfinder/ckfinder.html?type=Images';
 
-    config.filebrowserFlashBrowseUrl = 'http://vitoidep.vn/admin/ckfinder/ckfinder.html?type=Flash';
+    config.filebrowserFlashBrowseUrl = 'http://localhost:85/admin/ckfinder/ckfinder.html?type=Flash';
 
-    config.filebrowserUploadUrl = 'http://vitoidep.vn/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+    config.filebrowserUploadUrl = 'http://localhost:85/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
 
-    config.filebrowserImageUploadUrl = 'http://vitoidep.vn/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+    config.filebrowserImageUploadUrl = 'http://localhost:85/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
 
-    config.filebrowserFlashUploadUrl = 'http://vitoidep.vn/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+    config.filebrowserFlashUploadUrl = 'http://localhost:85/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
 
 
 

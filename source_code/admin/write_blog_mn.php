@@ -17,7 +17,7 @@
 	include("ad_header.php");
 	include("ad_side_bar.php");
 	include("ad_title.php");
-	include("write_add_blog_content_template.php");
+	include("template/blog/list_blog.php");
 	// add content list catalog blog
 	include("ad_footer.php");
 ?>

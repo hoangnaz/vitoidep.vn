@@ -118,7 +118,7 @@
                                           <div class="form-group" style="text-align:center;">
                                              <button type="submit" name="btn_update_write_catalog"
                                                 onclick="return check_catalog_blog_update('<?php echo $lst_cat->id_catalog;?>')"
-                                                class="btn btn-primary text-center">Tạo danh mục
+                                                class="btn btn-primary text-center">Cập nhật danh mục
                                              blog</button>
                                           </div>
                                        </div>
@@ -136,7 +136,7 @@
                      {
                      ?>
                   <td width="60px"><a href="javascript:void(0)"
-                     onClick="return delete_catalog_blog(<?php echo $lst_cat->id_catalog;?>,0)"><i
+                     onClick="return delete_catalog_blog('<?php echo $lst_cat->id_catalog;?>',0)"><i
                      class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                   <?php
                      }
@@ -144,7 +144,7 @@
                      {
                      ?>
                   <td width="60px"><a href="javascript:void(0)"
-                     onClick="recyecle_catalog_blog(<?php echo $lst_cat->id_catalog;?>,1)"><i
+                     onClick="recyecle_catalog_blog('<?php echo $lst_cat->id_catalog;?>',1)"><i
                      class="fa fa-recycle" aria-hidden="true"></i></a></td>
                   <?php
                      }

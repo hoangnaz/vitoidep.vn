@@ -14,6 +14,6 @@
 	include("ad_header.php");
 	include("ad_side_bar.php");
 	include("ad_title.php");
-	include("write_sub_add_write_template.php");
+	include("template/blog/write_sub_add_write_template.php");
 	include("ad_footer.php");
 ?>

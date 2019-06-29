@@ -4,7 +4,7 @@
 			public function conect_data() {
         	try
         	{
-            $connect = new PDO('mysql:host=localhost; dbname=sale_book_learning_tools','root','');
+            $connect = new PDO('mysql:host=localhost; dbname=sale_book_learning_tools','root','root');
             $connect->query('set names "utf8"');
             $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			     return $connect;

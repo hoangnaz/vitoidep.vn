@@ -1116,7 +1116,7 @@ Website :	www.themefisher.com
         }
 
         .modal-content-popup {
-           
+            margin-left: -20px;
             border-radius: 0;
             box-shadow: none;
             border: none;

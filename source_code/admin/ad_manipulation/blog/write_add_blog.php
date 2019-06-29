@@ -15,6 +15,7 @@
         $blogPost->setContenSumary($_POST['txt_describle_blog']);
         $blogPost->setContentFull($_POST['txt_content_blog']);
         $blogPost->setCreateUser($_SESSION["info_staff"]['fullname']);
+        $blogPost->setNumberView(1);
         $file=$_FILES['img_content'];
         $path='avatar_post';
         $resultUploadFile=uploadImage($file,$path);
@@ -33,23 +34,24 @@
                 $imageSource=$path.'/'.$file['name'];
                 $blogPost->setImageBlog($imageSource);
                 $insertBlogPost=$blogPostDB->insertBlogPost($blogPost);
+            
                 if($insertBlogPost == 200)
                 {
                     unset($_SESSION["blog_content"]);
                     echo "<script>alert('Thêm thành công bài viết mới.')</script>";
-                    echo "<script>window.location='../write_blog_mn.php'</script>";
+                    echo "<script>window.location='../../write_blog_mn.php'</script>";
                 }
                 else if($insertBlogPost == 1000)
                 {
                     $_SESSION["blog_content"]= array("txt_blog_name"=>$blogTitle,"txt_describle_blog"=>$_POST['txt_describle_blog'],"txt_content_blog"=>$_POST['txt_content_blog']);
                     echo "<script>alert('Tên blog này đã tồn tại')</script>";
-                    echo "<script>window.location='../write_sub_add_write_template.php'</script>";
+                    echo "<script>window.location='../../write_sub_add_write.php'</script>";
                 }
                 else
                 {
                     $_SESSION["blog_content"]= array("txt_blog_name"=>$blogTitle,"txt_describle_blog"=>$_POST['txt_describle_blog'],"txt_content_blog"=>$_POST['txt_content_blog']);
                     echo "<script>alert('Quá trình thêm  bài viết thất bại.')</script>";
-                    echo "<script>window.location='../write_sub_add_write_template.php'</script>";
+                    echo "<script>window.location='../../write_sub_add_write.php'</script>";
                     
                 }
             }

@@ -1,8 +1,11 @@
 <?php
 error_reporting(1);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/database/blog_post.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/database/catalog_blog.php';
 $blogPostDB = new blogPostDB();
 $listBlogPost = $blogPostDB->getAllBlogPost();
+$catalogBlogDB = new blogCatalogtDB();
+$listCatalogBlog = $catalogBlogDB->getAllBlogCatalog();
 $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
 
 ?>
@@ -30,7 +33,6 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                   </th>
                   <th width="20px">Đọc</th>
                   <th width="20px">Sửa</th>
-                  <th width="20px">Phê duyệt</th>
                   <th width="20px">Xóa</th>
                </tr>
             </thead>
@@ -45,9 +47,9 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                      <td>
                         <?php echo $post->content_sumary; ?>
                      </td>
-                     
-                     <td> <a  data-toggle="modal" href='#read<?php echo $post->blog_id; ?>'><i class="fa fa-eye" aria-hidden="true"></i></a>
-                     <div class="modal fade" id="read<?php echo $post->blog_id; ?>">
+
+                     <td> <a data-toggle="modal" href='#read<?php echo $post->blog_id; ?>'><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <div class="modal fade" id="read<?php echo $post->blog_id; ?>">
                            <div class="modal-dialog">
                               <div class="modal-content">
                                  <div class="modal-header">
@@ -64,11 +66,11 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                  </div>
                               </div>
                            </div>
-                        </div>   
+                        </div>
 
                      </td>
-                     <td> <a  data-toggle="modal" href='#edit<?php echo $lst_cat->blog_id; ?>'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                     <div class="modal fade" id="edit<?php echo $lst_cat->blog_id; ?>">
+                     <td> <a data-toggle="modal" href='#edit<?php echo $post->blog_id; ?>'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <div class="modal fade" id="edit<?php echo $post->blog_id; ?>">
                            <div class="modal-dialog">
                               <div class="modal-content">
                                  <div class="modal-header">
@@ -78,16 +80,14 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                  </div>
                                  <div class="modal-body">
                                     <div class="col-xs-12 col-sm-12 col-lg-12 form_info_input">
-                                       <form action="ad_manipulation/blog/update_blog.php" enctype="multipart/form-data" method="POST" role="form" enctype="multipart/form-data">
+                                       <form action="ad_manipulation/blog/update_blog.php?blogId=<?php echo $post->blog_id;?>" enctype="multipart/form-data" method="POST" role="form" enctype="multipart/form-data">
                                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data">
                                              <div class="form-group">
                                                 <div class="col-lg-2">
                                                    <label for="catalog">Tiều đề :</label>
                                                 </div>
                                                 <div class="col-lg-10">
-                                                   <input type="text" maxlength="300"  name="txt_blog_name"
-                                                   class="txt_blog_name form-control" id="txt_blog_name"
-                                                   required value='<?php echo $_SESSION["blog_content"]["txt_blog_name"]; ?>'>
+                                                   <input type="text" maxlength="300" name="txt_blog_name" class="txt_blog_name form-control" id="txt_blog_name" required value='<?php echo $post->blog_name; ?>'>
                                                 </div>
 
                                              </div>
@@ -100,11 +100,11 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                                 </div>
                                                 <div class="col-lg-10">
 
-                                                   <textarea type="text" maxlength="500" name="txt_describle_blog" class="txt_describle_blog form-control" id="txt_describle_blog" required>
-															 	   <?php echo     $_SESSION["blog_content"]["txt_describle_blog"]; ?>
-															   </textarea>
+                                                   <textarea type="text" maxlength="500" name="txt_describle_blog" class="txt_describle_blog form-control" id="txt_describle_blog<?php echo $post->blog_id; ?>" required>
+															 	      <?php echo  $post->content_sumary; ?>
+															      </textarea>
                                                    <script>
-                                                      CKEDITOR.replace('txt_describle_blog');
+                                                      CKEDITOR.replace('txt_describle_blog<?php echo $post->blog_id; ?>');
                                                    </script>
                                                 </div>
                                              </div>
@@ -115,10 +115,11 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                                    <label for="content_blog">Nội dung:</label>
                                                 </div>
                                                 <div class="col-lg-10">
-                                                   <textarea type="text" maxlength="10000" name="txt_content_blog" class="txt_content_blog form-control" id="txt_content_blog" required>
-														    <?php echo     $_SESSION["blog_content"]["txt_content_blog"]; ?></textarea>
+                                                   <textarea type="text" maxlength="10000" name="txt_content_blog" class="txt_content_blog form-control" id="txt_content_blog<?php echo $post->blog_id; ?>" required>
+                                                   <?php echo  $post->content_full; ?>
+                                                </textarea>
                                                    <script>
-                                                      CKEDITOR.replace('txt_content_blog');
+                                                      CKEDITOR.replace('txt_content_blog<?php echo $post->blog_id; ?>');
                                                    </script>
                                                 </div>
                                              </div>
@@ -134,7 +135,7 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                                       <?php
                                                       foreach ($listCatalogBlog as $key => $value) {
                                                          ?>
-                                                         <option value="<?php echo  $value->id_catalog; ?>">
+                                                         <option value="<?php echo  $value->id_catalog; ?>" <?php echo $value->id_catalog==$post->blog_catalog?'selected':'' ?>>
                                                             <?php echo  $value->name_blog; ?></option>
                                                       <?php
                                                    }
@@ -149,17 +150,16 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                                    <label for="content_blog">Hình ảnh bài viết:</label>
                                                 </div>
                                                 <div class="col-lg-10">
-                                                   <input type="file" class="form-control" name="img_content" id="img_content" required onclick="return auto_load_img()">
+                                                   <input type="file" class="form-control" name="img_content" id="img_content"  onclick="return auto_load_img()">
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                   <img src="im" id="img_avt" class="img-responsive" alt="Image" style="width:150px; ">
+                                                   <img  id="img_avt" class="img-responsive" alt="Image" src="../images/user_info/<?php echo $post->image_blog;?>" style="width:150px; ">
                                                 </div>
                                              </div>
                                           </div>
                                           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                              <div class="form-group" style="text-align:center;">
-                                                <button type="submit" name="btn_add_write_catalog" onclick="return check_content_add_write()" class="btn btn-primary text-center">Tạo
-                                                   danh mục blog</button>
+                                                <button type="submit" name="btn_update_post" onclick="return check_content_add_write()" class="btn btn-primary text-center">Cập nhật bài viết</button>
                                              </div>
                                           </div>
                                        </form>
@@ -169,17 +169,16 @@ $path = $_SERVER['DOCUMENT_ROOT'] . '/images/user_info';
                                  </div>
                               </div>
                            </div>
-                        </div>   
-                  </td>
-                     <td><i class="fa fa-toggle-on" aria-hidden="true"></i></td>
+                        </div>
+                     </td>
                      <?php
-                     if ($lstPost->status == 1) {
+                     if ($post->status == 1) {
                         ?>
-                        <td width="60px"><a href="javascript:void(0)" onClick="delete_catalog_blog(<?php echo $lstPost->blog_id; ?>,0)"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+                        <td width="60px"><a href="javascript:void(0)" onClick="delete_blog('<?php echo $post->blog_id; ?>',0)"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                      <?php
-                  } else if ($lstPost->status == 0) {
+                  } else if ($post->status == 0) {
                      ?>
-                        <td width="60px"><a href="javascript:void(0)" onClick="recyecle_catalog_blog(<?php echo $lstPost->blog_id; ?>,1)"><i class="fa fa-recycle" aria-hidden="true"></i></a></td>
+                        <td width="60px"><a href="javascript:void(0)" onClick="recyecle_blog('<?php echo $post->blog_id; ?>',1)"><i class="fa fa-recycle" aria-hidden="true"></i></a></td>
                      <?php
                   }
                   ?>

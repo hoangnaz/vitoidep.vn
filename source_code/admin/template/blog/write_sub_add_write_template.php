@@ -11,7 +11,7 @@ $listCatalogBlog = $catalogBlogDB->getAllBlogCatalog();
                 <p class="text-center">VIẾT BÀI MỚI</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-lg-12 form_info_input">
-                <form action="ad_manipulation/write_add_blog.php" enctype="multipart/form-data" method="POST" role="form" enctype="multipart/form-data">
+                <form action="ad_manipulation/blog/write_add_blog.php" enctype="multipart/form-data" method="POST" role="form" enctype="multipart/form-data">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_login_data">
                         <div class="form-group">
                             <div class="col-lg-2">
@@ -89,8 +89,7 @@ $listCatalogBlog = $catalogBlogDB->getAllBlogCatalog();
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="form-group" style="text-align:center;">
-                            <button type="submit" name="btn_add_write_catalog" onclick="return check_content_add_write()" class="btn btn-primary text-center">Tạo
-                                danh mục blog</button>
+                            <button type="submit" name="btn_add_write_catalog" onclick="return check_content_add_write()" class="btn btn-primary text-center">Thêm bài viết</button>
                         </div>
                     </div>
                 </form>
